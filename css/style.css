@@ -1,13 +1,12 @@
 :root {
     --white: #FFFFFF;
     --black: #000000;
-    --dark: #232830;
-    --very-light-pink: #C7C7C7;
-    --text-input-field: #F7F7F7;
-    --hospital-green: #ACD9B2;
     --sm: 1.4rem;
     --md: 1.6rem;
     --lg: 1.8rem;
+    --button-color:linear-gradient(125.2deg, #8B8AF3 -19.58%, #4643EE 104.45%);
+    --button-zise: 10px 55px;
+    --view-color: gray;
 }
 
 * {
@@ -24,3 +23,182 @@ body{
     font-size: 1.6rem;
     font-family: 'Quicksand', sans-serif;
 }
+
+h1{
+    font-weight:bolder;
+}
+
+/* ----------------------------------PORTADA--------------------------------- */
+
+.portada{
+position: absolute;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 75%;
+background-color:  #76A9EC;
+background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+z-index: -1;
+}
+
+.profile{
+display: grid;
+place-items: center;
+align-items: center;
+margin-top: 13rem;
+}
+
+.profile p{
+    padding: 2rem;
+    text-align: center;
+}
+
+.profile p i{
+    color: #9888F8;
+}
+
+.button-profile{
+    background: var(--button-color);
+    padding: var(--button-zise);
+    text-decoration: none;
+    color: var(--white);
+}
+
+/* ----------------------------------JOBS--------------------------------- */
+
+.job{
+    padding: 2rem;
+    margin-top: 10rem;
+    display: grid;
+    grid-template-columns: 35% 65%;
+    grid-template-rows: 10rem repeat(3, 15rem) 10rem ;
+    grid-template-areas: 
+    "job-title job-title"
+    "job-img1 job-content1"
+    "job-img2 job-content2"
+    "job-img3 job-content3"
+    "button-view-job button-view-job"
+    ;
+}
+
+.job__title{
+    grid-area: job-title;
+    text-align: center;
+}
+
+.job__img--1{
+    grid-area: job-img1;
+}
+
+.job__content--1{
+    grid-area: job-content1;
+}
+
+.job__img--2{
+    grid-area: job-img2;
+}
+
+.job__content--2{
+    grid-area: job-content2;
+}
+
+.job__img--3{
+    grid-area: job-img3;
+}
+
+.job__content--3{
+    grid-area: job-content3;
+}
+
+.button-view-job{
+    grid-area: button-view-job;
+    text-align: center;
+    text-decoration: none;
+    color: var(--view-color);
+}
+
+.job p{
+    font-size:small;
+}
+
+
+
+/* ----------------------------------STUDIES--------------------------------- */
+
+
+.studies{
+    margin-top: 8rem;
+    display: grid;
+    grid-template-columns: 33.33% 33.33%  33.33% ;
+    grid-template-rows: 10rem 22rem 10rem ;
+    grid-template-areas: 
+    "studies__title studies__title studies__title"
+    "studies-1 studies-2 studies-3"
+    "button-view-studies button-view-studies button-view-studies"
+    ;
+}
+
+.studies__title{
+grid-area: studies__title;
+text-align: center;
+}
+
+.studies__1{
+grid-area: studies-1;
+text-align: center;
+
+}
+
+.studies__2{
+grid-area: studies-2;
+text-align: center;
+
+}
+
+.studies__3{
+grid-area: studies-3;
+text-align: center;
+
+}
+
+.button-view-studies{
+grid-area: button-view-studies;
+text-align: center;
+text-decoration: none;
+color: var(--view-color);
+}
+
+/* ----------------------------------PROYECTS--------------------------------- */
+
+.proyects{
+    margin-top: 8rem;
+    display: grid;
+    grid-template-columns: 100% ;
+    grid-template-rows: repeat(5, 18rem)  ;
+    grid-template-areas: 
+    "proyect-title"
+    "proyect1"
+    "proyect2"
+    "proyect3"
+    "button-view-proyects"
+    ;
+}
+
+.proyects__title{
+    grid-area: proyect-title;
+}
+
+.proyects__item-1{
+    grid-area: proyect1;
+}
+.proyects__item-2{
+    grid-area: proyect2;
+}
+.proyects__item-3{
+    grid-area: proyect3;
+}
+
+.button-view-proyects{
+    grid-area: button-view-proyects;
+}
+
