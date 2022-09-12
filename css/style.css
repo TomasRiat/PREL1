@@ -68,6 +68,7 @@ margin-top: 13rem;
 
 .job{
     padding: 2rem;
+    place-items: center;
     margin-top: 10rem;
     display: grid;
     grid-template-columns: 35% 65%;
@@ -128,6 +129,7 @@ margin-top: 13rem;
 
 .studies{
     margin-top: 8rem;
+    place-items: center;
     display: grid;
     grid-template-columns: 33.33% 33.33%  33.33% ;
     grid-template-rows: 10rem 22rem 10rem ;
@@ -146,19 +148,16 @@ text-align: center;
 .studies__1{
 grid-area: studies-1;
 text-align: center;
-
 }
 
 .studies__2{
 grid-area: studies-2;
 text-align: center;
-
 }
 
 .studies__3{
 grid-area: studies-3;
 text-align: center;
-
 }
 
 .button-view-studies{
@@ -172,33 +171,67 @@ color: var(--view-color);
 
 .proyects{
     margin-top: 8rem;
+    place-items: center;
     display: grid;
     grid-template-columns: 100% ;
-    grid-template-rows: repeat(5, 18rem)  ;
+    grid-template-rows: 10rem repeat(4, 20rem) ;
     grid-template-areas: 
-    "proyect-title"
-    "proyect1"
-    "proyect2"
-    "proyect3"
+    "proyects__title"
+    "proyects__item-1"
+    "proyects__item-2"
+    "proyects__item-3"
     "button-view-proyects"
     ;
 }
 
 .proyects__title{
-    grid-area: proyect-title;
+    grid-area: proyects__title;
 }
 
 .proyects__item-1{
-    grid-area: proyect1;
+    grid-area: proyects__item-1;
 }
+
 .proyects__item-2{
-    grid-area: proyect2;
+    grid-area: proyects__item-2;
 }
+
 .proyects__item-3{
-    grid-area: proyect3;
+    grid-area: proyects__item-3;
 }
+
 
 .button-view-proyects{
     grid-area: button-view-proyects;
 }
 
+
+
+
+/* ----------------------------------BLOG--------------------------------- */
+
+.blog{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.blog__item-1{
+    padding: 2rem;
+}
+
+.blog__item-2{
+    display: flex;
+    flex-direction: row;
+    text-align:start;
+    border-top: 2px solid #DBDBDB;
+    padding: 2rem;
+}
+
+.blog__item-3{
+    display: flex;
+    flex-direction: row;
+    margin-top: 2rem;
+    border-top: 2px solid #DBDBDB;
+    padding: 2rem;
+}
