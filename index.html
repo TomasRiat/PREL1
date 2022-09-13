@@ -8,6 +8,9 @@
     <!-- Mobile Specific Metas -->
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;700&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
@@ -46,12 +49,8 @@
     </header>
 
     <main>
-        <div class="portada">
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
+        <div class="banner">
+
         </div>
 
 
@@ -65,23 +64,23 @@
                 <p>Leading art and technology projects for  <strong>over 4 years now</strong>; very interested in heading new creative
                     teams.</p>
             </article>
-            <a class="button-profile" href="#">Contact me!</a>
+            <a class="button-contact" href="#">Contact me!</a>
         </section>
 
         <section class="job" id="job">
             <h2 class="job__title" >Job Experience</h2>
 
-            <img class="job__img--1" src="./assets/img/www.png" alt="">
+            <a href=""><img class="job__img--1" src="./assets/img/www.png" alt=""></a>
             <article class="job__content--1">
                 <h3>Werisck · Product Manager</h3>
                 <p>My current job consists of directing a team of developers along with a designing team.</p>
             </article>
-            <img class="job__img--2" src="./assets/img/bp.png" alt="">
+            <a href="./pages/jobs2.html"><img class="job__img--2" src="./assets/img/bp.png" alt=""></a>
             <article class="job__content--2">
                 <h3>bluePoint · Product Manager</h3>
                 <p>My current job consists of directing a team of developers along with a designing team.</p>
             </article>
-            <img class="job__img--3" src="./assets/img/google.png" alt="">
+            <a href=""><img class="job__img--3" src="./assets/img/google.png" alt=""></a>
             <article class="job__content--3">
                 <h3>Google · Frontend Developer</h3>
                 <p>My current job consists of directing a team of developers along with a designing team.</p>
@@ -94,17 +93,17 @@
             <h2 class="studies__title">Studies</h2>
 
             <article class="studies__1">
-                <img src="./assets/img/coder.png" alt="">
+                <a href="./pages/studies1.html"><img src="./assets/img/coder.png" alt=""></a>
                 <h3>Coderhouse</h3>
                 <p>Lorem ipsum dolor </p>
             </article>
             <article class="studies__2">
-                <img src="./assets/img/georgetown.png" alt="">
+                <a href=""><img src="./assets/img/georgetown.png" alt=""></a>
                 <h3>Georgetown University</h3>
                 <p> Lorem ipsum dolor </p>
             </article>
             <article class="studies__3">
-                <img src="./assets/img/coursera.png" alt="">
+                <a href=""><img src="./assets/img/coursera.png" alt=""></a>
                 <h3>Coursera</h3>
                 <p>Lorem ipsum dolor .</p>
             </article>
@@ -117,17 +116,17 @@
             <h2 class="proyects__title">Projects</h2>
 
             <article class="proyects__item-1">
-                <img src="./assets/img/proyect1.png" alt="">
+                <a href=""><img src="./assets/img/proyect1.png" alt=""></a>
                 <h3>Managing Tools</h3>
                 <p>Emma Johnson</p>
             </article>
             <article class="proyects__item-2">
-                <img src="./assets/img/proyect2.png" alt="">
+                <a href=""><img src="./assets/img/proyect2.png" alt=""></a>
                 <h3>The essence of management</h3>
                 <p>Emma Johnson & others</p>
             </article>
             <article class="proyects__item-3">
-                <img src="./assets/img/proyect3.png" alt="">
+                <a href=""><img src="./assets/img/proyect3.png" alt=""></a>
                 <h3>TDD method - Organize your team</h3>
                 <p>Emma Johnson & others</p>
             </article>
@@ -139,46 +138,58 @@
             <h2 class="blog__title">Blog</h2>
 
             <div class="blog__item-1">
-                <img src="./assets/img/proyect1.png" alt="">
+                <a href=""><img src="./assets/img/proyect1.png" alt=""></a>
                 <h3>The essence of management</h3>
                 <p>A study I recently developed about the strugges of being in charge of a big group of people.A study I
                     recently developed about the strugges of being in charge of a big group of people.</p>
             </div>
 
             <div class="blog__item-2">
-                <img src="./assets/img/blog1.png" alt="">
+                <a href=""><img src="./assets/img/blog1.png" alt=""></a>
                 <h3>The essence of management and the reality of facing it</h3>
             </div>
 
             <div class="blog__item-3">
-                <img src="./assets/img/blog2.png" alt="">
+                <a href=""><img src="./assets/img/blog2.png" alt=""></a>
                 <h3>The essence of management and the reality of facing it</h3>
             </div>
 
             <a class="button-view-blog" href="#">VIEW MORE</a>
 
         </section>
-<!--
+
         <section class="social" id="social">
 
-            <h2>Social Media</h2>
-            <article class="icons">
-                <i class="bi bi-instagram"></i>
-                <i class="bi bi-twitter"></i>
-                <i class="bi bi-behance"></i>
-                <i class="bi bi-linkedin"></i>
-                <i class="bi bi-twitch"></i>
-                <i class="bi bi-whatsapp"></i>
-                <i class="bi bi-telegram"></i>
-                <i class="bi bi-discord"></i>
+            <h2 class="social__title">Social Media</h2>
+            <article class="social__icons">
+                <a href="" target="_blank" class="icon icon-instagram"><i class="bi bi-instagram"></i></a>
+                <a href="" target="_blank" class="icon icon-twitter"><i class="bi bi-twitter"></i></a>
+                <a href="" target="_blank" class="icon icon-behance"><i class="bi bi-behance"></i></a>
+                <a href="" target="_blank" class="icon icon-linkedin"><i class="bi bi-linkedin"></i></a>
+                <a href="" target="_blank" class="icon icon-twitch"><i class="bi bi-twitch"></i></a>
+                <a href="" target="_blank" class="icon icon-whatsapp"><i class="bi bi-whatsapp"></i></a>
+                <a href="" target="_blank" class="icon icon-telegram"><i class="bi bi-telegram"></i></a>
+                <a href="" target="_blank" class="icon icon-discord"><i class="bi bi-discord"></i></a>
             </article>
 
+            <a class="button-contact" href="#">Contact me!</a>
+
         </section>
-        -->
+
+
+        
+
     </main>
 
-    <footer>
-
+    <footer class="footer">
+        <div class="footer__text">
+            <h2>Emma Johnson</h2>
+            <h3>Product Manager</h3>
+            <p>© All rights reserved</p>
+        </div>
+        <div class="footer__up">
+            <a href="" class=""><i class="bi bi-arrow-up-square"></i></a>
+        </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"

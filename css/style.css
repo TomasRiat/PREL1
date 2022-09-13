@@ -4,9 +4,10 @@
     --sm: 1.4rem;
     --md: 1.6rem;
     --lg: 1.8rem;
-    --button-color:linear-gradient(125.2deg, #8B8AF3 -19.58%, #4643EE 104.45%);
+    --button-color: linear-gradient(125.2deg, #8B8AF3 -19.58%, #4643EE 104.45%);
     --button-zise: 10px 55px;
     --view-color: gray;
+    --font-titulos: 700;
 }
 
 * {
@@ -17,221 +18,596 @@
 
 html {
     font-size: 62.5%;
+    overflow: none;
 }
 
-body{
+body {
     font-size: 1.6rem;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Cabin', sans-serif;
 }
 
-h1{
-    font-weight:bolder;
+h1 {
+    font-weight: var(--font-h1);
+    font-size:x-large;
+}
+
+h2 {
+    font-weight: var(--font-h1);
+    font-size:large;
 }
 
 /* ----------------------------------PORTADA--------------------------------- */
 
-.portada{
-position: absolute;
-left: 0%;
-right: 0%;
-top: 0%;
-bottom: 75%;
-background-color:  #76A9EC;
-background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
-z-index: -1;
+.banner {
+    height: 20vh;
+    background-color: #76A9EC;
+    background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+    z-index: -1;
 }
 
-.profile{
-display: grid;
-place-items: center;
-align-items: center;
-margin-top: 13rem;
+.profile {
+    display: grid;
+    place-items: center;
+    margin-top: -3rem;
 }
 
-.profile p{
+.profile p {
     padding: 2rem;
     text-align: center;
 }
 
-.profile p i{
+.profile p i {
     color: #9888F8;
 }
 
-.button-profile{
+.button-contact {
     background: var(--button-color);
     padding: var(--button-zise);
+    color: var(--white);
     text-decoration: none;
+}
+
+.button-contact:hover {
     color: var(--white);
 }
 
 /* ----------------------------------JOBS--------------------------------- */
 
-.job{
+.job {
     padding: 2rem;
     place-items: center;
     margin-top: 10rem;
     display: grid;
     grid-template-columns: 35% 65%;
-    grid-template-rows: 10rem repeat(3, 15rem) 10rem ;
-    grid-template-areas: 
-    "job-title job-title"
-    "job-img1 job-content1"
-    "job-img2 job-content2"
-    "job-img3 job-content3"
-    "button-view-job button-view-job"
+    grid-template-rows: 10rem repeat(3, 15rem) 10rem;
+    grid-template-areas:
+        "job-title job-title"
+        "job-img1 job-content1"
+        "job-img2 job-content2"
+        "job-img3 job-content3"
+        "button-view-job button-view-job"
     ;
 }
 
-.job__title{
+.job__title {
     grid-area: job-title;
-    text-align: center;
 }
 
-.job__img--1{
+.job__img--1 {
     grid-area: job-img1;
 }
 
-.job__content--1{
+.job__content--1 {
     grid-area: job-content1;
 }
 
-.job__img--2{
+.job__img--2 {
     grid-area: job-img2;
 }
 
-.job__content--2{
+.job__content--2 {
     grid-area: job-content2;
 }
 
-.job__img--3{
+.job__img--3 {
     grid-area: job-img3;
 }
 
-.job__content--3{
+.job__content--3 {
     grid-area: job-content3;
 }
 
-.button-view-job{
+.button-view-job {
     grid-area: button-view-job;
-    text-align: center;
     text-decoration: none;
     color: var(--view-color);
 }
 
-.job p{
-    font-size:small;
+.button-view-job:hover {
+    color: var(--view-color);
 }
+
+.job p {
+    font-size: small;
+}
+
+
+/* ----------------------------------JOB-2 Y STUDIES-1--------------------------------- */
+
+.banner-jobs2 {
+    background-image: url(../assets/img/portada-jobs2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    object-fit: contain;
+    height: 20vh;
+}
+
+
+.profile-jobs2,  .profile-studies1{
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 40% 60%;
+    grid-template-areas: 
+    "profile-jobs2__img profile-jobs2__titulos"
+    "profile-jobs2__description profile-jobs2__description";
+    
+}
+
+.profile-jobs2__img,  .profile-studies1__img{
+    grid-area: profile-jobs2__img;
+    margin-top: -2rem;
+    margin-left: 1.5rem;
+}
+
+.profile-jobs2__titulos,  .profile-studies1__titulos{
+    grid-area: profile-jobs2__titulos;
+
+}
+
+.profile-jobs2__description,  .profile-studies1__description{
+    grid-area: profile-jobs2__description;
+    margin: 1.5rem;
+}
+
+.tecnologies-jobs2{
+    margin-top: 8rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    row-gap: 3rem;
+}
+
+.icons-jobs2 img{
+    margin: 2rem;
+}
+
+.icons-jobs2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+}
+
+
+.proyects-jobs2,  .proyects-studies1{
+    margin-top: 8rem;
+    place-items: center;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 10rem repeat(2, 20rem);
+    grid-template-areas:
+        "proyects__title"
+        "proyects__item-1"
+        "proyects__item-2"
+    ;
+}
+
+.proyects-jobs2__title,  .proyects-studies1__title{
+    grid-area: proyects__title;
+}
+
+.proyects-jobs2__item-1,  .proyects-studies1__item-1{
+    grid-area: proyects__item-1;
+}
+
+.proyects-jobs2__item-2,  .proyects-studies1__item-2{
+    grid-area: proyects__item-2;
+}
+
+
+
 
 
 
 /* ----------------------------------STUDIES--------------------------------- */
 
 
-.studies{
+.studies {
     margin-top: 8rem;
     place-items: center;
     display: grid;
-    grid-template-columns: 33.33% 33.33%  33.33% ;
-    grid-template-rows: 10rem 22rem 10rem ;
-    grid-template-areas: 
-    "studies__title studies__title studies__title"
-    "studies-1 studies-2 studies-3"
-    "button-view-studies button-view-studies button-view-studies"
+    grid-template-columns: 33.33% 33.33% 33.33%;
+    grid-template-rows: 10rem 22rem 10rem;
+    grid-template-areas:
+        "studies__title studies__title studies__title"
+        "studies-1 studies-2 studies-3"
+        "button-view-studies button-view-studies button-view-studies"
     ;
 }
 
-.studies__title{
-grid-area: studies__title;
-text-align: center;
+.studies__title {
+    grid-area: studies__title;
+    text-align: center;
 }
 
-.studies__1{
-grid-area: studies-1;
-text-align: center;
+.studies__1 {
+    grid-area: studies-1;
+    text-align: center;
 }
 
-.studies__2{
-grid-area: studies-2;
-text-align: center;
+.studies__2 {
+    grid-area: studies-2;
+    text-align: center;
 }
 
-.studies__3{
-grid-area: studies-3;
-text-align: center;
+.studies__3 {
+    grid-area: studies-3;
+    text-align: center;
 }
 
-.button-view-studies{
-grid-area: button-view-studies;
-text-align: center;
-text-decoration: none;
-color: var(--view-color);
+.button-view-studies {
+    grid-area: button-view-studies;
+    text-decoration: none;
+    color: var(--view-color);
 }
+
+.button-view-studies:hover {
+    color: var(--view-color);
+}
+
+/* ----------------------------------STUDIES-1--------------------------------- */
+
+
+.banner-studies1{
+    background-image: url(../assets/img/banner-studies1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    object-fit: contain;
+    height: 20vh;
+}
+
+.tecnologies-studies1{
+    margin-top: 8rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    row-gap: 3rem;
+}
+
+.icons-studies1 img{
+    margin: 3rem;
+}
+
+.icons-studies1{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
 
 /* ----------------------------------PROYECTS--------------------------------- */
 
-.proyects{
+.proyects {
     margin-top: 8rem;
     place-items: center;
     display: grid;
-    grid-template-columns: 100% ;
-    grid-template-rows: 10rem repeat(4, 20rem) ;
-    grid-template-areas: 
-    "proyects__title"
-    "proyects__item-1"
-    "proyects__item-2"
-    "proyects__item-3"
-    "button-view-proyects"
+    grid-template-columns: 100%;
+    grid-template-rows: 10rem repeat(3, 20rem) 15rem;
+    grid-template-areas:
+        "proyects__title"
+        "proyects__item-1"
+        "proyects__item-2"
+        "proyects__item-3"
+        "button-view-proyects"
     ;
 }
 
-.proyects__title{
+.proyects__title {
     grid-area: proyects__title;
 }
 
-.proyects__item-1{
+.proyects__item-1 {
     grid-area: proyects__item-1;
 }
 
-.proyects__item-2{
+.proyects__item-2 {
     grid-area: proyects__item-2;
 }
 
-.proyects__item-3{
+.proyects__item-3 {
     grid-area: proyects__item-3;
 }
 
 
-.button-view-proyects{
+.button-view-proyects {
     grid-area: button-view-proyects;
+    text-decoration: none;
+    color: var(--view-color);
 }
 
+.button-view-proyects:hover {
+    color: var(--view-color);
+}
 
+/* ----------------------------------PROYECTS-3--------------------------------- */
+
+
+.inicio-proyecto3{
+    padding: 3rem;
+}
+
+.inicio-proyecto3__description{
+    margin-top: 2rem;
+}
+
+.banner-proyecto3{
+    background-image: url(../assets/img/banner-proyect3.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    object-fit: contain;
+    height: 20vh;
+}
+
+.galery-proyect3{
+    margin: 2rem;
+}
+
+.galery-proyect3 img{
+    width: 100%;
+    margin-top: 0%;
+
+}
+.container-to-do{
+    background: linear-gradient(180deg, #FD4CB4 0%, #A227AC 100%);
+    clip-path: polygon(0 0, 100% 16%, 100% 100%, 0% 100%);
+    position: relative;
+    bottom: 50px;
+    color: var(--white);
+    font-size: x-small;
+}
+
+.to-do{
+    padding: 3rem;
+}
+
+.container-doing{
+    background: linear-gradient(180deg, #FD4CB4 0%, #A227AC 100%);
+    clip-path: polygon(0 16%, 100% 0, 100% 100%, 0% 100%);
+    position: relative;
+    bottom: 50px;
+    color: var(--white);
+    font-size: x-small;
+}
+
+.doing-title{
+    text-align: end;
+    padding: 2rem 3rem 1rem ;
+}
+
+.doing{
+    padding: 2rem;
+}
+
+.container-done{
+    background: linear-gradient(180deg, #FD4CB4 0%, #A227AC 100%);
+    clip-path: polygon(0 0, 100% 16%, 100% 100%, 0% 100%);
+    position: relative;
+    bottom: 50px;
+    color: var(--white);
+    font-size: x-small;
+}
+
+.done{
+    padding: 2rem;
+}
 
 
 /* ----------------------------------BLOG--------------------------------- */
 
-.blog{
-    display: flex;
-    flex-direction: column;
-
+.blog {
+    margin-top: 8rem;
+    place-items: center;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 20rem 25rem 20rem repeat(2, 15rem);
+    grid-template-areas:
+        "blog__title"
+        "blog__item-1"
+        "blog__item-2"
+        "blog__item-3"
+        "button-view-blog"
+    ;
 }
 
-.blog__item-1{
+.blog__title {
+    grid-area: blog__title;
+}
+
+.blog__item-1 {
     padding: 2rem;
+    grid-area: blog__item-1;
 }
 
-.blog__item-2{
+.blog__item-2 {
     display: flex;
     flex-direction: row;
-    text-align:start;
+    grid-area: blog__item-2;
+    text-align: start;
     border-top: 2px solid #DBDBDB;
     padding: 2rem;
 }
 
-.blog__item-3{
+.blog__item-3 {
     display: flex;
     flex-direction: row;
+    grid-area: blog__item-3;
     margin-top: 2rem;
     border-top: 2px solid #DBDBDB;
     padding: 2rem;
+}
+
+.button-view-blog {
+    grid-area: button-view-blog;
+    text-decoration: none;
+    color: var(--view-color);
+}
+
+.button-view-blog:hover {
+    color: var(--view-color);
+}
+
+
+/* ----------------------------------SOCIAL--------------------------------- */
+
+.social {
+    text-align: center;
+}
+
+.social__icons {
+    display: flex;
+    padding: 15px;
+    margin: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.social__icons a:hover {
+    text-decoration: none;
+    color: var(--black);
+}
+
+.icon {
+    margin: 10px;
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    color: var(--black);
+    border-radius: 50%;
+    outline: 2px solid var(--black);
+    transition-property: outline-offset, outline-color, backgroud-color;
+    transition-duration: .25s;
+}
+
+.icon:hover {
+    outline-offset: 4px;
+}
+
+.icon:hover i {
+    animation: shake .25s;
+}
+
+@keyframes shake {
+    10% {
+        transform: rotate(15deg);
+    }
+
+    20% {
+        transform: rotate(-15deg);
+    }
+
+    30% {
+        transform: rotate(15deg);
+    }
+
+    40% {
+        transform: rotate(-15deg);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-------------------------------------------------FOOTER----------------------------------------------*/
+
+.footer {
+    height: 20vh;
+    background-color: var(--black);
+    margin-top: 8rem;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 15rem;
+    grid-template-areas:
+        "footer__text footer__up";
+}
+
+.footer__text {
+    grid-area: footer__text;
+    color: var(--white);
+    margin: auto;
+    text-align: left
+}
+
+.footer__up {
+    grid-area: footer__up;
+    color: var(--white);
+    font-size: 30px;
+    margin: auto;
+
+}
+
+.footer__up a {
+    color: var(--white);
+    text-decoration: none;
 }
