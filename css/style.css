@@ -36,6 +36,14 @@ h2 {
     font-size:large;
 }
 
+
+.contenedor-button-contact{
+    display: flex;
+    justify-content: center;
+    margin: 3rem;
+}
+
+
 /* ----------------------------------PORTADA--------------------------------- */
 
 .banner {
@@ -343,6 +351,22 @@ h2 {
     color: var(--view-color);
 }
 
+.figure-container {
+    position: relative;
+    
+}
+
+.figure-container .figure-caption {
+    position: absolute;
+    top: 60%;
+    left: 5%;
+    color: var(--white);
+    
+}
+
+.figure-container .rounded{
+    border-radius: 0px !important;
+}
 /* ----------------------------------PROYECTS-3--------------------------------- */
 
 
@@ -531,10 +555,6 @@ h2 {
         transform: rotate(-15deg);
     }
 }
-
-
-
-
 
 
 
