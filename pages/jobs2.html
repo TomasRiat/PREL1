@@ -21,26 +21,35 @@
 <body>
 
     <header>
-        <nav class="navbar navbar-expand-lg bg-light">
+        <nav class="navbar navbar-expand-lg bg-black">
             <div class="container-fluid">
+                <a href="../index.html"><span class="bi bi-arrow-left"></span></a>
                 <a class="navbar-brand" href="#"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                    <span><img  class="img-nav" src="../assets/img/desplegable.svg" alt=""></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            <a class="nav-link cl-white" aria-current="page" href="../index.html#job">Job Experience</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Features</a>
+                            <a class="nav-link cl-white" href="../index.html#studies">Studies</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Pricing</a>
+                            <a class="nav-link cl-white" href="../index.html#proyects">Proyects</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link disabled">Disabled</a>
+                            <a class="nav-link cl-white" href="../index.html#blog">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link cl-white" href="../index.html#social">Social Media</a>
+                        </li>
+                        <li>
+                            <div class="contenedor-button-contact">
+                                <a class="button-contact" href="../pages/contacto.html">Contact me!</a>
+                            </div>
                         </li>
                     </ul>
                 </div>
@@ -68,22 +77,22 @@
             </article>
         </section>
 
-        <section class="tecnologies-jobs2">
+        <section class="tecnologies">
 
             <h2>Technologies</h2>
 
-            <article class="icons-jobs2">
-                <div class="icon-jobs2">
-                <img src="../assets/img/Vectorsql.svg" alt="">
-                <p>SQL</p>
+            <article class="tecnologies__icons">
+                <div class="tecnologies__icon">
+                    <img src="../assets/img/sql.svg" alt="">
+                    <p>SQL</p>
                 </div>
-                <div class="icon-jobs2">
-                <img src="../assets/img/Vectoragile.svg" alt="">
-                <p>Agile</p>
+                <div class="tecnologies__icon">
+                    <img src="../assets/img/agile.svg" alt="">
+                    <p>Agile</p>
                 </div>
-                <div class="icon-jobs2">
-                <img src="../assets/img/Vectorscrum.svg" alt="">
-                <p>Scrum</p>
+                <div class="tecnologies__icon">
+                    <img src="../assets/img/scrum.svg" alt="">
+                    <p>Scrum</p>
                 </div>
             </article>
 
@@ -93,21 +102,25 @@
             <h2 class="proyects-jobs2__title">Projects</h2>
 
             <article class="proyects-jobs2__item-1">
-                <a href=""><img src="../assets/img/proyecto-jobs2.png" alt=""></a>
-                <h3>LIKEit App</h3>
-                <p>Emma Johnson & others at bluePoint</p>
+                <figure class="figure figure-container">
+                    <a href=""><img src="../assets/img/proyecto-jobs2.png" alt=""></a>
+                    <figcaption class="figure-caption"> <h3>LIKEit App</h3><p>Emma Johnson & others at bluePoint</p>
+                    </figcaption>
+                </figure>
             </article>
             <article class="proyects-jobs2__item-2">
-                <a href=""><img src="../assets/img/proyecto2-jobs2.png" alt=""></a>
-                <h3>Binance App</h3>
-                <p>Emma Johnson & others at bluePoint</p>
+                <figure class="figure figure-container">
+                    <a href=""><img src="../assets/img/proyecto2-jobs2.png" alt=""></a>
+                    <figcaption class="figure-caption"><h3>Binance App</h3><p>Emma Johnson & others at bluePoint</p>
+                    </figcaption>
+                </figure>
             </article>
         </section>
 
         <div class="contenedor-button-contact">
-            <a class="button-contact" href="#">Contact me!</a>
+            <a class="button-contact" href="../pages/contacto.html">Contact me!</a>
         </div>
-        <!--<a class="button-contact" href="#">Contact me!</a>-->
+
     </main>
     <footer class="footer">
         <div class="footer__text">

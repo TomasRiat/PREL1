@@ -19,28 +19,30 @@
 </head>
 
 <body>
-
     <header>
-        <nav class="navbar navbar-expand-lg bg-light">
+        <nav class="navbar navbar-expand-lg bg-black">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                    <span"> <img  class="img-nav" src="./assets/img/desplegable.svg" alt=""></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            <a class="nav-link cl-white" aria-current="page" href="#job">Job Experience</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Features</a>
+                            <a class="nav-link cl-white" href="#studies">Studies</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Pricing</a>
+                            <a class="nav-link cl-white" href="#proyects">Proyects</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link disabled">Disabled</a>
+                            <a class="nav-link cl-white" href="#blog">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link cl-white" href="#social">Social Media</a>
                         </li>
                     </ul>
                 </div>
@@ -64,29 +66,35 @@
                 <p>Leading art and technology projects for  <strong>over 4 years now</strong>; very interested in heading new creative
                     teams.</p>
             </article>
-            <a class="button-contact" href="#">Contact me!</a>
         </section>
+
+        <div class="contenedor-button-contact">
+            <a class="button-contact" href="../pages/contacto.html">Contact me!</a>
+        </div>
 
         <section class="job" id="job">
             <h2 class="job__title" >Job Experience</h2>
 
-            <a href=""><img class="job__img--1" src="./assets/img/www.png" alt=""></a>
+            <a href="./pages/jobs2.html"><img class="job__img--1" src="./assets/img/werisk.png" alt=""></a>
             <article class="job__content--1">
                 <h3>Werisck · Product Manager</h3>
                 <p>My current job consists of directing a team of developers along with a designing team.</p>
             </article>
-            <a href="./pages/jobs2.html"><img class="job__img--2" src="./assets/img/bp.png" alt=""></a>
+            <a href="./pages/jobs2.html"><img class="job__img--2" src="./assets/img/bluepoint.png" alt=""></a>
             <article class="job__content--2">
                 <h3>bluePoint · Product Manager</h3>
                 <p>My current job consists of directing a team of developers along with a designing team.</p>
             </article>
-            <a href=""><img class="job__img--3" src="./assets/img/google.png" alt=""></a>
+            <a href="./pages/jobs2.html"><img class="job__img--3" src="./assets/img/google.png" alt=""></a>
             <article class="job__content--3">
                 <h3>Google · Frontend Developer</h3>
                 <p>My current job consists of directing a team of developers along with a designing team.</p>
             </article>
-            <a class="button-view-job" href="#">VIEW MORE</a>
         </section>
+
+        <div class="contenedor-view">
+            <a class="button-view" href="#">VIEW MORE</a>
+        </div>
 
         <section class="studies" id="studies">
 
@@ -98,26 +106,27 @@
                 <p>Lorem ipsum dolor </p>
             </article>
             <article class="studies__2">
-                <a href=""><img src="./assets/img/georgetown.png" alt=""></a>
+                <a href="./pages/studies1.html"><img src="./assets/img/georgetown.png" alt=""></a>
                 <h3>Georgetown University</h3>
                 <p> Lorem ipsum dolor </p>
             </article>
             <article class="studies__3">
-                <a href=""><img src="./assets/img/coursera.png" alt=""></a>
+                <a href="./pages/studies1.html"><img src="./assets/img/coursera.png" alt=""></a>
                 <h3>Coursera</h3>
                 <p>Lorem ipsum dolor .</p>
             </article>
-            
-            <a class="button-view-studies" href="#">VIEW MORE</a>
-
         </section>
+
+        <div class="contenedor-view">
+            <a class="button-view" href="#">VIEW MORE</a>
+        </div>
 
         <section class="proyects" id="proyects">
             <h2 class="proyects__title">Projects</h2>
 
             <article class="proyects__item-1">
                 <figure class="figure figure-container">
-                    <img src="./assets/img/proyect1.png" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
+                    <a href="./pages/proyecto3.html"><img src="./assets/img/proyect1.png"></a>
                     <figcaption class="figure-caption"> <h3>Managing Tools</h3>
                         <p>Emma Johnson</p>
                     </figcaption>
@@ -125,7 +134,7 @@
             </article>
             <article class="proyects__item-2">
                 <figure class="figure figure-container">
-                    <img src="./assets/img/proyect2.png" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
+                    <a href="./pages/proyecto3.html"><img src="./assets/img/proyect2.png"></a>
                     <figcaption class="figure-caption"> <h3>The essence of management</h3>
                         <p>Emma Johnson & others</p>
                     </figcaption>
@@ -134,39 +143,59 @@
             <article class="proyects__item-3">
                 
                 <figure class="figure figure-container">
-                    <a href="./pages/proyecto3.html"><img src="./assets/img/proyect3.png" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure."></a>
+                    <a href="./pages/proyecto3.html"><img src="./assets/img/proyect3.png"></a>
                     <figcaption class="figure-caption"> <h3>TDD method - Organize your team</h3>
                         <p>Emma Johnson & others</p>
                     </figcaption>
                 </figure>
             </article>
-            <a class="button-view-proyects" href="#">VIEW MORE</a>
         </section>
+
+        <div class="contenedor-view">
+            <a class="button-view" href="#">VIEW MORE</a>
+        </div>
 
         <section class="blog" id="blog">
 
             <h2 class="blog__title">Blog</h2>
 
             <div class="blog__item-1">
-                <a href=""><img src="./assets/img/proyect1.png" alt=""></a>
+                <figure class="figure figure-container-blog">
+                <a href="./pages/blog1.html"><img src="./assets/img/blog-principal.png" alt=""></a>
+                <figcaption class="figure-caption-blog">
+                    <p>Aug.2021</p>
+                </figcaption>
+                </figure>
+                
                 <h3>The essence of management</h3>
                 <p>A study I recently developed about the strugges of being in charge of a big group of people.A study I
                     recently developed about the strugges of being in charge of a big group of people.</p>
             </div>
 
             <div class="blog__item-2">
-                <a href=""><img src="./assets/img/blog1.png" alt=""></a>
+                <figure class="figure figure-container-blog-small">
+                    <a href="./pages/blog1.html"><img src="./assets/img/blog1.png" alt=""></a>
+                    <figcaption class="figure-caption-blog-small">
+                        <p>Aug.2021</p>
+                    </figcaption>
+                    </figure>
                 <h3>The essence of management and the reality of facing it</h3>
             </div>
 
             <div class="blog__item-3">
-                <a href=""><img src="./assets/img/blog2.png" alt=""></a>
+                <figure class="figure figure-container-blog-small">
+                    <a href="./pages/blog1.html"><img src="./assets/img/blog2.png" alt=""></a>
+                    <figcaption class="figure-caption-blog-small">
+                        <p>Aug.2021</p>
+                    </figcaption>
+                    </figure>
                 <h3>The essence of management and the reality of facing it</h3>
             </div>
-
-            <a class="button-view-blog" href="#">VIEW MORE</a>
-
         </section>
+
+        <div class="contenedor-view">
+            <a class="button-view" href="#">VIEW MORE</a>
+        </div>
 
         <section class="social" id="social">
 
@@ -181,11 +210,11 @@
                 <a href="" target="_blank" class="icon icon-telegram"><i class="bi bi-telegram"></i></a>
                 <a href="" target="_blank" class="icon icon-discord"><i class="bi bi-discord"></i></a>
             </article>
-
-            <a class="button-contact" href="#">Contact me!</a>
-
         </section>
 
+        <div class="contenedor-button-contact">
+            <a class="button-contact" href="../pages/contacto.html">Contact me!</a>
+        </div>
 
         
 
@@ -198,7 +227,7 @@
             <p>© All rights reserved</p>
         </div>
         <div class="footer__up">
-            <a href="" class=""><i class="bi bi-arrow-up-square"></i></a>
+            <a href="#profile"><i class="bi bi-arrow-up-square"></i></a>
         </div>
     </footer>
 

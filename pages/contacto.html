@@ -1,12 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Home</title>
 </head>
+
 <body>
-    
+
+    <header>
+        <nav class="navbar navbar-expand-lg bg-black">
+            <div class="container-fluid">
+                <a href="../index.html"><span class="bi bi-arrow-left"></span></a>
+                <a class="navbar-brand" href="#"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span><img  class="img-nav" src="../assets/img/desplegable.svg" alt=""></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link cl-white" aria-current="page" href="../index.html#job">Job Experience</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link cl-white" href="../index.html#studies">Studies</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link cl-white" href="../index.html#proyects">Proyects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link cl-white" href="../index.html#blog">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link cl-white" href="../index.html#social">Social Media</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="banner">
+
+        </div>
+
+        <section class="profile-studies1" id="profile-studies1">
+            <article class="profile-studies1__img">
+                <img src="../assets/img/perfil-small.png" alt="">
+            </article>
+            <article class="profile-studies1__titulos">
+                <h1>Emma Johnson</h1>
+                <h2>Product Manager</h2>
+            </article>
+        </section>
+
+        <section class="contact__container">
+            <form action="" class="contact__form">
+                <div class="contact__input-line">
+                    <label for="name" class="contact__label"></label>
+                    <input type="text" name="name" id="name" class="contact__input" placeholder="Your name" required>
+                </div>
+                <div class="contact__input-line">
+                    <label for="email" class="contact__label"></label>
+                    <input type="email" name="email" id="email" class="contact__input" placeholder="Your e-mail" required>
+                </div>
+                <div class="contact__input-line">
+                    <label for="message" class="contact__label"></label>
+                    <textarea type="text" name="mensaje" id="mensaje" class="contact__input--textarea" placeholder="Your message" required></textarea>
+                </div>
+
+                <div class="boton-contenedor">
+                    <input class="boton__contacto1"  type="submit"  value="Send">
+                </div>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+    crossorigin="anonymous"></script>
 </body>
 </html>

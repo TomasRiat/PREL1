@@ -1,20 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Home</title>
 </head>
+
 <body>
-    
+    <header>
+        <nav class="navbar navbar-expand-lg bg-black">
+            <div class="container-fluid">
+                <a href="../index.html"><span class="bi bi-arrow-left"></span></a>
+                <a class="navbar-brand" href="#"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span><img  class="img-nav" src="../assets/img/desplegable.svg" alt=""></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link cl-white" aria-current="page" href="../index.html#job">Job Experience</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link cl-white" href="../index.html#studies">Studies</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link cl-white" href="../index.html#proyects">Proyects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link cl-white" href="../index.html#blog">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link cl-white" href="../index.html#social">Social Media</a>
+                        </li>
+                        <li>
+                            <div class="contenedor-button-contact">
+                                <a class="button-contact" href="../pages/contacto.html">Contact me!</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
 
-    <article class="background-blog">
-        <h3>Managing Tools</h3>
-        <p>Emma Johnson</p>
-    </article>
+        <div class="banner-blog1"></div>
+
+        <section class="blog1-titles">
+            <h1>The essence of management</h1>
+            <h2>by Emma Johnson</h2>
+            <h3>August 2020</h3>
+        </section>
+
+        <section class="blog1-section1">
+            <article>
+                <p> <strong>This was one of my first personal projects back in 2019, just when I started a research based on
+                    the</strong>  </p>
+                <p>This was one of my first personal projects back in 2019, just when I started a research based on
+                    the organizing
+                    methods available for managing a big team of people working on the same project. <br> <br>
+                    After about 2 months of research, I came to the conclusion that making things simple is the best
+                    way in this
+                    type of cases. I then developed an oganization method - the TDD Method.</p>
+
+                <img src="../assets/img/blog-blog1.png" alt="">
+                <p>“This was one of my first personal projects back in 2019, just when I started a research”</p>
+            </article>
+            <article>
+                <p>This was one of my first personal projects back in 2019, just when I started a research based on
+                    the organizing
+                    methods available for managing a big team of people working on the same project.
+                    After about 2 months of research, I came to the conclusion that making things simple is the best
+                    way in this
+                    type of cases. I then developed an oganization method - the TDD Method.</p>
+                <img src="../assets/img/blog-blog2.png" alt="">
+                <p> <strong>This was one of my first personal projects back in 2019, just when I started a research based on
+                    the</strong>  </p>
+                <p>This was one of my first personal projects back in 2019, just when I started a research based on
+                    the organizing
+                    methods available for managing a big team of people working on the same project.
+                    After about 2 months of research, I came to the conclusion that making things simple is the best
+                    way in this
+                    type of cases. I then developed an oganization method - the TDD Method.</p>
+            </article>
 
 
+            <article>
+                <h3>Keep reading...</h3>
+                <div class="contenedor-keep-reading">
+                    <img src="../assets/img/blog1.png" alt="">
+                    <img src="../assets/img/blog5-small.png" alt="">
+                </div>
+            </article>
+        </section>
+        <div class="contenedor-button-contact">
+            <a class="button-contact" href="../pages/contacto.html">Contact me!</a>
+        </div>
 
+    </main>
+    <footer class="footer">
+        <div class="footer__text">
+            <h2>Emma Johnson</h2>
+            <h3>Product Manager</h3>
+            <p>© All rights reserved</p>
+        </div>
+        <div class="footer__up">
+            <a href="" class=""><i class="bi bi-arrow-up-square"></i></a>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>
