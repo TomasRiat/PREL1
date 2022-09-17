@@ -9,7 +9,8 @@
     --view-color: gray;
     --font-titulos: 700;
     --hover-view: #6A52F8;
-
+    --subtitulos: #292929;
+    --fechas: #848484;
 }
 
 * {
@@ -28,15 +29,40 @@ body {
     font-family: 'Cabin', sans-serif;
 }
 
-h1 {
+h1, h2 {
     font-weight: var(--font-titulos);
     font-size:x-large;
+    color: var(--black);
 }
 
-h2 {
-    font-size:large;
+h3{
+    font-weight: var(--font-titulos);
+    color: var(--black);
 }
 
+.span-titulos, .h2-subtitulo{
+    font-weight: 400;
+    color: --subtitulos;
+    font-size: medium;
+}
+
+.h3-fecha{
+    color: var(--fechas);
+    font-size: small;
+}
+
+/*
+figure{
+    display: inline-block;
+    box-shadow:inset 10px 0px 50px  rgba(0, 0, 0, 0.65);
+}
+
+figure img{
+    position: relative;
+    z-index:-1;
+    vertical-align: top;
+}
+*/
 
 .contenedor-button-contact{
     display: flex;
@@ -48,6 +74,7 @@ h2 {
     background: var(--button-color);
     padding: var(--button-zise);
     color: var(--white);
+    border: var(--hover-view) solid 1px;
     text-decoration: none;
     transition: 700ms ease;
 }
@@ -73,6 +100,8 @@ h2 {
 .button-view:hover {
     color: var(--hover-view);
 }
+
+
 
 /* ----------------------------------HEADER--------------------------------- */
 
@@ -277,6 +306,7 @@ h2 {
 
 .studies {
     margin-top: 8rem;
+    padding: 15px;
     place-items: center;
     display: grid;
     grid-template-columns: 33.33% 33.33% 33.33%;
@@ -310,6 +340,8 @@ h2 {
 .studies img{
     transition: 300ms ease;
     margin-right: 5px;
+    max-width: 70px;
+    margin-bottom: 5px;
 }
 
 .studies img:hover{
@@ -399,11 +431,14 @@ h2 {
     top: 60%;
     left: 5%;
     color: var(--white);
-    
 }
 
 .figure-container .rounded{
     border-radius: 0px !important;
+}
+
+.figure-caption h3{
+    color: var(--white);
 }
 /* ----------------------------------PROYECTS-3--------------------------------- */
 
