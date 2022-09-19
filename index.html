@@ -23,7 +23,7 @@
         <nav class="navbar navbar-expand-lg bg-black">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#"></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                <button class="navbar-toggler " tabindex="2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span"> <img  class="img-nav" src="./assets/img/desplegable.svg" alt=""></span>
                 </button>
@@ -45,6 +45,11 @@
                             <a class="nav-link cl-white" href="#social">Social Media</a>
                         </li>
                     </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                
                 </div>
             </div>
         </nav>
@@ -75,20 +80,37 @@
         <section class="job" id="job">
             <h2 class="job__title" >Job Experience</h2>
 
-            <a href="./pages/jobs2.html"><img class="job__img--1" src="./assets/img/werisk.png" alt=""></a>
-            <article class="job__content--1">
-                <h3>Werisck · <span class="span-titulos">Product Manager</span> </h3>
-                <p>My current job consists of directing a team of developers along with a designing team.</p>
+            
+            <article class="job__item--1">
+                <a href="./pages/jobs2.html"><img class="job__img--1" src="./assets/img/werisk.png" alt=""></a>
+                <div class="job__content--1">
+                    <h3>Werisck · <span class="span-titulos">Product Manager</span> </h3>
+                    <p>My current job consists of directing a team of developers along with a designing team.</p>
+                </div>
             </article>
-            <a href="./pages/jobs2.html"><img class="job__img--2" src="./assets/img/bluepoint.png" alt=""></a>
-            <article class="job__content--2">
-                <h3>bluePoint · <span class="span-titulos">Product Manager</span> </h3>
-                <p>My current job consists of directing a team of developers along with a designing team.</p>
+            
+            <article class="job__item--2">
+                <a href="./pages/jobs2.html"><img class="job__img--2" src="./assets/img/bluepoint.png" alt=""></a>
+                <div class="job__content--2">
+                    <h3>bluePoint · <span class="span-titulos">Product Manager</span> </h3>
+                    <p>My current job consists of directing a team of developers along with a designing team.</p>
+                </div>
             </article>
-            <a href="./pages/jobs2.html"><img class="job__img--3" src="./assets/img/google.png" alt=""></a>
-            <article class="job__content--3">
-                <h3>Google · <span class="span-titulos">Frontend Developer</span> </h3>
-                <p>My current job consists of directing a team of developers along with a designing team.</p>
+            
+            <article class="job__item--3">
+                <a href="./pages/jobs2.html"><img class="job__img--3" src="./assets/img/google.png" alt=""></a>
+                <div class="job__content--3">
+                    <h3>Google · <span class="span-titulos">Frontend Developer</span> </h3>
+                    <p>My current job consists of directing a team of developers along with a designing team.</p>
+                </div>
+            </article>
+            
+            <article class="job__item--4">
+                <a href="./pages/jobs2.html"><img class="job__img--4" src="./assets/img/google.png" alt=""></a>
+                <div class="job__content--4">
+                    <h3>Google · <span class="span-titulos">Frontend Developer</span> </h3>
+                    <p>My current job consists of directing a team of developers along with a designing team.</p>
+                </div>
             </article>
         </section>
 
@@ -115,6 +137,11 @@
                 <h3>Coursera</h3>
                 <p>Lorem ipsum dolor .</p>
             </article>
+            <article class="studies__4">
+                <a href="./pages/studies1.html"><img src="./assets/img/coursera.png" alt=""></a>
+                <h3>Coursera</h3>
+                <p>Lorem ipsum dolor .</p>
+            </article>
         </section>
 
         <div class="contenedor-view">
@@ -132,6 +159,7 @@
                     </figcaption>
                 </figure>
             </article>
+
             <article class="proyects__item-2">
                 <figure class="figure figure-container">
                     <a href="./pages/proyecto3.html"><img src="./assets/img/proyect2.png"></a>
@@ -140,8 +168,35 @@
                     </figcaption>
                 </figure>
             </article>
+
             <article class="proyects__item-3">
-                
+                <figure class="figure figure-container">
+                    <a href="./pages/proyecto3.html"><img src="./assets/img/proyect3.png"></a>
+                    <figcaption class="figure-caption"> <h3>TDD method - Organize your team</h3>
+                        <p>Emma Johnson & others</p>
+                    </figcaption>
+                </figure>
+            </article>
+
+            <article class="proyects__item-4">
+                <figure class="figure figure-container">
+                    <a href="./pages/proyecto3.html"><img src="./assets/img/proyect1.png"></a>
+                    <figcaption class="figure-caption"> <h3>Managing Tools</h3>
+                        <p>Emma Johnson</p>
+                    </figcaption>
+                </figure>
+            </article>
+
+            <article class="proyects__item-5">
+                <figure class="figure figure-container">
+                    <a href="./pages/proyecto3.html"><img src="./assets/img/proyect2.png"></a>
+                    <figcaption class="figure-caption"> <h3>The essence of management</h3>
+                        <p>Emma Johnson & others</p>
+                    </figcaption>
+                </figure>
+            </article>
+
+            <article class="proyects__item-6">
                 <figure class="figure figure-container">
                     <a href="./pages/proyecto3.html"><img src="./assets/img/proyect3.png"></a>
                     <figcaption class="figure-caption"> <h3>TDD method - Organize your team</h3>
@@ -174,7 +229,7 @@
 
             <div class="blog__item-2">
                 <figure class="figure figure-container-blog-small">
-                    <a href="./pages/blog1.html"><img src="./assets/img/blog1.png" alt=""></a>
+                    <a href="./pages/blog1.html"><img src="./assets/img/blog1-small.png" alt=""></a>
                     <figcaption class="figure-caption-blog-small">
                         <p>Aug.2021</p>
                     </figcaption>
@@ -183,6 +238,16 @@
             </div>
 
             <div class="blog__item-3">
+                <figure class="figure figure-container-blog-small">
+                    <a href="./pages/blog1.html"><img src="./assets/img/blog2.png" alt=""></a>
+                    <figcaption class="figure-caption-blog-small">
+                        <p>Aug.2021</p>
+                    </figcaption>
+                    </figure>
+                <h3>The essence of management and the reality of facing it</h3>
+            </div>
+
+            <div class="blog__item-4">
                 <figure class="figure figure-container-blog-small">
                     <a href="./pages/blog1.html"><img src="./assets/img/blog2.png" alt=""></a>
                     <figcaption class="figure-caption-blog-small">

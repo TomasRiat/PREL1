@@ -101,8 +101,6 @@ figure img{
     color: var(--hover-view);
 }
 
-
-
 /* ----------------------------------HEADER--------------------------------- */
 
 .bi-arrow-left{
@@ -133,9 +131,12 @@ figure img{
 
 /* ----------------------------------PORTADA--------------------------------- */
 
+
 .banner {
     height: 20vh;
     background-image: url(../assets/img/banner-init.png);
+    background-repeat: no-repeat;
+    background-size: cover;
     z-index: -1;
 }
 
@@ -154,6 +155,26 @@ figure img{
     color: #9888F8;
 }
 
+@media screen and (min-width: 576px) {
+    .banner {
+        height: 25vh;
+    }
+
+    .description{
+        padding: 1.5rem;
+    }
+}
+
+@media screen and (min-width: 768px){
+    .banner {
+        height: 30vh;
+    }
+
+    .description{
+        padding: 4rem;
+    }
+}
+
 /* ----------------------------------JOBS--------------------------------- */
 
 .job {
@@ -161,13 +182,13 @@ figure img{
     place-items: center;
     margin-top: 10rem;
     display: grid;
-    grid-template-columns: 35% 65%;
+    grid-template-columns: 100%;
     grid-template-rows: 10rem repeat(3, 15rem);
     grid-template-areas:
-        "job-title job-title"
-        "job-img1 job-content1"
-        "job-img2 job-content2"
-        "job-img3 job-content3"
+        "job-title"
+        "job-content1"
+        "job-content2"
+        "job-content3"
     ;
 }
 
@@ -175,28 +196,26 @@ figure img{
     grid-area: job-title;
 }
 
-.job__img--1 {
-    grid-area: job-img1;
-}
-
-.job__content--1 {
+.job__item--1 {
     grid-area: job-content1;
+    display:inline-flex;
+    
 }
 
-.job__img--2 {
-    grid-area: job-img2;
-}
-
-.job__content--2 {
+.job__item--2 {
     grid-area: job-content2;
+    display:inline-flex;
+    
 }
 
-.job__img--3 {
-    grid-area: job-img3;
-}
-
-.job__content--3 {
+.job__item--3 {
     grid-area: job-content3;
+    display:inline-flex;
+    
+}
+
+.job__item--4 {
+    display: none;
 }
 
 .job p {
@@ -212,6 +231,12 @@ figure img{
     transform: scale(1.05);
 }
 
+@media screen and (min-width: 576px){
+    .job__content--1, .job__content--2, .job__content--3, .job__content--4{
+        padding: 1.5rem;
+    }
+}
+
 
 /* ----------------------------------JOB-2 Y STUDIES-1--------------------------------- */
 
@@ -224,25 +249,29 @@ figure img{
     height: 20vh;
 }
 
+.profile-jobs2_may768px_, .profile-studies1_may768px_{
+    display: none;
+}
 
-.profile-jobs2,  .profile-studies1{
+.profile-jobs2_men768px_,  .profile-studies1_men768px_{
     display: grid;
     grid-template-columns: 40% 60%;
     grid-template-rows: 40% 60%;
     grid-template-areas: 
     "profile-jobs2__img profile-jobs2__titulos"
     "profile-jobs2__description profile-jobs2__description";
-    
 }
 
 .profile-jobs2__img,  .profile-studies1__img{
     grid-area: profile-jobs2__img;
     margin-top: -2rem;
-    margin-left: 1.5rem;
+    display: flex;
+    justify-content: center;
 }
 
 .profile-jobs2__titulos,  .profile-studies1__titulos{
     grid-area: profile-jobs2__titulos;
+    justify-content: start;
 
 }
 
@@ -250,6 +279,7 @@ figure img{
     grid-area: profile-jobs2__description;
     margin: 1.5rem;
 }
+
 
 .tecnologies-jobs2{
     margin-top: 8rem;
@@ -296,9 +326,66 @@ figure img{
     grid-area: proyects__item-2;
 }
 
+@media screen and (min-width:576px) {
+
+    .banner-jobs2 {
+        height: 25vh;
+    }
+
+    .profile-jobs2__img img,  .profile-studies1__img img{
+        width: 13rem;
+    }
+
+    .profile-jobs2__img,  .profile-studies1__img {
+        margin-top: -5rem;
+    }
+
+    .profile-jobs2__description,  .profile-studies1__description{
+        padding: 2rem;
+    }
+
+}
 
 
 
+@media screen and (min-width:768px){
+
+    .banner-jobs2{
+        height: 30vh;
+    }
+
+    .profile-jobs2_men768px_, .profile-studies1_men768px_{
+        display: none;
+    }
+
+
+    .profile-jobs2_may768px_, .profile-studies1_may768px_{
+        display: grid;
+        grid-template-columns: 40% 60%;
+        grid-template-rows: 40% 60%;
+        grid-template-areas: 
+        "profile-jobs2__img profile-jobs2__description "
+        ". profile-jobs2__description";
+    }
+
+    .profile-jobs2__img,  .profile-studies1__img{
+        grid-area: profile-jobs2__img;
+        margin-top: -5rem;
+        display: flex;
+        justify-content: center;
+    }
+
+    .profile-jobs2__img img,  .profile-studies1__img img{
+        width: 55%;
+    }
+    
+    .profile-jobs2__description,  .profile-studies1__description{
+        grid-area: profile-jobs2__description;
+        margin-top: -1rem;
+        text-align: justify;
+        margin-left: -2rem;
+    }
+}
 
 
 /* ----------------------------------STUDIES--------------------------------- */
@@ -337,6 +424,10 @@ figure img{
     text-align: center;
 }
 
+.studies__4{
+    display: none;
+}
+
 .studies img{
     transition: 300ms ease;
     margin-right: 5px;
@@ -365,16 +456,27 @@ figure img{
     margin-top: 8rem;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     text-align: center;
     align-items: center;
     row-gap: 3rem;
 }
 
-.tecnologies__icons{
+.tecnologies__icons-studies1{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
+}
+
+.tecnologies__icons1{
+    display: flex;
+    flex-direction: row;
+}
+
+.tecnologies__icons2{
+    display: flex;
+    flex-direction: row;
 }
 
 .tecnologies__icon img{
@@ -388,6 +490,19 @@ figure img{
 }
 
 
+@media screen and (min-width:576px){
+    .banner-studies1{
+        height: 25vh;
+    }
+}
+
+@media screen and (min-width:768px){
+    .banner-studies1{
+        height: 30vh;
+    }
+}
+
+
 
 /* ----------------------------------PROYECTS--------------------------------- */
 
@@ -396,7 +511,8 @@ figure img{
     place-items: center;
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 10rem repeat(3, 20rem);
+    grid-template-rows: 6rem repeat(3,15rem);
+    gap: 2rem;
     grid-template-areas:
         "proyects__title"
         "proyects__item-1"
@@ -421,6 +537,16 @@ figure img{
     grid-area: proyects__item-3;
 }
 
+.proyects__item-4{
+    display: none;
+}
+.proyects__item-5{
+    display: none;
+}
+.proyects__item-6{
+    display: none;
+}
+
 .figure-container {
     position: relative;
     
@@ -442,15 +568,6 @@ figure img{
 }
 /* ----------------------------------PROYECTS-3--------------------------------- */
 
-
-.inicio-proyecto3{
-    padding: 3rem;
-}
-
-.inicio-proyecto3__description{
-    margin-top: 2rem;
-}
-
 .banner-proyecto3{
     background-image: url(../assets/img/banner-proyect3.png);
     background-repeat: no-repeat;
@@ -460,6 +577,14 @@ figure img{
     height: 20vh;
 }
 
+.inicio-proyecto3{
+    padding: 3rem;
+}
+
+.inicio-proyecto3__description{
+    margin-top: 2rem;
+}
+
 .galery-proyect3{
     margin: 2rem;
 }
@@ -467,9 +592,38 @@ figure img{
 .galery-proyect3 img{
     width: 100%;
     margin-top: 0%;
-
 }
 
+.tecnologies__icons{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+@media screen and (min-width:576px){
+    .banner-proyecto3{
+        height: 25vh;
+    }
+
+    .galery-proyect3{
+        padding:  0rem 3rem;
+    }
+}
+
+@media screen and (min-width:768px){
+    .banner-proyecto3{
+        height: 30vh;
+    }
+
+    .inicio-proyecto3{
+        padding: 5rem;
+    }
+
+    .galery-proyect3{
+        padding:  0rem 10rem;
+    }
+}
 
 /* ----------------------------------BLOG--------------------------------- */
 
@@ -478,7 +632,8 @@ figure img{
     place-items: center;
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 25rem 15rem 20rem 15rem;
+    grid-template-rows: repeat(4,17rem);
+    gap: 2rem;
     grid-template-areas:
         "blog__title"
         "blog__item-1"
@@ -517,6 +672,10 @@ figure img{
     padding: 2rem;
 }
 
+.blog__item-4{
+    display: none;
+}
+
 .blog__item-2 h3, .blog__item-3 h3{
     margin-left: 10px;
 }
@@ -546,6 +705,18 @@ figure img{
     color: var(--white);
     font-size:x-small
 }
+@media screen and (min-width:576px){
+    .blog{
+        padding: 10rem;
+}
+
+}
+
+@media screen and (min-width:768px){
+    .blog{
+        padding: 12rem;
+    }
+}
 
 /* ----------------------------------BLOG1--------------------------------- */
 
@@ -557,12 +728,20 @@ figure img{
     background-size: cover;
 }
 
-.blog1-section1{
-    padding: 15px;
+.blog1-titles{
+    padding: 1.2rem;
 }
 
-.blog1-titles{
-    padding: 5px;
+.blog1-section1{
+    padding: 2rem;
+}
+
+.blog1-section1 img{
+    width: 100%;
+}
+
+.keep-reading_men768px_{
+    margin-top: 5rem;
 }
 
 .contenedor-keep-reading{
@@ -572,16 +751,52 @@ figure img{
     justify-content: center;
 }
 
-.contenedor-keep-reading img{
-    margin: 5px;
+.container-blog1-small{
+    margin: 1.05rem;
+}
+
+.keep-reading_may768px_{
+    display: none;
 }
 
 
+@media screen and (min-width:576px){
+    .banner-blog1{
+        height: 25vh;
+    }
 
+    .blog1-titles{
+        padding: 2rem 5rem;
+    }
 
+    .blog1-section1{
+        padding: 5rem;
+    }
+}
 
+@media screen and (min-width:768px){
+    .banner-blog1{
+        height: 30vh;
+    }
 
+    .blog1-section1{
+        padding: 10rem;
+    }
 
+    .keep-reading_men768px_{
+        display: none;
+    }
+
+    .keep-reading_may768px_{
+        margin-top: 5rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .keep-reading_may768px_ figure{
+        margin: 2rem;
+    }
+}
 
 
 /* ----------------------------------SOCIAL--------------------------------- */
@@ -665,7 +880,7 @@ figure img{
 .contact__input{
     width: 90%;
     border: var(--black) solid 1px;
-    font-size:x-small ;
+    font-size:small ;
     padding: 10px;
 }
 
@@ -673,7 +888,7 @@ figure img{
     width: 90%;
     height: 10rem;
     border: var(--black) solid 1px;
-    font-size:x-small ;
+    font-size:small ;
     padding: 10px;
 }
 
@@ -699,38 +914,6 @@ figure img{
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*-------------------------------------------------FOOTER----------------------------------------------*/
 
 .footer {
@@ -749,6 +932,10 @@ figure img{
     color: var(--white);
     margin: auto;
     text-align: left
+}
+
+.footer__text h3, .footer__text h2 {
+    color: var(--white);
 }
 
 .footer__up {
