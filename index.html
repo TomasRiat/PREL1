@@ -23,9 +23,9 @@
         <nav class="navbar navbar-expand-lg bg-black">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#"></a>
-                <button class="navbar-toggler " tabindex="2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span"> <img  class="img-nav" src="./assets/img/desplegable.svg" alt=""></span>
+                    <span><img  class="img-nav" src="./assets/img/desplegable.svg" alt=""></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
@@ -44,12 +44,23 @@
                         <li class="nav-item">
                             <a class="nav-link cl-white" href="#social">Social Media</a>
                         </li>
+                        <li class="nav-item">
+                            <form class="d-flex" role="search">
+                                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                                
+                            </form>
+                        </li>
+                        <li class="nav-item">
+                            <label id="switch">
+                                <input type="checkbox">
+                                <span class="slider round"></span>
+                            </label>
+                        </li>
+                            <div 
+                                class="contenedor-button-contact__nav">
+                                <a class="button-contact__nav" href="./pages/contacto.html">Contact me!</a>
+                            </div>
                     </ul>
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
-                    </form>
-                
                 </div>
             </div>
         </nav>
@@ -62,19 +73,20 @@
 
 
         <section class="profile" id="profile">
-            <img src="./assets/img/perfil.png" alt="">
-
-            <h1>Emma Johnson</h1>
-            <h3>Product Manager</h3>
-            <p><i class="bi bi-geo-alt"></i>Los Angeles, CA</p>
-            <article class="description">
+                <img class="profile__img" src="./assets/img/perfil.png" alt="">
+            <article class="profile__title">
+                <h1>Emma Johnson</h1>
+                <h3>Product Manager</h3>
+                <p><i class="bi bi-geo-alt"></i>Los Angeles, CA</p>
+            </article>
+            <article class="profile__description">
                 <p>Leading art and technology projects for  <strong>over 4 years now</strong>; very interested in heading new creative
                     teams.</p>
             </article>
         </section>
 
         <div class="contenedor-button-contact">
-            <a class="button-contact" href="../pages/contacto.html">Contact me!</a>
+            <a class="button-contact" href="./pages/contacto.html">Contact me!</a>
         </div>
 
         <section class="job" id="job">
@@ -104,11 +116,11 @@
                     <p>My current job consists of directing a team of developers along with a designing team.</p>
                 </div>
             </article>
-            
+
             <article class="job__item--4">
-                <a href="./pages/jobs2.html"><img class="job__img--4" src="./assets/img/google.png" alt=""></a>
+                <a href="./pages/jobs2.html"><img class="job__img--4" src="./assets/img/airbnb.png" alt=""></a>
                 <div class="job__content--4">
-                    <h3>Google · <span class="span-titulos">Frontend Developer</span> </h3>
+                    <h3>Airbnb · <span class="span-titulos">Frontend Developer</span> </h3>
                     <p>My current job consists of directing a team of developers along with a designing team.</p>
                 </div>
             </article>
@@ -125,22 +137,22 @@
             <article class="studies__1">
                 <a href="./pages/studies1.html"><img src="./assets/img/coder.png" alt=""></a>
                 <h3>Coderhouse</h3>
-                <p>Lorem ipsum dolor </p>
+                <p>Frontend Development</p>
             </article>
             <article class="studies__2">
                 <a href="./pages/studies1.html"><img src="./assets/img/georgetown.png" alt=""></a>
                 <h3>Georgetown</h3>
-                <p> Lorem ipsum dolor </p>
+                <p>Product Management</p>
             </article>
             <article class="studies__3">
                 <a href="./pages/studies1.html"><img src="./assets/img/coursera.png" alt=""></a>
                 <h3>Coursera</h3>
-                <p>Lorem ipsum dolor .</p>
+                <p>Product Management</p>
             </article>
             <article class="studies__4">
-                <a href="./pages/studies1.html"><img src="./assets/img/coursera.png" alt=""></a>
-                <h3>Coursera</h3>
-                <p>Lorem ipsum dolor .</p>
+                <a href="./pages/studies1.html"><img src="./assets/img/codecademy.png" alt=""></a>
+                <h3>Codecademy</h3>
+                <p>Frontend Development</p>
             </article>
         </section>
 
@@ -172,7 +184,7 @@
             <article class="proyects__item-3">
                 <figure class="figure figure-container">
                     <a href="./pages/proyecto3.html"><img src="./assets/img/proyect3.png"></a>
-                    <figcaption class="figure-caption"> <h3>TDD method - Organize your team</h3>
+                    <figcaption class="figure-caption"> <h3>TDD method </h3>
                         <p>Emma Johnson & others</p>
                     </figcaption>
                 </figure>
@@ -180,7 +192,7 @@
 
             <article class="proyects__item-4">
                 <figure class="figure figure-container">
-                    <a href="./pages/proyecto3.html"><img src="./assets/img/proyect1.png"></a>
+                    <a href="./pages/proyecto3.html"><img src="./assets/img/proyect3.png"></a>
                     <figcaption class="figure-caption"> <h3>Managing Tools</h3>
                         <p>Emma Johnson</p>
                     </figcaption>
@@ -189,7 +201,7 @@
 
             <article class="proyects__item-5">
                 <figure class="figure figure-container">
-                    <a href="./pages/proyecto3.html"><img src="./assets/img/proyect2.png"></a>
+                    <a href="./pages/proyecto3.html"><img src="./assets/img/proyect1.png"></a>
                     <figcaption class="figure-caption"> <h3>The essence of management</h3>
                         <p>Emma Johnson & others</p>
                     </figcaption>
@@ -198,8 +210,8 @@
 
             <article class="proyects__item-6">
                 <figure class="figure figure-container">
-                    <a href="./pages/proyecto3.html"><img src="./assets/img/proyect3.png"></a>
-                    <figcaption class="figure-caption"> <h3>TDD method - Organize your team</h3>
+                    <a href="./pages/proyecto3.html"><img src="./assets/img/proyect2.png"></a>
+                    <figcaption class="figure-caption"> <h3>Organize your team</h3>
                         <p>Emma Johnson & others</p>
                     </figcaption>
                 </figure>
@@ -209,6 +221,8 @@
         <div class="contenedor-view">
             <a class="button-view" href="#">VIEW MORE</a>
         </div>
+
+        <!--SECCION BLOG MENOR 992PX-->
 
         <section class="blog" id="blog">
 
@@ -246,16 +260,35 @@
                     </figure>
                 <h3>The essence of management and the reality of facing it</h3>
             </div>
+        </section>
 
-            <div class="blog__item-4">
-                <figure class="figure figure-container-blog-small">
-                    <a href="./pages/blog1.html"><img src="./assets/img/blog2.png" alt=""></a>
-                    <figcaption class="figure-caption-blog-small">
-                        <p>Aug.2021</p>
-                    </figcaption>
-                    </figure>
+        <!--SECCION BLOG MAYOR 992PX-->
+
+        <section class="blog_992px_" id="blog">
+
+            <h2 class="blog__title_992px_">Blog</h2>
+
+            <article class="blog__item-1_992px_">
+                <a href="./pages/blog1.html"><img src="./assets/img/blog1_992px_.png" alt=""></a>
+                <h3>The essence of management</h3>
+                <p>A study I recently developed about the strugges of being in charge of a big group of people.A study I
+                    recently developed about the strugges of being in charge of a big group of people.</p>
+            </article>
+
+            <article class="blog__item-2_992px_">
+                    <a href="./pages/blog1.html"><img src="./assets/img/blog3.png" alt=""></a>
                 <h3>The essence of management and the reality of facing it</h3>
-            </div>
+            </article>
+
+            <article class="blog__item-3_992px_">
+                    <a href="./pages/blog1.html"><img src="./assets/img/blog4.png" alt=""></a>
+                <h3>The essence of management and the reality of facing it</h3>
+            </article>
+
+            <article class="blog__item-4_992px_">
+                    <a href="./pages/blog1.html"><img src="./assets/img/blog5.png" alt=""></a>
+                <h3>The essence of management and the reality of facing it</h3>
+            </article>
         </section>
 
         <div class="contenedor-view">
@@ -278,7 +311,7 @@
         </section>
 
         <div class="contenedor-button-contact">
-            <a class="button-contact" href="../pages/contacto.html">Contact me!</a>
+            <a class="button-contact" href="./pages/contacto.html">Contact me!</a>
         </div>
 
         
@@ -295,6 +328,8 @@
             <a href="#profile"><i class="bi bi-arrow-up-square"></i></a>
         </div>
     </footer>
+
+    <!--<script src="./index.js"></script>-->   
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
