@@ -12,110 +12,121 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/style.css">
     <title>Product Manager</title>
 </head>
 
-<body>
+<body class="background-all">
 
     <header>
-        <nav class="navbar navbar-expand-lg bg-black">
-            <div class="container-fluid">
-                <a href="../index.html"><span class="bi bi-arrow-left"></span></a>
-                <a class="navbar-brand" href="#"></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span><img  class="img-nav" src="../assets/img/desplegable.svg" alt=""></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link cl-white" aria-current="page" href="../index.html#job">Job Experience</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link cl-white" href="../index.html#studies">Studies</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link cl-white" href="../index.html#proyects">Proyects</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link cl-white" href="../index.html#blog">Blog</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link cl-white" href="../index.html#social">Social Media</a>
-                        </li>
-                        <li class="nav-item">
-                            <form class="d-flex" role="search">
-                                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                                
-                            </form>
-                        </li>
-                        <li class="nav-item">
-                            <label id="switch">
-                                <input type="checkbox">
-                                <span class="slider round"></span>
-                            </label>
-                        </li>
-                            <div 
-                                class="contenedor-button-contact__nav">
-                                <a class="button-contact__nav" href="../pages/contacto.html">Contact me!</a>
-                            </div>
-                    </ul>
-                </div>
-            </div>
+
+        <nav class="nav container" id="nav">
+            <a href="../index.html"><i class="bi bi-arrow-left"></i></a>
+    
+            <ul class="nav__links">
+    
+                <li class="nav__item">
+                    <a href="../index.html#job" class="nav__link">Job Experience</a>
+                </li>
+                <li class="nav__item">
+                    <a href="../index.html#studies" class="nav__link">Studies</a>
+                </li>
+                <li class="nav__item">
+                    <a href="../index.html#proyects" class="nav__link">Proyects</a>
+                </li>
+                <li class="nav__item">
+                    <a href="../index.html#blog" class="nav__link">Blog</a>
+                </li>
+                <li class="nav__item">
+                    <a href="../index.html#social" class="nav__link">Social Media</a>
+                </li>
+                <li class="nav__item">
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    </form>
+                </li>
+                <li class="nav__item">
+                    <label id="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                </li>
+                <li class="nav__item">
+                    <div class="contenedor-button-contact__nav">
+                        <a class="button-contact__nav" href="./contacto.html">Contact me!</a>
+                    </div>
+                </li>
+    
+    
+            </ul>
+    
+            <a href="#nav" class="nav__hamburguer">
+                <img src="../assets/img/desplegable.svg" class="nav__icon" alt="">
+            </a>
+    
+            <a href="#" class="nav__close">
+                <i class=" nav__icon bi bi-x-lg"></i>
+            </a>
+    
         </nav>
+        
     </header>
     <main>
 
-        <div class="banner-proyecto3">
+        <div class="publicidad">
 
         </div>
 
-        <section class="inicio-proyecto3" id="inicio-proyecto3">
-                <h1>TDD Method / Organize your team</h1>
-                <h2 class="h2-subtitulo">Emma Johnson</h2>
-            </article>
-            <article class="inicio-proyecto3__description">
-                <p>This was one of my first personal projects back in 2019, just when I started a research based on the organizing methods available for managing a big team of people working on the same project.
-                    After about 2 months of research, I came to the conclusion that making things simple is the best way in this type of cases. I then developed an oganization method - the TDD Method.</p>
-            </article>
-        </section>
-
-        <section class="galery-proyect3">
-            <article>
-                <img src="../assets/img/proyecto3.png" alt="">
-                <img src="../assets/img/proyecto3-2.png" alt="">
-                <img src="../assets/img/proyecto3-3.png" alt="">
-                <img src="../assets/img/proyecto3-4.png" alt="">
-            </article>
-        </section>
-
-        <section class="tecnologies">
-
-            <h2>Technologies</h2>
-
-            <article class="tecnologies__icons">
-                <div class="tecnologies__icon">
-                    <img src="../assets/img/react.svg" alt="">
-                    <p>React.js</p>
-                </div>
-                <div class="tecnologies__icon">
-                    <img src="../assets/img/figma.svg" alt="">
-                    <p>Figma</p>
-                </div>
-                <div class="tecnologies__icon">
-                    <img src="../assets/img/node.svg" alt="">
-                    <p>Node</p>
-                </div>
-            </article>
-
-        </section>
-
-        <div class="contenedor-button-contact">
-            <a class="button-contact" href="../pages/contacto.html">Contact me!</a>
         </div>
+        <div class="background-proyect">
+            <section class="inicio-proyecto3" id="inicio-proyecto3">
+                    <h1>TDD Method / Organize your team</h1>
+                    <h2 class="h2-subtitulo">Emma Johnson</h2>
+                </article>
+                <article class="inicio-proyecto3__description">
+                    <p>This was one of my first personal projects back in 2019, just when I started a research based on the organizing methods available for managing a big team of people working on the same project.
+                        After about 2 months of research, I came to the conclusion that making things simple is the best way in this type of cases. I then developed an oganization method - the TDD Method.</p>
+                </article>
+            </section>
+
+            <section class="galery-proyect3">
+                <article>
+                    <img src="../assets/img/proyecto3.png" alt="">
+                    <img src="../assets/img/proyecto3-2.png" alt="">
+                    <img src="../assets/img/proyecto3-3.png" alt="">
+                    <img src="../assets/img/proyecto3-4.png" alt="">
+                </article>
+            </section>
+
+            <section class="tecnologies">
+
+                <h2>Technologies</h2>
+
+                <article class="tecnologies__icons">
+                    <div class="tecnologies__icon">
+                        <img src="../assets/img/react.svg" alt="">
+                        <p>React.js</p>
+                    </div>
+                    <div class="tecnologies__icon">
+                        <img src="../assets/img/figma.svg" alt="">
+                        <p>Figma</p>
+                    </div>
+                    <div class="tecnologies__icon">
+                        <img src="../assets/img/node.svg" alt="">
+                        <p>Node</p>
+                    </div>
+                </article>
+
+            </section>
+
+            <div class="contenedor-button-contact">
+                <a class="button-contact" href="../pages/contacto.html">Contact me!</a>
+            </div>
+
+        <div class="publicidad">
+
+        </div>
+
     </main>
     <footer class="footer">
         <div class="footer__text">
@@ -129,9 +140,7 @@
     </footer>
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
-        crossorigin="anonymous"></script>
+    <script src="../index.js"></script>
 </body>
 
 </html>

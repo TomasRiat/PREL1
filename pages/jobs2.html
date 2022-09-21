@@ -12,60 +12,64 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/style.css">
     <title>Product Manager</title>
 </head>
 
-<body>
+<body class="background-all">
 
     <header>
-        <nav class="navbar navbar-expand-lg bg-black">
-            <div class="container-fluid">
-                <a href="../index.html"><span class="bi bi-arrow-left"></span></a>
-                <a class="navbar-brand" href="#"></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span><img  class="img-nav" src="../assets/img/desplegable.svg" alt=""></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link cl-white" aria-current="page" href="../index.html#job">Job Experience</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link cl-white" href="../index.html#studies">Studies</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link cl-white" href="../index.html#proyects">Proyects</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link cl-white" href="../index.html#blog">Blog</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link cl-white" href="../index.html#social">Social Media</a>
-                        </li>
-                        <li class="nav-item">
-                            <form class="d-flex" role="search">
-                                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                                
-                            </form>
-                        </li>
-                        <li class="nav-item">
-                            <label id="switch">
-                                <input type="checkbox">
-                                <span class="slider round"></span>
-                            </label>
-                        </li>
-                            <div 
-                                class="contenedor-button-contact__nav">
-                                <a class="button-contact__nav" href="../pages/contacto.html">Contact me!</a>
-                            </div>
-                    </ul>
-                </div>
-            </div>
+
+        <nav class="nav container" id="nav">
+            <a href="../index.html"><i class="bi bi-arrow-left"></i></a>
+    
+            <ul class="nav__links">
+    
+                <li class="nav__item">
+                    <a href="../index.html#job" class="nav__link">Job Experience</a>
+                </li>
+                <li class="nav__item">
+                    <a href="../index.html#studies" class="nav__link">Studies</a>
+                </li>
+                <li class="nav__item">
+                    <a href="../index.html#proyects" class="nav__link">Proyects</a>
+                </li>
+                <li class="nav__item">
+                    <a href="../index.html#blog" class="nav__link">Blog</a>
+                </li>
+                <li class="nav__item">
+                    <a href="../index.html#social" class="nav__link">Social Media</a>
+                </li>
+                <li class="nav__item">
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    </form>
+                </li>
+                <li class="nav__item">
+                    <label id="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                </li>
+                <li class="nav__item">
+                    <div class="contenedor-button-contact__nav">
+                        <a class="button-contact__nav" href="./contacto.html">Contact me!</a>
+                    </div>
+                </li>
+    
+    
+            </ul>
+    
+            <a href="#nav" class="nav__hamburguer">
+                <img src="../assets/img/desplegable.svg" class="nav__icon" alt="">
+            </a>
+    
+            <a href="#" class="nav__close">
+                <i class=" nav__icon bi bi-x-lg"></i>
+            </a>
+    
         </nav>
+        
     </header>
     <main>
 
@@ -73,76 +77,75 @@
 
         </div>
 
-        <section class="profile-jobs2_men768px_" id="profile-jobs2">
-            <article class="profile-jobs2__img">
-                <img src="../assets/img/bluepoint-profile.png" alt="">
-            </article>
-            <article class="profile-jobs2__titulos">
-                <h1>bluePoint</h1>
-                <h2 class="h2-subtitulo">Product Manager</h2>
-                <h3 class="h3-fecha">2020 - today</h3>
-            </article>
-            <article class="profile-jobs2__description">
-                <p>My current job consists of directing a team of developers along with a designing team. Right now, we
-                    are working on a software development project, applying the Scrum and Agile technologies.</p>
-            </article>
-        </section>
-        <section class="profile-jobs2_may768px_" id="profile-jobs2">
-            <article class="profile-jobs2__img">
-                <img src="../assets/img/bluepoint-profile-768px.png" alt="">
-            </article>
-            <article class="profile-jobs2__description">
-                <h1>bluePoint · <span class="span-titulos">Product Manager</span> </h1>
-                <h3 class="h3-fecha">2020 - today</h3>
-                <p>My current job consists of directing a team of developers along with a designing team. Right now, we
-                    are working on a software development project, applying the Scrum and Agile technologies.</p>
-            </article>
-        </section>
+            <section class="profile-jobs2_men768px_" id="profile-jobs2">
+                <article class="profile-jobs2__img">
+                    <img src="../assets/img/bluepoint-profile.png" alt="">
+                </article>
+                <article class="profile-jobs2__titulos">
+                    <h1>bluePoint</h1>
+                    <h2 class="h2-subtitulo">Product Manager</h2>
+                    <h3 class="h3-fecha">2020 - today</h3>
+                </article>
+                <article class="profile-jobs2__description">
+                    <p>My current job consists of directing a team of developers along with a designing team. Right now, we
+                        are working on a software development project, applying the Scrum and Agile technologies.</p>
+                </article>
+            </section>
+            <section class="profile-jobs2_may768px_" id="profile-jobs2">
+                <article class="profile-jobs2__img">
+                    <img src="../assets/img/bluepoint-profile-768px.png" alt="">
+                </article>
+                <article class="profile-jobs2__description">
+                    <h1>bluePoint · <span class="span-titulos">Product Manager</span> </h1>
+                    <h3 class="h3-fecha">2020 - today</h3>
+                    <p>My current job consists of directing a team of developers along with a designing team. Right now, we
+                        are working on a software development project, applying the Scrum and Agile technologies.</p>
+                </article>
+            </section>
 
-        <section class="tecnologies">
+            <section class="tecnologies">
 
-            <h2>Technologies</h2>
+                <h2>Technologies</h2>
 
-            <article class="tecnologies__icons">
-                <div class="tecnologies__icon">
-                    <img src="../assets/img/sql.svg" alt="">
-                    <p>SQL</p>
-                </div>
-                <div class="tecnologies__icon">
-                    <img src="../assets/img/agile.svg" alt="">
-                    <p>Agile</p>
-                </div>
-                <div class="tecnologies__icon">
-                    <img src="../assets/img/scrum.svg" alt="">
-                    <p>Scrum</p>
-                </div>
-            </article>
+                <article class="tecnologies__icons">
+                    <div class="tecnologies__icon">
+                        <img src="../assets/img/sql.svg" alt="">
+                        <p>SQL</p>
+                    </div>
+                    <div class="tecnologies__icon">
+                        <img src="../assets/img/agile.svg" alt="">
+                        <p>Agile</p>
+                    </div>
+                    <div class="tecnologies__icon">
+                        <img src="../assets/img/scrum.svg" alt="">
+                        <p>Scrum</p>
+                    </div>
+                </article>
 
-        </section>
+            </section>
 
-        <section class="proyects-jobs2" id="proyects">
-            <h2 class="proyects-jobs2__title">Projects</h2>
+            <section class="proyects-jobs2" id="proyects">
+                <h2 class="proyects-jobs2__title">Projects</h2>
 
-            <article class="proyects-jobs2__item-1">
-                <figure class="figure figure-container">
-                    <a href=""><img src="../assets/img/proyecto-jobs2.png" alt=""></a>
-                    <figcaption class="figure-caption"> <h3>LIKEit App</h3><p>Emma Johnson & others at bluePoint</p>
-                    </figcaption>
-                </figure>
-            </article>
-            <article class="proyects-jobs2__item-2">
-                <figure class="figure figure-container">
-                    <a href=""><img src="../assets/img/proyecto2-jobs2.png" alt=""></a>
-                    <figcaption class="figure-caption"><h3>Binance App</h3><p>Emma Johnson & others at bluePoint</p>
-                    </figcaption>
-                </figure>
-            </article>
-        </section>
+                <article class="proyects-jobs2__item-1">
+                    <figure class="figure figure-container">
+                        <a href=""><img src="../assets/img/proyecto-jobs2.png" alt=""></a>
+                        <figcaption class="figure-caption"> <h3>LIKEit App</h3><p>Emma Johnson & others at bluePoint</p>
+                        </figcaption>
+                    </figure>
+                </article>
+                <article class="proyects-jobs2__item-2">
+                    <figure class="figure figure-container">
+                        <a href=""><img src="../assets/img/proyecto2-jobs2.png" alt=""></a>
+                        <figcaption class="figure-caption"><h3>Binance App</h3><p>Emma Johnson & others at bluePoint</p>
+                        </figcaption>
+                    </figure>
+                </article>
+            </section>
 
-        <div class="contenedor-button-contact">
-            <a class="button-contact" href="../pages/contacto.html">Contact me!</a>
-        </div>
-
+            <div class="contenedor-button-contact">
+                <a class="button-contact" href="../pages/contacto.html">Contact me!</a>
+            </div>
     </main>
     <footer class="footer">
         <div class="footer__text">
@@ -156,9 +159,7 @@
     </footer>
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
-        crossorigin="anonymous"></script>
+    <script src="../index.js"></script>
 </body>
 
 </html>
