@@ -14,6 +14,7 @@
 
     --color-fuente: #ffffff;
     --color-fondo: #1b1d23;
+
 }
 
 
@@ -77,11 +78,13 @@ input:checked + .slider:before {
 
 .slider.round {
     border-radius: 34px;
+    
 }
 
 .slider.round:before {
     border-radius: 50%;
 }
+
 
 
 
@@ -213,7 +216,8 @@ figure img{
 
     .background-all{
         background-image: url(../assets/img/bg1.png);
-        background-repeat: no-repeat;
+        background-repeat:no-repeat;
+        background-position: right;
         background-size: cover;
         min-height: 500px;
     }
@@ -235,15 +239,13 @@ figure img{
 /* ----------------------------------HEADER---------------------------------*/ 
 
 header{
-    background-color: var(--color-fondo);
+    background-color: var(--black);
     height: 44px;
 }
 
 .container{
     width: 95%;
-    max-width: 1200px;
     overflow: hidden;
-    
 }
 
 .nav{
@@ -282,7 +284,6 @@ header{
 .nav__icon{
     transition: transform 300ms ease-in-out;
     width: 25px;
-    color:var(--color-fuente) 
 }
 
 .nav__icon:hover {
@@ -290,11 +291,11 @@ header{
 }
 
 .bi-x-lg{
-    color: var(--color-fuente);
+    color: var(--white);
 }
 
 .nav__links{
-    background-color: var(--color-fondo);
+    background-color: var(--black);
     position: absolute;
     top: 0;
     bottom: 150px;
@@ -316,14 +317,14 @@ header{
 }
 
 .nav__link{
-    color: var(--color-fuente);
+    color: var(--white);
     text-decoration: none;
     font-size: 1.2rem;
-    letter-spacing: 2px;
+
 }
 
 .bi-arrow-left{
-    color: var(--color-fuente);
+    color: var(--white);
     font-size: x-large;
     align-items: center;
 }
@@ -331,13 +332,12 @@ header{
 .contenedor-button-contact__nav{
     display: flex;
     justify-content: center;
-
 }
 
 .button-contact__nav{
     padding: var(--button-zise);
-    color: var(--color-fuente);
-    border: var(--color-fuente) solid 1px;
+    color: var(--white);
+    border: var(--white) solid 1px;
     text-decoration: none;
     transition: 700ms ease;
 }
@@ -355,9 +355,18 @@ header{
 
 @media screen and (min-width:992px){
 
+    header{
+        height: 10rem;
+        background-color: var(--white);
+    }
+
     .nav{
         --state-hamburguer:scale(0);
         --state-menu: translate(0);
+
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
     }
     
     .nav:target{
@@ -368,8 +377,9 @@ header{
         padding: 0;
         background-color: unset;
         position: unset;
-        gap: 1.5em;
         grid-auto-flow: column;
+        align-items: center;
+        margin-top: 2rem;
     
         transform: unset;
 
@@ -378,31 +388,17 @@ header{
     }
 
     .nav__link{
-        font-size: 1rem;
-        letter-spacing: none;
+        color: var(--black);
     }
+
+    .button-contact__nav{
+        color: var(--black);
+        border: var(--black) solid 1px;
+    }
+
     .bi-arrow-left{
         display: none;
     }
-
-    .contenedor-button-contact__nav{
-        margin-top: 2rem;
-    }
-
-    .navbar{
-        height: 10rem;
-        justify-content: space-evenly;
-    }
-
-    .navbar-nav{
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .navbar-nav li{
-        margin-left: 25px;
-    }
-
 }
 /* ----------------------------------PORTADA--------------------------------- */
 
@@ -423,6 +419,15 @@ header{
 
 .profile__title{
     text-align: center;
+}
+
+.profile__title h1{
+    font-size: 3rem;
+}
+
+.p-profile{
+    font-size: small;
+    margin-bottom: 10px;
 }
 
 .profile p {
@@ -459,10 +464,11 @@ header{
         display: none;
     }
     .profile{
-        margin: 15rem;
+        margin: 20rem;
         display: grid;
-        place-items:none;
-        grid-template-columns: repeat(2,50%);
+
+        place-items:start;
+        grid-template-columns: 60% 40%;
         grid-template-rows: repeat(2,13rem);
         grid-template-areas: 
         "profile__title profile__img"
@@ -477,14 +483,27 @@ header{
     .profile__title{
         text-align: start;
         grid-area: profile__title;
+        margin-top: 4rem;
+        margin-left: 20px;
+
+    }
+
+    .profile__title h1{
+        font-size: 3rem;
+        margin-bottom: 5px;
     }
 
     .profile__description{
         grid-area: profile__description;
+        padding: 0px;
+        margin-right: 80px;
+        margin-left: 20px;
     }
 
     .profile__img{
         grid-area: profile__img;
+        width: 200px;
+        
     }
 
     .button-contact-profile{
@@ -495,13 +514,21 @@ header{
 
 @media screen and (min-width:1200px){
     .profile__img{
-        height: 295px;
-        width: 295px;
-
+        width: 240px;
     }
 
-    .profile__title h1, .profile__title h2{
-        font-size:4rem;
+    .profile__title h1, .profile__title h3{
+        text-align: left;
+        margin-left: 50px;
+    }
+
+    .profile__description{
+        padding: 0px;
+    }
+
+    .profile p {
+        margin-left: 50px;
+        
     }
 }
 
@@ -941,6 +968,19 @@ header{
 }
 .proyects__item-6{
     display: none;
+}
+
+.figure::after{
+    content:'';
+    position:absolute;
+    left:0; top:0;
+    width:100%; height:97.5%;
+    display:inline-block;
+    background: -moz-linear-gradient(to top, rgba(20, 20, 20, 0.692) 0%, rgba(10, 10, 10, 0) 100%);
+}
+
+.figure-caption, .figure-caption-blog, .figure-caption-blog-small{
+    z-index: 2;
 }
 
 .figure-container {
