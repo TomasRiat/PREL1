@@ -11,6 +11,9 @@
     --hover-view: #6A52F8;
     --subtitulos: #292929;
     --fechas: #848484;
+    --blog-line-color: rgba(219, 219, 219, 1);
+    --blog-text-color: rgba(85, 84, 84, 1);
+
 
     --color-fuente: #ffffff;
     --color-fondo: #1b1d23;
@@ -215,10 +218,10 @@ figure img{
     }
 
     .background-all{
-        background-image: url(../assets/img/bg1.png);
-        background-repeat:no-repeat;
-        background-position: right;
-        background-size: cover;
+        background-image: url(../assets/img/bg-nubes.png);
+        background-repeat:repeat;
+
+        background-size: contain;
         min-height: 500px;
     }
 }
@@ -232,6 +235,7 @@ figure img{
     text-decoration: none;
     color: var(--view-color);
     transition: 300ms ease;
+    font-weight: 700;
 }
 
 
@@ -298,15 +302,16 @@ header{
     background-color: var(--black);
     position: absolute;
     top: 0;
-    bottom: 150px;
+    bottom: 300px;
     left: auto;
     right: 0;
-    padding: 30px;
 
     display: grid;
-    align-content: center;
-    gap: 2em;
-    padding-left: 5%;
+    align-content: end;
+    gap: 20px;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 10%;
 
     transform: var(--state-menu);
 
@@ -348,21 +353,19 @@ header{
 }
 
 input.src{
-    padding: 5px 5px 5px 20px;
-    width: 90px;
+    padding: 5px 5px 5px 30px;
+    width: 200px;
     outline: none;
-    font-size: 18px;
+    font-size: 13px;
     border-radius: 15px;
     border: 3px solid var(--black);
     background: #FFFFFF url(../assets/img/search.svg) 
-    no-repeat 1px center ;
+    no-repeat 3px center ;
     transition: all .5s;
 }
 
-input.src:hover{
-    width: 150px;
-    background-color: #FFFFFF;
-    border-color: var(--view-color);
+.search-may992px{
+    display: none;
 }
 
 @media screen and (min-width:992px){
@@ -411,6 +414,14 @@ input.src:hover{
     .bi-arrow-left{
         display: none;
     }
+
+    .search-men992px{
+        display: none;
+    }
+
+    .search-may992px{
+        display: block;
+    }
 }
 /* ----------------------------------PORTADA--------------------------------- */
 
@@ -444,10 +455,16 @@ input.src:hover{
 
 .profile p {
     text-align: center;
+    margin-top: 3px;
 }
 
 .profile p i {
     color: #9888F8;
+    padding: 2.5px;
+}
+
+.profile__description{
+    padding: 12px;
 }
 
 @media screen and (min-width: 576px) {
@@ -556,7 +573,7 @@ input.src:hover{
     margin-top: 10rem;
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 10rem repeat(3, 15rem);
+    grid-template-rows: 8rem repeat(3, 15rem);
     grid-template-areas:
         "job-title"
         "job__item--1"
@@ -572,26 +589,23 @@ input.src:hover{
 .job__item--1 {
     grid-area: job__item--1;
     display:inline-flex;
-    
 }
 
 .job__item--2 {
     grid-area: job__item--2;
     display:inline-flex;
-    
 }
 
 .job__item--3 {
     grid-area: job__item--3;
     display:inline-flex;
-    
 }
 
 .job__item--4 {
     display: none;
 }
 
-.job p {
+.job p{
     font-size: small;
 }
 
@@ -651,7 +665,6 @@ input.src:hover{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    object-fit: contain;
     height: 20vh;
 }
 
@@ -662,7 +675,7 @@ input.src:hover{
 .profile-jobs2_men768px_,  .profile-studies1_men768px_{
     display: grid;
     justify-content: center;
-    grid-template-columns: 30% 60%;
+    grid-template-columns: 40% 60%;
     grid-template-rows: 40% 60%;
     grid-template-areas: 
     "profile-jobs2__img profile-jobs2__titulos"
@@ -677,20 +690,26 @@ input.src:hover{
     
 }
 
-.profile-jobs2__titulos,  .profile-studies1__titulos{
+.profile-jobs2__titulos, .profile-studies1__titulos{
     grid-area: profile-jobs2__titulos;
     justify-content: start;
+    margin-top: 3px;
+}
 
+.profile-jobs2__titulos h1, .profile-studies1__titulos h1{
+    font-size: x-large;
+    margin-bottom: 5px;
 }
 
 .profile-jobs2__description,  .profile-studies1__description{
     grid-area: profile-jobs2__description;
-    margin: 1.5rem;
+    margin: 30px auto;
+    max-width: 90%;
+    font-size: small;
 }
 
 
 .tecnologies-jobs2{
-    margin-top: 8rem;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -710,7 +729,7 @@ input.src:hover{
 
 
 .proyects-jobs2,  .proyects-studies1{
-    margin-top: 8rem;
+    margin-top: 4rem;
     place-items: center;
     display: grid;
     grid-template-columns: 100%;
@@ -740,6 +759,10 @@ input.src:hover{
         height: 25vh;
     }
 
+    .profile-jobs2_men768px_,  .profile-studies1_men768px_{
+        grid-template-columns: 30% 60%;
+    }
+
     .profile-jobs2__img img,  .profile-studies1__img img{
         width: 13rem;
     }
@@ -750,6 +773,7 @@ input.src:hover{
 
     .profile-jobs2__description,  .profile-studies1__description{
         padding: 2rem;
+        font-size: medium;
     }
 }
 
@@ -767,7 +791,7 @@ input.src:hover{
     .profile-jobs2_may768px_, .profile-studies1_may768px_{
         display: grid;
         justify-content: start;
-        grid-template-columns: 20% 60%;
+        grid-template-columns: 25% 60%;
         grid-template-rows: 40% 60%;
         grid-template-areas: 
         "profile-jobs2__img profile-jobs2__description "
@@ -787,9 +811,9 @@ input.src:hover{
     
     .profile-jobs2__description,  .profile-studies1__description{
         grid-area: profile-jobs2__description;
-        margin-top: -1rem;
-        text-align: justify;
-        
+        margin-top: 1rem;
+        text-align: start;
+        padding: 0;
     }
 }
 
@@ -810,12 +834,12 @@ input.src:hover{
 
 
 .studies {
-    margin-top: 8rem;
-    padding: 15px;
+
     place-items: center;
+    gap: 2px;
     display: grid;
     grid-template-columns: repeat(3,33.33%);
-    grid-template-rows: 10rem 22rem;
+    grid-template-rows: 8rem 18rem;
     grid-template-areas:
         "studies__title studies__title studies__title"
         "studies-1 studies-2 studies-3"
@@ -832,14 +856,26 @@ input.src:hover{
     text-align: center;
 }
 
+.studies__1 p{
+    font-size: small;
+}
+
 .studies__2 {
     grid-area: studies-2;
     text-align: center;
 }
 
+.studies__2 p{
+    font-size: small;
+}
+
 .studies__3 {
     grid-area: studies-3;
     text-align: center;
+}
+
+.studies__3 p{
+    font-size: small;
 }
 
 .studies__4{
@@ -907,7 +943,7 @@ input.src:hover{
 }
 
 .tecnologies{
-    margin-top: 8rem;
+    margin-top: 4rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -976,11 +1012,10 @@ input.src:hover{
 /* ----------------------------------PROYECTS--------------------------------- */
 
 .proyects {
-    margin-top: 8rem;
     place-items: center;
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 6rem repeat(3,15rem);
+    grid-template-rows: 8rem repeat(3,15rem);
     gap: 15px;
     grid-template-areas:
         "proyects__title"
@@ -1039,9 +1074,10 @@ input.src:hover{
 
 .figure-container .figure-caption {
     position: absolute;
-    top: 60%;
+    top: 70%;
     left: 5%;
     color: var(--white);
+    font-size: small;
 }
 
 .figure-container .rounded{
@@ -1050,6 +1086,10 @@ input.src:hover{
 
 .figure-caption h3{
     color: var(--white);
+}
+
+.figure-caption p{
+    font-weight: 400;
 }
 
 @media screen and (min-width:992px){
@@ -1121,13 +1161,17 @@ input.src:hover{
     margin-top: 2rem;
 }
 
+.inicio-proyecto3__description p{
+    margin-bottom: 10px;
+}
+
 .galery-proyect3{
-    margin: 2rem;
+    margin: 0 2rem;
 }
 
 .galery-proyect3 img{
     width: 100%;
-    margin-top: 0%;
+
 }
 
 .tecnologies__icons{
@@ -1200,12 +1244,11 @@ input.src:hover{
 /* ----------------------------------BLOG--------------------------------- */
 
 .blog {
-    margin-top: 8rem;
     place-items: center;
     display: grid;
     justify-content: center;
     grid-template-columns: 90%;
-    grid-template-rows: 10rem 35rem 15rem 15rem;
+    grid-template-rows: 8rem 30rem 15rem 15rem;
 
     grid-template-areas:
         "blog__title"
@@ -1225,7 +1268,7 @@ input.src:hover{
 
 .blog__item-1 p{
     font-size: small;
-    margin-top: 5px;
+    text-align: start;
 }
 
 .blog__item-1 img{
@@ -1239,7 +1282,7 @@ input.src:hover{
     grid-area: blog__item-2;
     text-align: start;
     padding: 10px;
-    border-top: var(--color-fuente)solid 1px;
+    border-top: var(--blog-line-color) solid 1px;
 }
 
 .blog__item-3 {
@@ -1247,8 +1290,7 @@ input.src:hover{
     flex-direction: row;
     grid-area: blog__item-3;
     padding: 10px;
-    border-top: var(--color-fuente)solid 1px;
-
+    border-top: var(--blog-line-color) solid 1px;
 }
 
 .blog_992px_{
@@ -1269,7 +1311,11 @@ input.src:hover{
     top: 80%;
     left: 78%;
     color: var(--white);
-    font-size: small;
+    
+}
+
+.figure-caption-blog p{
+    font-size: x-small;
 }
 
 .figure-container-blog-small {
@@ -1282,18 +1328,34 @@ input.src:hover{
     top: 80%;
     left: 68%;
     color: var(--white);
-    font-size:x-small
+    
 }
+
+.figure-caption-blog-small{
+    font-size:x-small;
+}   
+
+@media screen and (min-width:500px){
+    .blog{
+        grid-template-columns: 60%;
+    }
+}
+
 @media screen and (min-width:576px){
     .blog{
         grid-template-columns: 70%;
+    }
 }
 
+@media screen and (min-width:650px){
+    .blog{
+        grid-template-columns: 50%;
+    }
 }
 
 @media screen and (min-width:768px){
     .blog{
-        padding: 12rem;
+        grid-template-columns: 40%;
     }
 }
 
@@ -1392,6 +1454,10 @@ input.src:hover{
 
 .blog1-titles_men992px_{
     padding: 1.2rem;
+}
+
+.blog1-titles_may992px_{
+    display: none;
 }
 
 .blog1-section1{
@@ -1755,15 +1821,24 @@ input.src:hover{
         "footer__text footer__up";
 }
 
+.footer__nav-container{
+    display: none;
+}
+
 .footer__text {
     grid-area: footer__text;
     color: var(--white);
     margin: auto;
-    text-align: left
+    text-align: left;
+    font-size: x-small;
 }
 
 .footer__text h3, .footer__text h2 {
     color: var(--white);
+}
+
+.footer__text h3{
+    margin-bottom: 10px;
 }
 
 .footer__nav{
@@ -1785,6 +1860,12 @@ input.src:hover{
 
 .footer__up a:hover{
     color: var(--view-color);
+}
+
+@media screen and (min-width:576px){
+    .footer__text{
+        font-size: small;
+    }
 }
 
 @media screen and (min-width:992px){
