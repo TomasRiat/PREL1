@@ -347,8 +347,24 @@ header{
     border: var(--view-color) solid 1px;
 }
 
-.form-control{
-    width: 10rem;
+
+input.src{
+    padding: 5px 5px 5px 20px;
+    width: 90px;
+    outline: none;
+    font-size: 18px;
+    border-radius: 15px;
+    border: 3px solid var(--black);
+    background: #FFFFFF url(../assets/img/search.svg) 
+    no-repeat 1px center ;
+    transition: all .5s;
+}
+
+input.src:hover{
+    width: 150px;
+    background-color: #FFFFFF;
+    border-color: var(--view-color);
+
 }
 
 
@@ -357,7 +373,7 @@ header{
 
     header{
         height: 10rem;
-        background-color: var(--white);
+        background-color: rgb(255, 255, 255);
     }
 
     .nav{
@@ -466,9 +482,9 @@ header{
     .profile{
         margin: 20rem;
         display: grid;
-
+        justify-content: center;
         place-items:start;
-        grid-template-columns: 60% 40%;
+        grid-template-columns: 40% 40%;
         grid-template-rows: repeat(2,13rem);
         grid-template-areas: 
         "profile__title profile__img"
@@ -595,7 +611,8 @@ header{
 @media screen and (min-width: 992px){
     .job{
         display: grid;
-        grid-template-columns: repeat(2,50%);
+        justify-content: center;
+        grid-template-columns: repeat(2,40%);
         grid-template-rows: 10rem repeat(2,15rem);
         grid-template-areas: 
         "job-title job-title"
@@ -619,9 +636,13 @@ header{
         grid-area: job__item--4;
         display:inline-flex;
     }
-
 }
 
+@media screen and (min-width: 1200px){
+    .job{
+        grid-template-columns: repeat(2,30%);
+    }
+}
 
 /* ----------------------------------JOB-2 Y STUDIES-1--------------------------------- */
 
@@ -640,7 +661,8 @@ header{
 
 .profile-jobs2_men768px_,  .profile-studies1_men768px_{
     display: grid;
-    grid-template-columns: 40% 60%;
+    justify-content: center;
+    grid-template-columns: 30% 60%;
     grid-template-rows: 40% 60%;
     grid-template-areas: 
     "profile-jobs2__img profile-jobs2__titulos"
@@ -649,9 +671,10 @@ header{
 
 .profile-jobs2__img,  .profile-studies1__img{
     grid-area: profile-jobs2__img;
-    margin-top: -2rem;
+    margin-top: -3rem;
     display: flex;
     justify-content: center;
+    
 }
 
 .profile-jobs2__titulos,  .profile-studies1__titulos{
@@ -743,7 +766,8 @@ header{
 
     .profile-jobs2_may768px_, .profile-studies1_may768px_{
         display: grid;
-        grid-template-columns: 40% 60%;
+        justify-content: start;
+        grid-template-columns: 20% 60%;
         grid-template-rows: 40% 60%;
         grid-template-areas: 
         "profile-jobs2__img profile-jobs2__description "
@@ -754,18 +778,30 @@ header{
         grid-area: profile-jobs2__img;
         margin-top: -5rem;
         display: flex;
-        justify-content: center;
+        justify-content: end;
     }
 
     .profile-jobs2__img img,  .profile-studies1__img img{
-        width: 55%;
+        width: 160px;
     }
     
     .profile-jobs2__description,  .profile-studies1__description{
         grid-area: profile-jobs2__description;
         margin-top: -1rem;
         text-align: justify;
-        margin-left: -2rem;
+        
+    }
+}
+
+@media screen and (min-width:768px){
+    .banner-jobs2{
+        height: 40vh;
+    }
+}
+
+@media screen and (min-width: 1200px){
+    .banner-jobs2{
+        height: 50vh;
     }
 }
 
@@ -820,11 +856,10 @@ header{
 
 @media screen and (min-width:992px){
     .studies {
-        margin-top: 8rem;
-        padding: 15px;
         place-items: center;
         display: grid;
-        grid-template-columns: repeat(4,25%);
+        justify-content: center;
+        grid-template-columns: repeat(4,15%);
         grid-template-rows: 10rem 22rem;
         grid-template-areas:
             "studies__title studies__title studies__title studies__title"
@@ -921,6 +956,21 @@ header{
     }
 }
 
+@media screen and (min-width:992px){
+    .banner-studies1{
+        height: 40vh;
+        background-image: url(../assets/img/banner-studies998px.png);
+        background-position: center;
+        background-size: cover;
+    }
+}
+
+@media screen and (min-width: 1200px){
+    .banner-studies1{
+        height: 50vh;
+    }
+}
+
 
 
 /* ----------------------------------PROYECTS--------------------------------- */
@@ -1005,9 +1055,9 @@ header{
 @media screen and (min-width:992px){
     .proyects {
         display: grid;
+        justify-content: center;
 
-        margin: 7rem;
-        grid-template-columns: repeat(3,33.33%);
+        grid-template-columns: repeat(3,25%);
         grid-template-rows: 6rem repeat(2,15rem);
         grid-template-areas:
             "proyects__title proyects__title proyects__title"
@@ -1044,10 +1094,13 @@ header{
         grid-area: proyects__item-6;
         display: inline;
     }
-
-
 }
 
+@media screen and (min-width:1200px){
+    .proyects {
+        grid-template-columns: repeat(3,22%);
+    }
+}
 
 /* ----------------------------------PROYECTS-3--------------------------------- */
 
@@ -1118,15 +1171,36 @@ header{
     }
 }
 
+@media screen and (min-width:1200px){
+    .banner-proyecto3{
+        height: 50vh;
+    }
+
+    .galery-proyect3{
+        padding:  0rem 30rem;
+    }
+}
+
+@media screen and (min-width:1400px){
+    .banner-proyecto3{
+        height: 60vh;
+    }
+
+    .galery-proyect3{
+        padding:  0rem 40rem;
+    }
+}
+
 /* ----------------------------------BLOG--------------------------------- */
 
 .blog {
     margin-top: 8rem;
     place-items: center;
     display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: repeat(4,17rem);
-    gap: 2rem;
+    justify-content: center;
+    grid-template-columns: 90%;
+    grid-template-rows: 10rem 35rem 15rem 15rem;
+
     grid-template-areas:
         "blog__title"
         "blog__item-1"
@@ -1140,10 +1214,17 @@ header{
 }
 
 .blog__item-1 {
-    padding: 2rem;
     grid-area: blog__item-1;
-    margin-bottom: 15px;
+}
+
+.blog__item-1 p{
     font-size: small;
+    margin-top: 5px;
+}
+
+.blog__item-1 img{
+    width: 100%;
+    max-width: 500px;
 }
 
 .blog__item-2 {
@@ -1151,18 +1232,17 @@ header{
     flex-direction: row;
     grid-area: blog__item-2;
     text-align: start;
-    border-top: 2px solid #DBDBDB;
-    padding: 2rem;
-    margin-bottom: -80px;
+    padding: 10px;
+    border-top: var(--color-fuente)solid 1px;
 }
 
 .blog__item-3 {
     display: flex;
     flex-direction: row;
     grid-area: blog__item-3;
-    margin-top: 2rem;
-    border-top: 2px solid #DBDBDB;
-    padding: 2rem;
+    padding: 10px;
+    border-top: var(--color-fuente)solid 1px;
+
 }
 
 .blog_992px_{
@@ -1200,7 +1280,7 @@ header{
 }
 @media screen and (min-width:576px){
     .blog{
-        padding: 10rem;
+        grid-template-columns: 70%;
 }
 
 }
@@ -1218,11 +1298,10 @@ header{
 
     .blog_992px_{
         display: grid;
-        padding: 60px;
         place-items: center;
-        grid-template-columns: 60% 40%;
+        justify-content: center;
+        grid-template-columns: 50% 30%;
         grid-template-rows: 10rem repeat(3,33.33%);
-        margin-bottom: 8rem;
         grid-template-areas:
         "blog__title blog__title"
         "blog__item-1 blog__item-2"
@@ -1241,39 +1320,45 @@ header{
     }
 
     .blog__item-1_992px_ img {
-        width: 550px;
+        width: 100%;
     }
     
     .blog__item-2_992px_ {
         grid-area: blog__item-2;
-        margin-left: 30px;
+        padding: 15px;
     }
 
     .blog__item-2_992px_ img {
-        width:200px;
+        width:130px;
     }
     
     .blog__item-3_992px_ {
         grid-area: blog__item-3;
         border-top: 2px solid #DBDBDB;
-        margin-left: 30px;
+        padding: 15px;
     }
 
     .blog__item-3_992px_ img {
-        width: 200px;
+        width: 130px;
     }
 
     .blog__item-4_992px_ {
         grid-area: blog__item-4;
         border-top: 2px solid #DBDBDB;
-        margin-left: 30px;
+        padding: 15px;
     }
 
     .blog__item-4_992px_ img{
-        width: 200px;
+        width: 130px;
     }
 }
 
+@media screen and (min-width:1200px){
+    .blog_992px_{
+        grid-template-columns: 50% 25%;
+    }
+
+}
 /* ----------------------------------BLOG1--------------------------------- */
 
 
@@ -1356,7 +1441,7 @@ header{
 
 @media screen and (min-width:992px){
     .banner-blog1{
-        height: 35vh;
+        height: 40vh;
     }
 
     .blog1-titles_men992px_{
@@ -1373,6 +1458,26 @@ header{
 
     .blog1-titles_may992px_{
         padding: 5rem 8rem;
+    }
+}
+
+@media screen and (min-width:1200px){
+    .banner-blog1{
+        height: 50vh;
+    }
+
+    .blog1-section1, .blog1-titles_may992px_{
+        padding: 5rem 30rem;
+    }
+}
+
+@media screen and (min-width:1400px){
+    .banner-blog1{
+        height: 60vh;
+    }
+
+    .blog1-section1, .blog1-titles_may992px_{
+        padding: 5rem 40rem;
     }
 }
 
@@ -1424,7 +1529,8 @@ header{
 .contact{
     display: grid;
     margin-bottom: 5rem;
-    grid-template-columns: 30% 70%;
+    justify-content: center;
+    grid-template-columns: 30% 60%;
     grid-template-rows: 100%;
     grid-template-areas: 
     "contact__img contact__title"
@@ -1463,7 +1569,6 @@ header{
 
 .contact__input{
     width: 90%;
-    border: var(--black) solid 1px;
     font-size:small ;
     padding: 10px;
 }
@@ -1531,16 +1636,81 @@ header{
 
 @media screen and (min-width:992px){
     .banner-contact{
-        height: 35vh;
+        height: 40vh;
+    }
+
+    .contact__input{
+        width: 30rem;
+    }
+
+    .contact__input--textarea{
+        width: 60rem;
+    }
+
+    .boton__contacto1{
+        width: 60rem;
     }
 
     .contact{
-        grid-template-columns: 20% 80%;
+        grid-template-columns: 20% 40%;
     }
 
+    .container__name-email{
+        display: flex;
+        flex-direction: row;
+        justify-content:center;
 
+    }
+}
 
+@media screen and (min-width:1200px){
+    .contact{
+        grid-template-columns: 15% 40%;
+    }
+}
 
+@media screen and (min-width:1400px){
+    .contact{
+        grid-template-columns: 10% 40%;
+    }
+}
+
+.alert__sent-message{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: 40vh;
+    margin: 2rem;
+}
+
+.title__sent{
+    font-size: xx-large;
+    padding:2rem;
+}
+
+.p__sent{
+    font-size:small;
+    padding:2rem;
+}
+
+.contenedor-button-sent{
+    display: flex;
+    justify-content: center;
+    margin: 3rem;
+}
+
+.button-sent{
+    padding: var(--button-zise);
+    color: var(--color-fuente);
+    border: var(--color-fuente) solid 1px;
+    text-decoration: none;
+    transition: 700ms ease;
+}
+
+.button-sent:hover{
+    color: var(--view-color);
+    border: var(--view-color) solid 1px;
 }
 
 
@@ -1592,32 +1762,43 @@ header{
 @media screen and (min-width:992px){
     .footer{
         display: grid;
-        grid-template-columns: repeat(5,20%);
+        justify-content: center;
+        grid-template-columns: repeat(2, 30%) 20% 20%;
         grid-template-rows: 15rem;
         grid-template-areas:
-        "footer__text . . footer__nav footer__up";
+        "footer__text .  footer__nav-container footer__up";
     }
 
-    .footer__nav{
-        grid-area: footer__nav;
-        display: flex;
-        flex-direction: column;
-        flex-wrap:wrap;
+    .footer__nav-container{
+        grid-area: footer__nav-container;
+        display: grid;
         justify-content: center;
-        margin: 13px;
+        align-items: center;
+        grid-template-columns: repeat(2, 50%);
+        grid-template-rows: 15rem;
+        grid-template-areas:
+        "footer__nav1 footer__nav2";
+    };
+    }
+
+    .footer__nav1{
+        grid-area: footer__nav1;
     }
     
-    .footer__nav ul{
+    .footer__nav2{
+        grid-area: footer__nav2;
+    }
+    
+    .footer__nav-container ul{
         list-style: none;
         text-decoration: none;
     }
 
-    .footer__nav a{
+    .footer__nav-container a{
         text-decoration: none;
-        color: var(--color-fuente);
+        color: var(--white);
     }
 
-    .footer__nav a:hover{
+    .footer__nav-container a:hover{
         color: var(--view-color);
     }
-}
