@@ -1,18 +1,16 @@
 
-
 const colorSwitch = document.querySelector('#switch input[type="checkbox"]');
-function cambiaTema(ev){
+function changetheme(ev){
     if(ev.target.checked){
-        document.documentElement.setAttribute('tema', 'light');
+        document.documentElement.setAttribute('theme', 'light');
     } else {
-        document.documentElement.setAttribute('tema', 'dark');
+        document.documentElement.setAttribute('theme', 'dark');
     }
 }
-colorSwitch.addEventListener('change', cambiaTema);
+colorSwitch.addEventListener('change', changetheme);
 
 
-
-
+localStorage.setItem('change', changetheme);
 
 
 

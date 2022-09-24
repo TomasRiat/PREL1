@@ -21,11 +21,16 @@
 }
 
 
-/*------------------BOTON DARK-THEME---------------------*/
+/*------------------BUTTON DARK-THEME---------------------*/
 
-[tema="light"]{
-    --color-fuente: #000;
+[theme="light"]{
     --color-fondo: #fff;
+    --color-fuente: #000;
+}
+
+[theme="dark"]{
+    --color-fondo: #1b1d23;
+    --color-fuente: #fff;
 }
 
 #switch {
@@ -88,8 +93,7 @@ input:checked + .slider:before {
     border-radius: 50%;
 }
 
-
-
+/*-------------------RESET-----------------*/
 
 * {
     box-sizing: border-box;
@@ -120,44 +124,6 @@ h3{
     color:var(--color-fuente) 
 }
 
-.span-titulos, .h2-subtitulo{
-    font-weight: 400;
-    color: --subtitulos;
-    font-size: medium;
-}
-
-.h3-fecha{
-    color: var(--fechas);
-    font-size: small;
-}
-
-/*
-figure{
-    display: inline-block;
-    box-shadow:inset 10px 0px 50px  rgba(0, 0, 0, 0.65);
-}
-
-figure img{
-    position: relative;
-    z-index:-1;
-    vertical-align: top;
-}
-*/
-
-.contenedor-button-contact{
-    display: flex;
-    justify-content: center;
-    margin: 3rem;
-}
-
-.button-contact {
-    background: var(--button-color);
-    padding: var(--button-zise);
-    color: var(--white);
-    border: var(--hover-view) solid 1px;
-    text-decoration: none;
-    transition: 700ms ease;
-}
 
 /*-------------------------------------------ANIMACIONES Y TRANSICIONES---------------------------------------*/
 
@@ -165,7 +131,7 @@ figure img{
     .button-contact:hover {
         color: var(--hover-view);
         border: var(--hover-view) solid 1px;
-        background: var(--white);
+        background: var(--color-fondo);
     }
 
     .button-view:hover {
@@ -185,14 +151,8 @@ figure img{
     .icon{
         width: 40px;
         height: 40px;
-        border-radius: 50%;
-        outline: 2px solid var(--color-fuente);
         transition-property: outline-offset, outline-color, backgroud-color;
         transition-duration: .25s;
-    }
-
-    .icon:hover {
-        outline-offset: 4px;
     }
     
     .icon:hover i {
@@ -225,6 +185,8 @@ figure img{
         min-height: 500px;
     }
 }
+
+/*-----------------BUTTON CONTACT---VIEW----SPECIAL H2,H3----------------*/
 .contenedor-view{
     display: flex;
     justify-content: center;
@@ -238,7 +200,41 @@ figure img{
     font-weight: 700;
 }
 
+.span-titulos, .h2-subtitulo{
+    font-weight: 400;
+    color: --subtitulos;
+    font-size: medium;
+}
 
+.h3-fecha{
+    color: var(--fechas);
+    font-size: small;
+}
+
+.contenedor-button-contact{
+    display: flex;
+    justify-content: center;
+    margin: 3rem;
+}
+
+.button-contact {
+    background: var(--button-color);
+    padding: var(--button-zise);
+    color: var(--white);
+    border: var(--hover-view) solid 1px;
+    text-decoration: none;
+    transition: 700ms ease;
+}
+
+@media screen and (min-width:992px){
+    .button-contact{
+        width: 400px;
+        height: 50px;
+        text-align: center;
+        padding: 12px;
+        font-size: 20px;
+    }
+}
 
 /* ----------------------------------HEADER---------------------------------*/ 
 
@@ -361,7 +357,7 @@ input.src{
     border: 3px solid var(--black);
     background: #FFFFFF url(../assets/img/search.svg) 
     no-repeat 3px center ;
-    transition: all .5s;
+    transition: 500ms ease;
 }
 
 .search-may992px{
@@ -407,8 +403,15 @@ input.src{
     }
 
     .button-contact__nav{
-        color: var(--black);
-        border: var(--black) solid 1px;
+        color: var(--white);
+        background: var(--button-color);
+        border: var(--hover-view)solid 1px;
+    }
+
+    .button-contact__nav:hover{
+        border: var(--hover-view)solid 1px;
+        color: var(--hover-view);
+        background: var(--white);
     }
 
     .bi-arrow-left{
@@ -421,6 +424,16 @@ input.src{
 
     .search-may992px{
         display: block;
+    }
+
+    input.src{
+        width: 20px;
+        padding: 5px 3px 3px 20px;
+    }
+
+    input.src:hover{
+        width: 180px;
+        padding: 5px 5px 5px 30px;
     }
 }
 /* ----------------------------------PORTADA--------------------------------- */
@@ -497,7 +510,7 @@ input.src{
         display: grid;
         justify-content: center;
         place-items:start;
-        grid-template-columns: 40% 40%;
+        grid-template-columns: 60% 40%;
         grid-template-rows: repeat(2,13rem);
         grid-template-areas: 
         "profile__title profile__img"
@@ -531,7 +544,7 @@ input.src{
 
     .profile__img{
         grid-area: profile__img;
-        width: 200px;
+        width: 250px;
         
     }
 
@@ -570,7 +583,8 @@ input.src{
 .job {
     padding: 2rem;
     place-items: center;
-    margin-top: 10rem;
+    margin-top: 8rem;
+    font-size: small;
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 8rem repeat(3, 15rem);
@@ -627,7 +641,7 @@ input.src{
         display: grid;
         justify-content: center;
         grid-template-columns: repeat(2,40%);
-        grid-template-rows: 10rem repeat(2,15rem);
+        grid-template-rows: 8rem repeat(2,15rem);
         grid-template-areas: 
         "job-title job-title"
         "job__item--1 job__item--2"
@@ -834,11 +848,12 @@ input.src{
 
 
 .studies {
-
+    font-size: small;
     place-items: center;
     gap: 2px;
     display: grid;
-    grid-template-columns: repeat(3,33.33%);
+    justify-content: center;
+    grid-template-columns: repeat(3,30%);
     grid-template-rows: 8rem 18rem;
     grid-template-areas:
         "studies__title studies__title studies__title"
@@ -885,7 +900,7 @@ input.src{
 .studies img{
     transition: 300ms ease;
     margin-right: 5px;
-    max-width: 70px;
+    max-width: 80px;
     margin-bottom: 5px;
 }
 
@@ -1598,11 +1613,11 @@ input.src{
 }
 
 .icon {
-    margin: 2rem;
+    margin: 1.5rem;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    font-size: 26px;
+    font-size: 33px;
     color: var(--color-fuente);
 }
 
