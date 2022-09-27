@@ -82,10 +82,12 @@ input:checked + .slider:before {
 
 .slider.round {
     border-radius: 34px;
+    border: var(--black) solid 1px;
 }
 
 .slider.round:before {
     border-radius: 50%;
+    
 }
 
 /*-------------------RESET-----------------*/
@@ -171,7 +173,7 @@ h3{
 /*-----------------------------BACKGROUND--------------------------------*/
 
     .background-all{
-        background-image: url(../assets/img/bg-nubes.png);
+        background-image: url(../assets/img/bg1.png);
         background-repeat:repeat;
         background-size: contain;
         min-height: 500px;
@@ -196,6 +198,12 @@ h3{
     font-weight: 400;
     color: --subtitle;
     font-size: medium;
+}
+
+.span-title-jobs{
+    font-weight: 400;
+    color: --subtitle;
+    font-size: x-large;
 }
 
 .h3-date{
@@ -341,7 +349,7 @@ input.src{
     outline: none;
     font-size: 13px;
     border-radius: 15px;
-    border: 3px solid var(--black);
+    border: 2px solid var(--black);
     background: #FFFFFF url(../assets/img/search.svg) 
     no-repeat 3px center ;
     transition: 500ms ease;
@@ -351,10 +359,36 @@ input.src{
     display: none;
 }
 
+.button-contact__nav992px{
+    display: none;
+}
+
+@media screen and (min-width:576px){
+    .nav__links{
+        bottom: 300px;
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-bottom: 5%;
+    }
+}
+
+@media screen and (min-width:768px){
+    .nav__links{
+        bottom: 300px;
+    }
+}
+
 @media screen and (min-width:992px){
     header{
         height: 10rem;
         background-color: rgb(255, 255, 255);
+        justify-content: start;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .container{
+        width: 75%;
     }
 
     .nav{
@@ -362,7 +396,8 @@ input.src{
         --state-menu: translate(0);
         display: flex;
         flex-direction: row;
-        justify-content: end;
+        justify-content:start;
+        margin-left: 2rem;
     }
     
     .nav:target{
@@ -375,7 +410,6 @@ input.src{
         position: unset;
         grid-auto-flow: column;
         align-items: center;
-        margin-top: 2rem;
         transform: unset;
         grid-column: -2/-1;
         grid-row: 1/2;
@@ -409,6 +443,17 @@ input.src{
         display: block;
     }
 
+    .button-contact__nav-min992px{
+        display: none;
+    }
+    
+    .button-contact__nav992px{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: auto;
+    }
+
     input.src{
         width: 20px;
         padding: 5px 3px 3px 20px;
@@ -417,6 +462,20 @@ input.src{
     input.src:hover{
         width: 180px;
         padding: 5px 5px 5px 30px;
+    }
+}
+
+@media screen and (min-width:1200px){
+    .nav{
+        margin-left: 5rem;
+    }
+
+    .nav__link{
+        margin: 1.5rem;
+    }
+
+    .button-contact__nav992px{
+        margin-right: 5rem;
     }
 }
 
@@ -719,7 +778,7 @@ input.src{
     place-items: center;
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 10rem repeat(2, 20rem);
+    grid-template-rows: 8rem repeat(2, 18rem);
     grid-template-areas:
         "proyects__title"
         "proyects__item-1"
@@ -734,12 +793,12 @@ input.src{
     grid-area: proyects__item-1;
 }
 
-.proyects-jobs2__item-2,  .proyects-studies1__item-2{
+.proyects-jobs2__item-2 {
     grid-area: proyects__item-2;
 }
 
-@media screen and (min-width:576px) {
 
+@media screen and (min-width:576px) {
     .banner-jobs2 {
         height: 25vh;
     }
@@ -763,20 +822,19 @@ input.src{
 }
 
 @media screen and (min-width:768px){
-
     .banner-jobs2{
         height: 30vh;
     }
 
-    .profile-jobs2_men768px_, .profile-studies1_men768px_{
+    .profile-jobs2_min768px_, .profile-studies1_min768px_{
         display: none;
     }
 
-    .profile-jobs2_may768px_, .profile-studies1_may768px_{
+    .profile-jobs2_hig768px_, .profile-studies1_hig768px_{
         display: grid;
         justify-content: start;
-        grid-template-columns: 25% 60%;
-        grid-template-rows: 40% 60%;
+        grid-template-columns: 30% 60%;
+        grid-template-rows: 30% 60%;
         grid-template-areas: 
         "profile-jobs2__img profile-jobs2__description "
         ". profile-jobs2__description";
@@ -790,7 +848,7 @@ input.src{
     }
 
     .profile-jobs2__img img,  .profile-studies1__img img{
-        width: 160px;
+        width: 180px;
     }
     
     .profile-jobs2__description,  .profile-studies1__description{
@@ -799,17 +857,47 @@ input.src{
         text-align: start;
         padding: 0;
     }
+
+    .profile-jobs2__description h1,  .profile-studies1__description h1{
+        font-size: xx-large;
+    }
+
+    .profile-jobs2__description p,  .profile-studies1__description p{
+        margin-top: 2rem;
+    }
 }
 
-@media screen and (min-width:768px){
+@media screen and (min-width:992px){
     .banner-jobs2{
         height: 40vh;
+    }
+
+    .profile-jobs2_hig768px_, .profile-studies1_hig768px_{
+        grid-template-columns: 25% 60%;
+    }
+
+    .profile-jobs2__img img,  .profile-studies1__img img{
+        width: 200px;
+    }
+
+    .proyects-jobs2,  .proyects-studies1{
+        justify-content: center;
+        grid-template-columns: 30% 30%;
+        grid-template-rows: 8rem 20rem;
+        grid-template-areas:
+            "proyects__title proyects__title"
+            "proyects__item-1 proyects__item-2"
+            ;
     }
 }
 
 @media screen and (min-width: 1200px){
     .banner-jobs2{
         height: 50vh;
+    }
+
+    .profile-jobs2_hig768px_, .profile-studies1_hig768px_{
+        grid-template-columns: 20% 60%;
     }
 }
 
@@ -959,6 +1047,25 @@ input.src{
     justify-content: center;
 }
 
+.proyects-studies1{
+    margin-top: 4rem;
+    place-items: center;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 8rem 18rem;
+    grid-template-areas:
+        "proyects__title"
+        "proyects__item-1";
+}
+
+.proyects-studies1__title{
+    grid-area: proyects__title;
+}
+
+.proyects-studies1__item-1{
+    grid-area: proyects__item-1;
+}
+
 
 @media screen and (min-width:576px){
     .banner-studies1{
@@ -969,6 +1076,10 @@ input.src{
 @media screen and (min-width:768px){
     .banner-studies1{
         height: 30vh;
+    }
+
+    .profile-studies1__img img{
+        width: 200px;
     }
 }
 
@@ -1147,12 +1258,11 @@ input.src{
 }
 
 .galery-proyect3{
-    margin: 0 2rem;
+    margin: 0rem 2rem;
 }
 
 .galery-proyect3 img{
     width: 100%;
-
 }
 
 .tecnologies__icons{
@@ -1218,7 +1328,7 @@ input.src{
 
 @media screen and (min-width:1600px){
     .galery-proyect3{
-        padding:  0rem 60rem;
+        padding:  0rem 50rem;
     }
 }
 
@@ -1400,7 +1510,7 @@ input.src{
 
 @media screen and (min-width:1200px){
     .blog_992px_{
-        grid-template-columns: 50% 25%;
+        grid-template-columns: 43% 30%;
     }
 
     .blog__item-2_992px_ img, .blog__item-3_992px_ img , .blog__item-4_992px_ img  {
@@ -1410,11 +1520,20 @@ input.src{
 
 @media screen and (min-width:1400px){
     .blog_992px_{
-        grid-template-columns: 45% 20%;
+        grid-template-columns: 30% 30%;
     }
 
     .blog__item-2_992px_ img, .blog__item-3_992px_ img , .blog__item-4_992px_ img  {
-        width: 200px;
+        width: 180px;
+    }
+
+    .blog__item-2_992px_, .blog__item-3_992px_ , .blog__item-4_992px_  {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .blog__item-2_992px_  H3, .blog__item-3_992px_  H3, .blog__item-4_992px_  H3 {
+        padding: 10px;
     }
 }
 
@@ -1439,12 +1558,28 @@ input.src{
     padding: 2rem;
 }
 
+.blog1-section1 h3{
+    margin-bottom: 2rem;
+}
+
 .blog1-section1 img{
     width: 100%;
+    margin: 2rem 0rem;
+}
+
+blockquote{
+    text-align: start;
+    margin-left: 40px;
+    border-left: var(--font-color) solid 2px;
+    padding: 10px;
 }
 
 .keep-reading_min768px_{
     margin-top: 5rem;
+}
+
+.keep-reading_min768px_ img{
+    width: 100%;
 }
 
 .container-keep-reading{
@@ -1455,7 +1590,7 @@ input.src{
 }
 
 .container-blog1-small{
-    margin: 1.05rem;
+    margin: 0.5rem;
 }
 
 .keep-reading_hig768px_{
@@ -1475,6 +1610,10 @@ input.src{
     .blog1-section1{
         padding: 5rem;
     }
+
+    blockquote{
+        margin: 40px 50px;
+    }
 }
 
 @media screen and (min-width:768px){
@@ -1484,6 +1623,10 @@ input.src{
 
     .blog1-section1{
         padding: 10rem;
+    }
+
+    blockquote{
+        margin: 40px 80px;
     }
 
     .keep-reading_min768px_{
