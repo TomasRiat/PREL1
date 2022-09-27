@@ -1992,7 +1992,7 @@ blockquote{
         display: grid;
         justify-content: center;
         align-items: center;
-        grid-template-columns: repeat(2, 50%);
+        grid-template-columns: repeat(2, 30%);
         grid-template-rows: 15rem;
         grid-template-areas:
         "footer__nav1 footer__nav2";
@@ -2005,6 +2005,7 @@ blockquote{
     
     .footer__nav2{
         grid-area: footer__nav2;
+        margin-bottom: 2rem;
     }
     
     .footer__nav-container ul{
