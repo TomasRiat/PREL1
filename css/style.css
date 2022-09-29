@@ -1,3 +1,32 @@
+
+/*---------------------------------------INDEX------------------------------------------
+
+*1. Line 46 -- Root --
+*2. Line 67 -- Reset --
+*3. Line 98 -- Button Dark Theme --
+*4. Line 171 -- Animations and Transitions --
+*5. Line 218 -- Background --
+*6. Line 228 -- Button Contact --
+*   6.1. -- Button View --
+*   6.2. -- Span title --
+*   6.3. -- Special h2 and h3 --
+*7. Line 284 -- Header --
+*8. Line 519 -- Profile --
+*9. Line 656 -- Jobs --
+*10. Line 747 -- Jobs 2 and Studies 1 -- (they share similar characteristics) --
+*11. Line 941 -- Studies --
+*12. Line 1039 -- Studies 1 -- (here are other features not shared with jobs 2) --
+*13. Line 1138 -- Proyects -- 
+*14. Line 1274 -- Proyects 3 --
+*15. Line 1373 -- Blog --
+*16. Line 1577 -- Blog 1 --
+*17. Line 1732 -- Social Media --
+*18. Line 1762 -- Contact --
+*19. Line 1958 -- Footer --
+*/
+
+/*-------------------ROOT-----------------*/
+
 :root {
     --white: #FFFFFF;
     --black: #000000;
@@ -15,6 +44,37 @@
     --blog-text-color: rgba(85, 84, 84, 1);
     --font-color: #ffffff;
     --bg-color: #1b1d23;
+}
+
+/*-------------------RESET-----------------*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    overflow: none;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: 'Cabin', sans-serif;
+    overflow-x: hidden;
+    background-color:var(--bg-color);
+    color:var(--font-color) 
+}
+
+h1, h2 {
+    font-weight: var(--font-title);
+    color:var(--font-color) 
+}
+
+h3{
+    font-weight: var(--font-title);
+    color:var(--font-color) 
 }
 
 /*----------------------------------BUTTON DARK-THEME-----------------------------------*/
@@ -90,38 +150,7 @@ input:checked + .slider:before {
     
 }
 
-/*-------------------RESET-----------------*/
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-html {
-    font-size: 62.5%;
-    overflow: none;
-}
-
-body {
-    font-size: 1.6rem;
-    font-family: 'Cabin', sans-serif;
-    overflow-x: hidden;
-    background-color:var(--bg-color);
-    color:var(--font-color) 
-}
-
-h1, h2 {
-    font-weight: var(--font-title);
-    color:var(--font-color) 
-}
-
-h3{
-    font-weight: var(--font-title);
-    color:var(--font-color) 
-}
-
-/*-----------------------------------ANIMATIONS Y TRANSITIONS--------------------------------------*/
+/*-----------------------------------ANIMATIONS AND TRANSITIONS--------------------------------------*/
 
 @media screen and (min-width:992px){
     .button-contact:hover {
@@ -141,8 +170,6 @@ h3{
     .studies img:hover{
         transform: scale(1.05);
     }
-
-/*-----------------------------------ANIMATION SOCIAL MEDIA---------------------------------------*/
 
     .icon{
         width: 40px;
@@ -345,7 +372,7 @@ header{
 
 input.src{
     padding: 5px 5px 5px 30px;
-    width: 200px;
+    width: 186px;
     outline: none;
     font-size: 13px;
     border-radius: 15px;
@@ -454,15 +481,7 @@ input.src{
         margin: auto;
     }
 
-    input.src{
-        width: 20px;
-        padding: 5px 3px 3px 20px;
-    }
 
-    input.src:hover{
-        width: 180px;
-        padding: 5px 5px 5px 30px;
-    }
 }
 
 @media screen and (min-width:1200px){
@@ -1692,7 +1711,7 @@ blockquote{
     }
 }
 
-/* ----------------------------------SOCIAL--------------------------------- */
+/* ----------------------------------SOCIAL MEDIA--------------------------------- */
 
 .social {
     text-align: center;
