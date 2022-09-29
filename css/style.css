@@ -1,31 +1,30 @@
 
 /*---------------------------------------INDEX------------------------------------------
 
-*1. Line 46 -- Root --
-*2. Line 67 -- Reset --
-*3. Line 98 -- Button Dark Theme --
-*4. Line 171 -- Animations and Transitions --
-*5. Line 218 -- Background --
-*6. Line 228 -- Button Contact --
-*   6.1. -- Button View --
-*   6.2. -- Span title --
-*   6.3. -- Special h2 and h3 --
-*7. Line 284 -- Header --
-*8. Line 519 -- Profile --
-*9. Line 656 -- Jobs --
-*10. Line 747 -- Jobs 2 and Studies 1 -- (they share similar characteristics) --
-*11. Line 941 -- Studies --
-*12. Line 1039 -- Studies 1 -- (here are other features not shared with jobs 2) --
-*13. Line 1138 -- Proyects -- 
-*14. Line 1274 -- Proyects 3 --
-*15. Line 1373 -- Blog --
-*16. Line 1577 -- Blog 1 --
-*17. Line 1732 -- Social Media --
-*18. Line 1762 -- Contact --
-*19. Line 1958 -- Footer --
+*1. -- Root --
+*2. -- Reset --
+*3. -- Button Dark Theme --
+*4. -- Animations and Transitions --
+*5. -- Background --
+*6. -- Button View --
+*7. -- Special h2, h3 and Span title --
+*8. -- Button Contact --
+*9. -- Header --
+*10. -- Profile --
+*11. -- Jobs --
+*12. -- Jobs 2 and Studies 1 -- (they share similar characteristics) --
+*13. -- Studies --
+*14. -- Studies 1 -- (here are other features not shared with jobs 2) --
+*15. -- Proyects -- 
+*16. -- Proyects 3 --
+*17. -- Blog --
+*18. -- Blog 1 --
+*19. -- Social Media --
+*20. -- Contact --
+*21. -- Footer --
 */
 
-/*-------------------ROOT-----------------*/
+/*-------------------*1. -- Root -- -----------------*/
 
 :root {
     --white: #FFFFFF;
@@ -46,7 +45,7 @@
     --bg-color: #1b1d23;
 }
 
-/*-------------------RESET-----------------*/
+/*-------------------*2. -- Reset -- -----------------*/
 
 * {
     box-sizing: border-box;
@@ -77,7 +76,7 @@ h3{
     color:var(--font-color) 
 }
 
-/*----------------------------------BUTTON DARK-THEME-----------------------------------*/
+/*-------------*3. -- Button Dark Theme -- --------------*/
 
 [theme="light"]{
     --bg-color: #fff;
@@ -150,7 +149,7 @@ input:checked + .slider:before {
     
 }
 
-/*-----------------------------------ANIMATIONS AND TRANSITIONS--------------------------------------*/
+/*---------------*4. -- Animations and Transitions -- -----------------*/
 
 @media screen and (min-width:992px){
     .button-contact:hover {
@@ -197,7 +196,7 @@ input:checked + .slider:before {
         }
     }
 
-/*-----------------------------BACKGROUND--------------------------------*/
+/*-------------------*5. -- Background -- -----------------------*/
 
     .background-all{
         background-image: url(../assets/img/bg1.png);
@@ -207,7 +206,7 @@ input:checked + .slider:before {
     }
 }
 
-/*-----------------BUTTON CONTACT---VIEW----SPECIAL H2,H3----------------*/
+/*-----------------*6. -- Button View -- ----------------------*/
 .container-view{
     display: flex;
     justify-content: center;
@@ -220,7 +219,7 @@ input:checked + .slider:before {
     transition: 300ms ease;
     font-weight: 700;
 }
-
+/*-----------------*7. -- Special h2, h3 and Span title -- ----------------*/
 .span-title, .h2-subtitle{
     font-weight: 400;
     color: --subtitle;
@@ -237,7 +236,7 @@ input:checked + .slider:before {
     color: var(--date);
     font-size: small;
 }
-
+/*-----------------*8. -- Button Contact -- ------------------*/
 .container-button-contact{
     display: flex;
     justify-content: center;
@@ -263,7 +262,7 @@ input:checked + .slider:before {
     }
 }
 
-/* ----------------------------------HEADER---------------------------------*/ 
+/* -------------------*9. -- Header -- ----------------------*/ 
 
 header{
     background-color: var(--black);
@@ -498,7 +497,7 @@ input.src{
     }
 }
 
-/* ----------------------------------PROFILE--------------------------------- */
+/* --------------------*10. -- Profile -- -------------------- */
 
 .banner {
     height: 20vh;
@@ -635,7 +634,7 @@ input.src{
     }
 }
 
-/* ----------------------------------JOBS--------------------------------- */
+/* -------------------*11. -- Jobs -- ---------------- */
 
 .job {
     padding: 2rem;
@@ -726,7 +725,7 @@ input.src{
     }
 }
 
-/* ----------------------------------JOB-2 Y STUDIES-1--------------------------------- */
+/* ----------------*12. -- Jobs 2 and Studies 1 -- ---------------------- */
 
 .banner-jobs2 {
     background-image: url(../assets/img/banner-jobs2.png);
@@ -920,7 +919,7 @@ input.src{
     }
 }
 
-/* ----------------------------------STUDIES--------------------------------- */
+/* -----------------------*13. -- Studies -- -------------------- */
 
 .studies {
     font-size: small;
@@ -1018,7 +1017,7 @@ input.src{
     }
 }
 
-/* ----------------------------------STUDIES-1--------------------------------- */
+/* ----------------------*14. -- Studies 1 -- ----------------------- */
 
 .banner-studies1{
     background-image: url(../assets/img/banner-studies1.png);
@@ -1117,7 +1116,7 @@ input.src{
     }
 }
 
-/* ----------------------------------PROYECTS--------------------------------- */
+/* -------------------*15. -- Proyects --  -------------------- */
 
 .proyects {
     place-items: center;
@@ -1253,7 +1252,7 @@ input.src{
     }
 }
 
-/* ----------------------------------PROYECTS-3--------------------------------- */
+/* -----------------------*16. -- Proyects 3 -- -------------------- */
 
 .banner-proyect3{
     background-image: url(../assets/img/banner-proyect3.png);
@@ -1352,7 +1351,7 @@ input.src{
 }
 
 
-/* ----------------------------------BLOG--------------------------------- */
+/* ---------------------*17. -- Blog -- ---------------------- */
 
 .blog {
     place-items: center;
@@ -1556,7 +1555,7 @@ input.src{
     }
 }
 
-/* ----------------------------------BLOG1--------------------------------- */
+/* -----------------*18. -- Blog 1 -- --------------------- */
 
 .banner-blog1{
     height: 20vh;
@@ -1711,7 +1710,7 @@ blockquote{
     }
 }
 
-/* ----------------------------------SOCIAL MEDIA--------------------------------- */
+/* ----------------*19. -- Social Media -- ----------------- */
 
 .social {
     text-align: center;
@@ -1741,7 +1740,7 @@ blockquote{
     color: var(--font-color);
 }
 
-/* ----------------------------------CONTACT--------------------------------- */
+/* ------------------------*20. -- Contact -- ----------------------- */
 
 .banner-contact{
     height: 20vh;
@@ -1937,7 +1936,7 @@ blockquote{
     border: var(--view-color) solid 1px;
 }
 
-/*-------------------------------------------------FOOTER----------------------------------------------*/
+/*----------------------*21. -- Footer -- --------------------------*/
 
 .footer {
     height: 20vh;
