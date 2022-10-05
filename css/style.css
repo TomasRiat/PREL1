@@ -76,6 +76,14 @@ h3{
     color:var(--font-color) 
 }
 
+main{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    
+    grid-auto-rows: auto;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 25rem, 1080px)));
+}
 /*-------------*3. -- Button Dark Theme -- --------------*/
 
 [theme="light"]{
@@ -234,13 +242,13 @@ input:checked + .slider:before {
 
 .h3-date{
     color: var(--date);
-    font-size: small;
+    font-size:medium;
 }
 /*-----------------*8. -- Button Contact -- ------------------*/
 .container-button-contact{
     display: flex;
     justify-content: center;
-    margin: 3rem;
+    margin: 55px;
 }
 
 .button-contact {
@@ -375,7 +383,7 @@ input.src{
     outline: none;
     font-size: 13px;
     border-radius: 15px;
-    border: 2px solid var(--black);
+    border: 1px solid var(--black);
     background: #FFFFFF url(../assets/img/search.svg) 
     no-repeat 3px center ;
     transition: 500ms ease;
@@ -639,7 +647,7 @@ input.src{
 .job {
     padding: 2rem;
     place-items: center;
-    margin-top: 8rem;
+    margin-top: 50px;
     font-size: small;
     display: grid;
     grid-template-columns: 100%;
@@ -826,7 +834,7 @@ input.src{
     }
 
     .profile-jobs2__img img,  .profile-studies1__img img{
-        width: 13rem;
+        width: 200px;
     }
 
     .profile-jobs2__img,  .profile-studies1__img {
@@ -852,7 +860,7 @@ input.src{
         display: grid;
         justify-content: start;
         grid-template-columns: 30% 60%;
-        grid-template-rows: 30% 60%;
+        grid-template-rows: 70% 60%;
         grid-template-areas: 
         "profile-jobs2__img profile-jobs2__description "
         ". profile-jobs2__description";
@@ -866,7 +874,7 @@ input.src{
     }
 
     .profile-jobs2__img img,  .profile-studies1__img img{
-        width: 180px;
+        width: 200px;
     }
     
     .profile-jobs2__description,  .profile-studies1__description{
@@ -895,12 +903,12 @@ input.src{
     }
 
     .profile-jobs2__img img,  .profile-studies1__img img{
-        width: 200px;
+        width: 240px;
     }
 
     .proyects-jobs2,  .proyects-studies1{
         justify-content: center;
-        grid-template-columns: 30% 30%;
+        grid-template-columns: repeat(2,300px);
         grid-template-rows: 8rem 20rem;
         grid-template-areas:
             "proyects__title proyects__title"
@@ -927,7 +935,7 @@ input.src{
     gap: 2px;
     display: grid;
     justify-content: center;
-    grid-template-columns: repeat(3,30%);
+    grid-template-columns: repeat(3,100px);
     grid-template-rows: 8rem 18rem;
     grid-template-areas:
         "studies__title studies__title studies__title"
@@ -983,7 +991,7 @@ input.src{
         place-items: center;
         display: grid;
         justify-content: center;
-        grid-template-columns: repeat(4,15%);
+        grid-template-columns: repeat(4,100px);
         grid-template-rows: 10rem 22rem;
         grid-template-areas:
             "studies__title studies__title studies__title studies__title"
@@ -1202,7 +1210,7 @@ input.src{
     .proyects {
         display: grid;
         justify-content: center;
-        grid-template-columns: repeat(3,25%);
+        grid-template-columns: repeat(3,280px);
         grid-template-rows: 6rem repeat(2,15rem);
         grid-template-areas:
         "proyects__title proyects__title proyects__title"
@@ -1240,17 +1248,7 @@ input.src{
     }
 }
 
-@media screen and (min-width:1200px){
-    .proyects {
-        grid-template-columns: repeat(3,22%);
-    }
-}
 
-@media screen and (min-width:1400px){
-    .proyects {
-        grid-template-columns: repeat(3,20%);
-    }
-}
 
 /* -----------------------*16. -- Proyects 3 -- -------------------- */
 
@@ -1281,6 +1279,7 @@ input.src{
 
 .galery-proyect3 img{
     width: 100%;
+    margin: -2px;
 }
 
 .tecnologies__icons{
@@ -1288,6 +1287,7 @@ input.src{
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    margin-bottom: 20px;
 }
 
 @media screen and (min-width:576px){
@@ -1357,7 +1357,7 @@ input.src{
     place-items: center;
     display: grid;
     justify-content: center;
-    grid-template-columns: 90%;
+    grid-template-columns: 300px;
     grid-template-rows: 8rem 30rem 15rem 15rem;
     grid-template-areas:
         "blog__title"
@@ -1439,30 +1439,6 @@ input.src{
     font-size:x-small;
 }   
 
-@media screen and (min-width:500px){
-    .blog{
-        grid-template-columns: 60%;
-    }
-}
-
-@media screen and (min-width:576px){
-    .blog{
-        grid-template-columns: 70%;
-    }
-}
-
-@media screen and (min-width:650px){
-    .blog{
-        grid-template-columns: 50%;
-    }
-}
-
-@media screen and (min-width:768px){
-    .blog{
-        grid-template-columns: 40%;
-    }
-}
-
 @media screen and (min-width:992px){
     .blog{
         display: none;
@@ -1472,8 +1448,8 @@ input.src{
         display: grid;
         place-items: center;
         justify-content: center;
-        grid-template-columns: 50% 30%;
-        grid-template-rows: 10rem repeat(3,33.33%);
+        grid-template-columns: 610px 300px;
+        grid-template-rows: 10rem repeat(3,220px);
         grid-template-areas:
         "blog__title blog__title"
         "blog__item-1 blog__item-2"
@@ -1491,68 +1467,106 @@ input.src{
     }
 
     .blog__item-1_992px_ img {
-        width: 100%;
-        filter: drop-shadow(2px 2px 6px rgba(10, 10, 10, 0.87));
-
+        width: 610px;
+        height: 540px;
+        box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.2);
     }
     
     .blog__item-2_992px_ {
         grid-area: blog__item-2;
-        padding: 15px;
+        margin-left: 15px;
+        
+        padding: 5px;
     }
 
     .blog__item-2_992px_ img {
-        width:130px;
+        width:170px;
+        border-radius: 4px;
     }
     
     .blog__item-3_992px_ {
         grid-area: blog__item-3;
         border-top: 2px solid #DBDBDB;
-        padding: 15px;
+        margin-left: 15px;
+        padding: 5px;
     }
 
     .blog__item-3_992px_ img {
-        width: 130px;
+        width:170px;
+        border-radius: 4px;
     }
 
     .blog__item-4_992px_ {
         grid-area: blog__item-4;
         border-top: 2px solid #DBDBDB;
-        padding: 15px;
+        margin-left: 15px;
+        padding: 5px;
     }
 
     .blog__item-4_992px_ img{
-        width: 130px;
-    }
-}
-
-@media screen and (min-width:1200px){
-    .blog_992px_{
-        grid-template-columns: 43% 30%;
-    }
-
-    .blog__item-2_992px_ img, .blog__item-3_992px_ img , .blog__item-4_992px_ img  {
-        width: 175px;
+        width:170px;
+        border-radius: 4px;
     }
 }
 
 @media screen and (min-width:1400px){
+
     .blog_992px_{
-        grid-template-columns: 30% 30%;
+        grid-template-columns: 610px 570px;
+        grid-template-rows: 10rem repeat(3,200px);
     }
 
-    .blog__item-2_992px_ img, .blog__item-3_992px_ img , .blog__item-4_992px_ img  {
-        width: 180px;
+    .blog__item-1_992px_ img {
+        width: 610px;
+        height: 480px;
     }
 
-    .blog__item-2_992px_, .blog__item-3_992px_ , .blog__item-4_992px_  {
+    .blog__item-2_992px_ {
+        display: flex;
+        flex-direction: row;
+        
+    }
+
+    .blog__item-2_992px_ img {
+        width: 280px;
+        border-radius: 4px;
+    }
+
+    .blog__item-2_992px_ h3{
+        margin-left: 20px;
+        margin-top: 5px;
+    }
+
+    .blog__item-3_992px_ {
         display: flex;
         flex-direction: row;
     }
 
-    .blog__item-2_992px_  H3, .blog__item-3_992px_  H3, .blog__item-4_992px_  H3 {
-        padding: 10px;
+    .blog__item-3_992px_ img {
+        width: 280px;
+        border-radius: 4px;
     }
+
+    .blog__item-3_992px_ h3{
+        margin-left: 20px;
+        margin-top: 5px;
+    }
+
+    .blog__item-4_992px_ {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .blog__item-4_992px_ img {
+        width: 280px;
+        border-radius: 4px;
+    }
+
+    .blog__item-4_992px_ h3{
+        margin-left: 20px;
+        margin-top: 5px;
+    }
+
 }
 
 /* -----------------*18. -- Blog 1 -- --------------------- */
@@ -1689,8 +1703,8 @@ blockquote{
         height: 50vh;
     }
 
-    .blog1-section1, .blog1-titles_hig992px_{
-        padding: 5rem 30rem;
+    .blog1-section1{
+        padding: 5rem 400px;
     }
 }
 
@@ -1715,7 +1729,6 @@ blockquote{
 .social {
     text-align: center;
     margin-top: 8rem;
-    margin-bottom: 8rem;
 }
 
 .social__icons {
@@ -1754,7 +1767,7 @@ blockquote{
     display: grid;
     margin-bottom: 5rem;
     justify-content: center;
-    grid-template-columns: 30% 60%;
+    grid-template-columns: 35% 60%;
     grid-template-rows: 100%;
     grid-template-areas: 
     "contact__img contact__title"
@@ -1791,10 +1804,24 @@ blockquote{
     margin-top: 15px;
 }
 
-.contact__input{
+.contact__input1{
     width: 90%;
     font-size:small ;
     padding: 10px;
+    border-color: inherit;
+    box-shadow: none;
+    border: var(--black) solid 1px;
+    outline: 0;
+}
+
+.contact__input2{
+    width: 90%;
+    font-size:small ;
+    padding: 10px;
+    border-color: inherit;
+    box-shadow: none;
+    border: var(--black) solid 1px;
+    outline: 0;
 }
 
 .contact__input--textarea{
@@ -1803,15 +1830,18 @@ blockquote{
     border: var(--black) solid 1px;
     font-size:small ;
     padding: 10px;
+    border-color: inherit;
+    box-shadow: none;
+    outline: 0;
 }
 
-.boton-contenedor{
+.container__button{
     display: flex;
     justify-content: center;
-    margin-top: 10rem;
+    margin: 104px auto;
 }
 
-.boton__contact1{
+.button__contact1{
     width: 90%;
     height: 5rem;
     background-color: var(--black);
@@ -1820,7 +1850,7 @@ blockquote{
     transition: 300ms ease;
 }
 
-.boton__contact1:hover{
+.button__contact1:hover{
     color: var(--black);
     background-color: var(--white);
     border: var(--black) solid 1px;
@@ -1835,7 +1865,7 @@ blockquote{
         width: 70%;
     }
 
-    .boton__contact1{
+    .button__contact1{
         width: 70%;
     }
 }
@@ -1863,12 +1893,22 @@ blockquote{
         height: 40vh;
     }
 
-    .contact__input{
+    .contact__input1{
         width: 30rem;
+        height: 50px;
+        width: 295px;
+    }
+
+    .contact__input2{
+        width: 30rem;
+        margin-left: 20px;
+        height: 50px;
+        width: 295px;
     }
 
     .contact__input--textarea{
-        width: 60rem;
+        height: 190px;
+        width: 610px;
     }
 
     .boton__contact1{
@@ -1883,6 +1923,7 @@ blockquote{
         display: flex;
         flex-direction: row;
         justify-content:center;
+        margin: 20px;
     }
 }
 
@@ -1941,7 +1982,7 @@ blockquote{
 .footer {
     height: 20vh;
     background-color: var(--black);
-    margin-top: 8rem;
+
     display: grid;
     grid-template-columns: 60% 40%;
     grid-template-rows: 15rem;
@@ -1998,25 +2039,48 @@ blockquote{
 @media screen and (min-width:992px){
     .footer{
         display: grid;
-        justify-content: center;
-        grid-template-columns: repeat(2, 30%) 20% 20%;
+        text-align: start;
+        justify-content:center;
+        grid-template-columns: 60% 20% 20%;
         grid-template-rows: 15rem;
         grid-template-areas:
-        "footer__text .  footer__nav-container footer__up";
+        "footer__text footer__nav-container footer__up";
+    }
+
+    .footer__text {
+        grid-area: footer__text;
+        color: var(--white);
+        margin: auto 100px;
+        text-align: left;
+        font-size: x-small;
+    }
+
+    .footer__up {
+        grid-area: footer__up;
+        color: var(--white);
+        font-size: 30px;
+        margin-right: 100px;
+        
+    }
+
+    .div__footer{
+        display: flex;
+        flex-direction: row;
+        grid-area: footer__nav-container;
     }
 
     .footer__nav-container{
-        grid-area: footer__nav-container;
+
         display: grid;
         justify-content: center;
         align-items: center;
-        grid-template-columns: repeat(2, 50%);
+        margin: auto 100px;
+        grid-template-columns: repeat(2, 100px);
         grid-template-rows: 15rem;
         grid-template-areas:
         "footer__nav1 footer__nav2";
     }
-    }
-
+    
     .footer__nav1{
         grid-area: footer__nav1;
     }
@@ -2039,3 +2103,4 @@ blockquote{
     .footer__nav-container a:hover{
         color: var(--view-color);
     }
+}
