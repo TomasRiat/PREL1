@@ -460,6 +460,7 @@ input.src{
         transform: unset;
         grid-column: -2/-1;
         grid-row: 1/2;
+
     }
 
     .nav__link{
@@ -509,14 +510,31 @@ input.src{
         margin-left: 5rem;
     }
 
+    .nav__links{
+        gap: 30px;
+    }
+
     .nav__link{
-        margin: 1.5rem;
+        font-size: 16px;
     }
 
     .button-contact__nav992px{
         margin-right: 5rem;
     }
 }
+
+@media screen and (min-width:1400px){
+    .nav__links{
+        gap: 50px;
+    }
+}
+
+@media screen and (min-width:1400px){
+    .nav__links{
+        gap: 60px;
+    }
+}
+
 
 /* --------------------*10. -- Profile -- -------------------- */
 
@@ -1941,7 +1959,7 @@ blockquote{
     }
 
     .button__contact1{
-        max-width: 610px;
+        max-width: 820px;
     }
 }
 
@@ -1953,25 +1971,36 @@ blockquote{
     .contact__input1{
         width: 30rem;
         height: 50px;
-        width: 295px;
+        width: 400px;
     }
 
     .contact__input2{
         width: 30rem;
         margin-left: 20px;
         height: 50px;
-        width: 295px;
+        width: 400px;
     }
 
     .contact__input--textarea{
         height: 190px;
-        width: 610px;
+        width: 820px;
     }
 
-
-
     .contact{
-        grid-template-columns: 200px 300px;
+        grid-template-columns: 295px 500px;
+    }
+
+    .contact img{
+        width: 295px;
+        margin-top: -50px;
+    }
+
+    .contact h1{
+        font-size: 50px;
+    }
+
+    .contact__container{
+        height: 60vh;
     }
 
     .container__name-email{
@@ -1979,6 +2008,30 @@ blockquote{
         flex-direction: row;
         justify-content:center;
         margin: 20px;
+    }
+}
+
+@media screen and (min-width:1400px){
+    .contact__input1{
+        width: 30rem;
+        height: 50px;
+        width: 530px;
+    }
+
+    .contact__input2{
+        width: 30rem;
+        margin-left: 20px;
+        height: 50px;
+        width: 530px;
+    }
+
+    .contact__input--textarea{
+        height: 190px;
+        width: 1080px;
+    }
+
+    .button__contact1{
+        max-width: 1080px;
     }
 }
 
@@ -2121,7 +2174,11 @@ blockquote{
         color: var(--white);
         margin: auto 150px;
         text-align: left;
-        font-size: x-small;
+        font-size: 14px;
+    }
+
+    .footer__text h2{
+        font-size: 20px;
     }
 
     .footer__up {
