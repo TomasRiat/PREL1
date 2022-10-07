@@ -21,8 +21,13 @@
 <header>
 
     <nav class="nav container" id="nav">
-            <a href="../index.html"><i class="bi bi-arrow-left"></i></a>
-        <ul class="nav__links">
+        <a href="../index.html"><i class="bi bi-arrow-left"></i></a>
+    <ul class="nav__links">
+        <li class="nav__item search-min992px">
+            <div class="box">
+                <input type="text" name="search" placeholder="Search" class="src" autocomplete="off">
+            </div>
+        </li>
             <li class="nav__item">
                 <a href="../index.html" class="nav__link">Home</a>
             </li>
@@ -41,7 +46,7 @@
             <li class="nav__item">
                 <a href="../index.html#social" class="nav__link">Social Media</a>
             </li>
-            <li class="nav__item search-may992px">
+            <li class="nav__item search-hig992px">
                 <div class="box">
                     <input type="text" name="search" placeholder="Search" class="src" autocomplete="off">
                 </div>
@@ -53,15 +58,14 @@
                     </label>
                 </li>
             </ul>
-    
+            
             <a href="#nav" class="nav__hamburguer">
-                <img src="../assets/img/desplegable.svg" class="nav__icon" alt="">
+                <img src="../assets/img/dropdown.svg" class="nav__icon" alt="">
             </a>
     
             <a href="#" class="nav__close">
                 <i class=" nav__icon bi bi-x-lg"></i>
             </a>
-    
         </nav>
         
         
@@ -98,7 +102,7 @@
                     </div>
 
                     <div class="container__button">
-                        <input class="button__contact1"  type="submit"  value="Send">
+                        <input id="button__contact1" class="button__contact1"  type="submit"  value="Send">
                     </div>
             </section>
     </main>
@@ -123,7 +127,8 @@
             <a href="#"><i class="bi bi-arrow-up-square"></i></a>
         </div>
     </footer>
-
+    
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="../index.js"></script>
 </body>
 </html>
