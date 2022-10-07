@@ -1732,6 +1732,10 @@ blockquote{
         font-size:x-small;
     }
 
+    .container-keep p{
+        margin-left: 20px;
+    }
+
 }
 
 @media screen and (min-width:992px){
