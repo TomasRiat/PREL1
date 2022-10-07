@@ -71,6 +71,13 @@ h1, h2 {
     color:var(--font-color) 
 }
 
+@media screen and (min-width:992px){
+    h2{
+        font-size: 30px;
+    }
+}
+
+
 h3{
     font-weight: var(--font-title);
     color:var(--font-color) 
@@ -232,6 +239,12 @@ input:checked + .slider:before {
     font-weight: 400;
     color: --subtitle;
     font-size: medium;
+}
+
+.span-title-job{
+    font-weight: 400;
+    color: --subtitle;
+    font-size: small;
 }
 
 .span-title{
@@ -1223,7 +1236,7 @@ input.src{
         display: grid;
         justify-content: center;
         grid-template-columns: repeat(3,280px);
-        grid-template-rows: 6rem repeat(2,15rem);
+        grid-template-rows: 15rem repeat(2,15rem);
         grid-template-areas:
         "proyects__title proyects__title proyects__title"
         "proyects__item-1 proyects__item-2 proyects__item-3"
@@ -1344,6 +1357,21 @@ input.src{
         justify-content: center;
     }
 }
+
+@media screen and (min-width:992px){
+    .inicio-proyect3{
+        display: grid;
+        grid-auto-columns: 1080px;
+        justify-content: center;
+        
+    }
+
+    .galery-proyect3{
+        display: grid;
+        grid-auto-columns: 1080px;
+        justify-content: center;
+    }
+}
 /* ---------------------*17. -- Blog -- ---------------------- */
 
 .blog {
@@ -1436,7 +1464,7 @@ input.src{
         place-items: center;
         justify-content: center;
         grid-template-columns: 610px 300px;
-        grid-template-rows: 10rem repeat(3,220px);
+        grid-template-rows: 15rem repeat(3,220px);
         grid-template-areas:
         "blog__title blog__title"
         "blog__item-1 blog__item-2"
@@ -2037,6 +2065,10 @@ blockquote{
     margin: auto;
     text-align: left;
     font-size: x-small;
+}
+
+.footer__text h2{
+    font-size: medium;
 }
 
 .footer__text h3, .footer__text h2 {
