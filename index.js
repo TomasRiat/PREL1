@@ -12,9 +12,10 @@ toggle.addEventListener('click', function(){
 
 
 
-button.onclick('click', () =>{
+button.addEventListener('click', () =>{
     Swal.fire({
         showConfirmButton: false,
+        timer: 2500,
         width: '600px',
         html: '<h1 class="h1__sweetAlert">Message sent!</h1><p class="p__sweetAlert">Thanks for contacting me, I’ll be aswering soon.</p><br><br><a href="../index.html" class="button-sweetAlert"><i class=" arrow_sweet bi bi-arrow-left"></i>Back to Home</a><br> <br>'
     });

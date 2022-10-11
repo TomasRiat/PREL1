@@ -80,6 +80,7 @@
 
 html {
     font-size: 62.5%;
+    overflow-x: hidden;
 }
 
 body {
@@ -249,7 +250,6 @@ header{
 
 .container{
     width: 95%;
-    overflow: hidden;
 }
 
 .nav{
@@ -303,6 +303,24 @@ header{
     top: 0;
     bottom: 0;
     max-height: 470px;
+    max-width: 270px;
+    left: auto;
+    right: 0;
+    display: grid;
+    align-content: end;
+    gap: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+    transform: var(--state-menu);
+}
+
+.nav__links-contact{
+    background-color: var(--black);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    max-height: 400px;
     max-width: 270px;
     left: auto;
     right: 0;
@@ -408,6 +426,19 @@ input.src{
         max-width: unset;
     }
 
+    .nav__links-contact{
+        padding: 0;
+        background-color: unset;
+        position: unset;
+        grid-auto-flow: column;
+        align-items: center;
+        transform: unset;
+        grid-column: -2/-1;
+        grid-row: 1/2;
+        max-height: unset;
+        max-width: unset;
+    }
+
     .nav__link{
         color: var(--black);
     }
@@ -459,6 +490,10 @@ input.src{
         gap: 30px;
     }
 
+    .nav__links-contact{
+        gap: 30px;
+    }
+
     .nav__link{
         font-size: 16px;
     }
@@ -472,10 +507,18 @@ input.src{
     .nav__links{
         gap: 50px;
     }
+
+    .nav__links-contact{
+        gap: 50px;
+    }
 }
 
 @media screen and (min-width:1400px){
     .nav__links{
+        gap: 60px;
+    }
+
+    .nav__links-contact{
         gap: 60px;
     }
 }
@@ -724,7 +767,7 @@ input.src{
     }
 }
 
-/* ----------------*12. -- Jobs 2 and Studies 1 -- ---------------------- */
+/* ----------------*12. -- Jobs 2 -- ---------------------- */
 
 .banner-jobs2 {
     background-image: url(../assets/img/banner-jobs2.png);
@@ -734,21 +777,21 @@ input.src{
     height: 20vh;
 }
 
-.profile-jobs2_hig768px_, .profile-studies1_hig768px_{
+.profile-jobs2_hig768px_{
     display: none;
 }
 
-.profile-jobs2_min768px_,  .profile-studies1_min768px_{
+.profile-jobs2_min768px_{
     display: grid;
     justify-content: center;
     grid-template-columns: 89px 200px;
-    grid-template-rows: 20px 200px;
+    grid-template-rows: 80px 100px;
     grid-template-areas: 
     "profile-jobs2__img profile-jobs2__title"
     "profile-jobs2__description profile-jobs2__description";
 }
 
-.profile-jobs2__img,  .profile-studies1__img{
+.profile-jobs2__img{
     grid-area: profile-jobs2__img;
     margin-top: -20px;
 }
@@ -757,18 +800,18 @@ input.src{
     width: 89px;
 }
 
-.profile-jobs2__title, .profile-studies1__title{
+.profile-jobs2__title{
     grid-area: profile-jobs2__title;
     justify-content: start;
     margin-left: 20px;
 }
 
-.profile-jobs2__title h1, .profile-studies1__title h1{
+.profile-jobs2__title h1{
     font-size: x-large;
     margin-bottom: 5px;
 }
 
-.profile-jobs2__description,  .profile-studies1__description{
+.profile-jobs2__description{
     grid-area: profile-jobs2__description;
     max-width: 90%;
     font-size: small;
@@ -779,7 +822,7 @@ input.src{
     flex-direction: column;
     text-align: center;
     row-gap: 3rem;
-    
+    margin-top: 50px;
 }
 
 .icons-jobs2 img{
@@ -792,7 +835,7 @@ input.src{
     justify-content: center;
 }
 
-.proyects-jobs2,  .proyects-studies1{
+.proyects-jobs2{
     margin-top: 4rem;
     place-items: center;
     display: grid;
@@ -804,11 +847,11 @@ input.src{
         "proyects__item-2";
 }
 
-.proyects-jobs2__title,  .proyects-studies1__title{
+.proyects-jobs2__title{
     grid-area: proyects__title;
 }
 
-.proyects-jobs2__item-1,  .proyects-studies1__item-1{
+.proyects-jobs2__item-1{
     grid-area: proyects__item-1;
 }
 
@@ -822,20 +865,20 @@ input.src{
         height: 25vh;
     }
 
-    .profile-jobs2_min768px_,  .profile-studies1_min768px_{
+    .profile-jobs2_min768px_{
         justify-content: center;
         grid-template-columns: 180px 300px;
     }
 
-    .profile-jobs2__img img,  .profile-studies1__img img{
+    .profile-jobs2__img img{
         width: 150px;
     }
 
-    .profile-jobs2__img,  .profile-studies1__img {
+    .profile-jobs2__img{
         margin-top: -5rem;
     }
 
-    .profile-jobs2__description,  .profile-studies1__description{
+    .profile-jobs2__description{
         padding: 2rem;
         font-size: medium;
     }
@@ -846,11 +889,11 @@ input.src{
         height: 30vh;
     }
 
-    .profile-jobs2_min768px_, .profile-studies1_min768px_{
+    .profile-jobs2_min768px_{
         display: none;
     }
 
-    .profile-jobs2_hig768px_, .profile-studies1_hig768px_{
+    .profile-jobs2_hig768px_{
         display: grid;
         justify-content: center;
         place-items: center;
@@ -861,27 +904,27 @@ input.src{
         ". profile-jobs2__description";
     }
 
-    .profile-jobs2__img,  .profile-studies1__img{
+    .profile-jobs2__img{
         grid-area: profile-jobs2__img;
         margin-top: -120px;
     }
 
-    .profile-jobs2__img img,  .profile-studies1__img img{
+    .profile-jobs2__img img{
         width: 200px;
     }
     
-    .profile-jobs2__description,  .profile-studies1__description{
+    .profile-jobs2__description{
         grid-area: profile-jobs2__description;
         margin-top: 10px;
         text-align: start;
         padding: 0;
     }
 
-    .profile-jobs2__description h1,  .profile-studies1__description h1{
+    .profile-jobs2__description h1{
         font-size: xx-large;
     }
 
-    .profile-jobs2__description p,  .profile-studies1__description p{
+    .profile-jobs2__description p{
         margin-top: 30px;
         margin-bottom: 100px;
     }
@@ -892,23 +935,19 @@ input.src{
         height: 40vh;
     }
 
-    .profile-jobs2_hig768px_, .profile-studies1_hig768px_{
+    .profile-jobs2_hig768px_{
         grid-template-columns: 25% 60%;
     }
 
-
-
-    .profile-jobs2__img img,  .profile-studies1__img img{
+    .profile-jobs2__img img{
         width: 240px;
     }
 
-    .profile-jobs2__description p,  .profile-studies1__description p{
+    .profile-jobs2__description p{
         font-size: 17px;
     }
 
-    
-
-    .proyects-jobs2,  .proyects-studies1{
+    .proyects-jobs2{
         justify-content: center;
         grid-template-columns: repeat(2,300px);
         grid-template-rows: 8rem 160px;
@@ -920,11 +959,11 @@ input.src{
 }
 
 @media screen and (min-width: 1200px){
-    .profile-jobs2__description h1,  .profile-studies1__description h1{
-        font-size: 40px;
+    .profile-jobs2__description h1{
+        font-size: 50px;
     }
 
-    .profile-jobs2_hig768px_, .profile-studies1_hig768px_{
+    .profile-jobs2_hig768px_{
         grid-template-columns: 300px 940px;
     }
 }
@@ -1038,12 +1077,48 @@ input.src{
     height: 20vh;
 }
 
-.profile-studies1__description{
-    margin-top: 60px;
+.profile-studies1_hig768px_{
+    display: none;
 }
 
-.tecnologies{
-    margin-top: 100px;
+.profile-studies1_min768px_{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 89px 200px;
+    grid-template-rows: 80px 150px;
+    grid-template-areas: 
+    "profile-studies1__img profile-studies1__title"
+    "profile-studies1__description profile-studies1__description";
+}
+
+.profile-studies1__img{
+    grid-area: profile-studies1__img;
+    margin-top: -20px;
+}
+
+.profile-studies1__img img{
+    width: 89px;
+}
+
+.profile-studies1__title{
+    grid-area: profile-studies1__title;
+    justify-content: start;
+    margin-left: 20px;
+}
+
+.profile-studies1__title h1{
+    font-size: x-large;
+    margin-bottom: 5px;
+}
+
+.profile-studies1__description{
+    grid-area: profile-studies1__description;
+    max-width: 90%;
+    font-size: small;
+}
+
+.tecnologies-studies1{
+    margin-top: 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1104,6 +1179,24 @@ input.src{
     .banner-studies1{
         height: 25vh;
     }
+
+    .profile-studies1_min768px_{
+        justify-content: center;
+        grid-template-columns: 180px 300px;
+    }
+
+    .profile-studies1__img img{
+        width: 150px;
+    }
+
+    .profile-studies1__img {
+        margin-top: -5rem;
+    }
+
+    .profile-studies1__description{
+        padding: 2rem;
+        font-size: medium;
+    }
 }
 
 @media screen and (min-width:768px){
@@ -1114,6 +1207,43 @@ input.src{
     .profile-studies1__img img{
         width: 200px;
     }
+
+    .profile-studies1_min768px_{
+        display: none;
+    }
+
+    .profile-studies1_hig768px_{
+        margin-top: 30px;
+        display: grid;
+        justify-content: center;
+        place-items: center;
+        grid-template-columns: 200px 500px;
+        grid-template-rows: 200px 80px;
+        grid-template-areas: 
+        "profile-studies1__img profile-studies1__description "
+        ". profile-studies1__description";
+    }
+
+    .profile-studies1__img{
+        grid-area: profile-studies1__img;
+        margin-top: -150px;
+    }
+    
+    .profile-studies1__description{
+        grid-area: profile-studies1__description;
+        margin-top: 10px;
+        text-align: start;
+        padding: 0;
+    }
+
+    .profile-studies1__description h1{
+        font-size: 30px;
+    }
+
+    .profile-studies1__description p{
+        margin-top: 30px;
+        margin-bottom: 100px;
+    }
 }
 
 @media screen and (min-width:992px){
@@ -1122,6 +1252,28 @@ input.src{
         background-image: url(../assets/img/banner-studies998px.png);
         background-position: center;
         background-size: cover;
+    }
+
+    .profile-studies1_hig768px_{
+        grid-template-columns: 25% 60%;
+    }
+
+    .profile-studies1__img img{
+        width: 240px;
+    }
+
+    .profile-studies1__description p{
+        font-size: 17px;
+    }
+}
+
+@media screen and (min-width: 1200px){
+    .profile-studies1__description h1{
+        font-size: 50px;
+    }
+
+    .profile-studies1_hig768px_{
+        grid-template-columns: 300px 940px;
     }
 }
 
@@ -1298,6 +1450,14 @@ input.src{
 .galery-proyect3 img{
     width: 100%;
     margin: -3px;
+}
+
+.tecnologies{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    row-gap: 3rem;
+    margin-top: 50px;
 }
 
 .tecnologies__icons{
@@ -1606,11 +1766,13 @@ blockquote{
 }
 
 .keep-reading_min768px_{
-    margin-top: 5rem;
+    margin-top: 50px;
+    margin-bottom: -20px;
 }
 
 .keep-reading_min768px_ img{
     width: 130px;
+    height: 100px;
 }
 
 .container-keep-reading{
@@ -1621,7 +1783,7 @@ blockquote{
 }
 
 .container-blog1-small{
-    margin: 5px;
+    margin: 10px;
 }
 
 .keep-reading_hig768px_{
