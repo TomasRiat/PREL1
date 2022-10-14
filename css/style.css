@@ -136,19 +136,13 @@ img{
     }
 }
 
-
 h3{
     font-weight: var(--font-title);
     color:var(--font-color) 
 }
 
-main{
-    width: 100%;
+body{
     height: 100%;
-    display: grid;
-    grid-auto-rows: auto;
-    grid-auto-columns: minmax(300px, 1080px);
-    justify-content: center;
 }
 
 /*---------------*4. -- Animations and Transitions -- -----------------*/
@@ -212,7 +206,8 @@ main{
 .container-view{
     display: flex;
     justify-content: center;
-    margin: 50px 0px;
+    margin-bottom: 80px;
+    margin-top: 50px;
 }
 
 .button-view {
@@ -220,6 +215,7 @@ main{
     color: var(--view-color);
     transition: 300ms ease;
     font-weight: 700;
+    font-size: 12px;
 }
 /*-----------------*7. -- Special h2, h3 and Span title -- ----------------*/
 .span-title, .h2-subtitle{
@@ -433,6 +429,7 @@ input.src{
 @media screen and (min-width:992px){
     header{
         position: absolute;
+        top: 0;
         width: 100%;
         height: 10rem;
         background-color: rgba(255, 255, 255, 0.459);
@@ -580,7 +577,7 @@ input.src{
 .profile {
     display: grid;
     grid-auto-columns: 300px;
-    row-gap: 20px;
+    row-gap: 10px;
     justify-content: center;
     place-items: center;
     margin-top: -8rem;
@@ -637,7 +634,7 @@ input.src{
         display: grid;
         justify-content: center;
         place-items:start;
-        grid-template-columns: 60% 40%;
+        grid-template-columns: 450px 250px;
         grid-template-rows: repeat(2,13rem);
         grid-template-areas: 
         "profile__title profile__img"
@@ -701,9 +698,11 @@ input.src{
     }
 
     .profile{
+        grid-auto-columns: 1080px;
         justify-content: center;
-        grid-template-columns: 40% 30%;
     }
+
+
 }
 
 /* -------------------*11. -- Jobs -- ---------------- */
@@ -715,7 +714,7 @@ input.src{
     display: grid;
     gap: 10px;
     grid-template-columns: 300px;
-    grid-template-rows: 50px repeat(3, 90px);
+    grid-auto-rows: 50px repeat(3, 90px) 50px;
     grid-template-areas:
     "job-title"
     "job__item--1"
@@ -843,12 +842,12 @@ input.src{
 .profile-jobs2__title{
     grid-area: profile-jobs2__title;
     justify-content: start;
-    margin-left: 20px;
+    margin-left: 10px;
 }
 
 .profile-jobs2__title h1{
     margin: 5px 0px;
-    font-size: 20px;
+    font-size: x-large;
     font-weight: 700;
     line-height: 24px;
     text-align: left;
@@ -1137,7 +1136,7 @@ input.src{
 .profile-studies1_min768px_{
     display: grid;
     justify-content: center;
-    grid-template-columns: 89px 200px;
+    grid-template-columns: 89px 211px;
     grid-template-rows: 80px 180px;
     grid-template-areas: 
     "profile-studies1__img profile-studies1__title"
@@ -1155,8 +1154,7 @@ input.src{
 
 .profile-studies1__title{
     grid-area: profile-studies1__title;
-    justify-content: start;
-    margin-left: 20px;
+    margin-left: 10px;
 }
 
 .profile-studies1__title h1{
@@ -1227,12 +1225,17 @@ input.src{
 .proyects-studies1{
     margin-top: 4rem;
     place-items: center;
+    justify-content: center;
     display: grid;
-    grid-template-columns: 100%;
+    grid-template-columns: 300px;
     grid-template-rows: 8rem 18rem;
     grid-template-areas:
         "proyects__title"
         "proyects__item-1";
+}
+
+.proyects-studies1 img{
+    width: 300px;
 }
 
 .proyects-studies1__title{
@@ -1438,8 +1441,9 @@ input.src{
     .proyects {
         display: grid;
         justify-content: center;
-        grid-template-columns: repeat(3,290px);
-        grid-template-rows: 15rem repeat(2,15rem);
+        grid-template-columns: repeat(3,300px);
+        grid-template-rows: 70px repeat(2,165px);
+        gap: 10px;
         grid-template-areas:
         "proyects__title proyects__title proyects__title"
         "proyects__item-1 proyects__item-2 proyects__item-3"
@@ -1501,7 +1505,10 @@ input.src{
 }
 
 .inicio-proyect3{
-    padding: 18px;
+    margin-top: 10px;
+    display: grid;
+    grid-auto-columns: 300px;
+    justify-content: center;
 }
 
 .inicio-proyect3__description{
@@ -1526,12 +1533,14 @@ input.src{
 }
 
 .galery-proyect3{
-    padding: 0px 20px;
+    display: grid;
+    margin: 0px;
+    grid-auto-columns: 300px;
+    justify-content: center;
 }
 
 .galery-proyect3 img{
     width: 100%;
-    margin: -3px;
 }
 
 .tecnologies{
@@ -1568,7 +1577,7 @@ input.src{
     }
 
     .galery-proyect3{
-        padding: 0px 30px;
+
     }
 }
 
@@ -1581,8 +1590,8 @@ input.src{
         padding: 20px 50px;
     }
 
-    .galery-proyect3 img{
-        padding: 0px 60px;
+    .galery-proyect3{
+
     }
 }
 
@@ -1834,7 +1843,7 @@ input.src{
 .container-blog1{
     display: grid;
     justify-content: center;
-    grid-auto-columns: 284px;
+    grid-auto-columns: 300px;
 }
 
 .blog1-titles_min992px_{
@@ -2140,7 +2149,7 @@ blockquote{
     display: grid;
     margin-bottom: 5rem;
     justify-content: center;
-    grid-template-columns: 130px 200px;
+    grid-template-columns: 90px 210px;
     grid-template-rows: 100%;
     grid-template-areas: 
     "contact__img contact__title"
@@ -2156,13 +2165,26 @@ blockquote{
 }
 
 .contact__img img{
-    width: 130px;
+    width: 89px;
 }
 
 .contact__title{
     grid-area: contact__title;
     justify-content: start;
-    margin-top: 1rem;
+    margin: 5px 10px;
+}
+
+.contact__title h1{
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+}
+
+.contact__title h2{
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 18px;
+    color: #444444;
 }
 
 .contact__container{
@@ -2178,17 +2200,18 @@ blockquote{
 }
 
 .contact__input1{
-    width: 90%;
+    width: 300px;
     font-size:small ;
     padding: 10px;
     border-color: inherit;
     box-shadow: none;
     border: var(--black) solid 2px;
     outline: 0;
+
 }
 
 .contact__input2{
-    width: 90%;
+    width: 300px;
     font-size:small ;
     padding: 10px;
     border-color: inherit;
@@ -2198,7 +2221,7 @@ blockquote{
 }
 
 .contact__input--textarea{
-    width: 90%;
+    width: 300px;
     height: 10rem;
     border: var(--black) solid 2px;
     font-size:small ;
@@ -2215,7 +2238,7 @@ blockquote{
 }
 
 .button__contact1{
-    width: 90%;
+    width: 300px;
     height: 5rem;
     background-color: var(--black);
     color: var(--white);
