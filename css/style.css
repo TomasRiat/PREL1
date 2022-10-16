@@ -12,9 +12,9 @@
 *9. -- Header --
 *10. -- Profile --
 *11. -- Jobs --
-*12. -- Jobs 2 and Studies 1 -- (they share similar characteristics) --
+*12. -- Jobs 2 -- 
 *13. -- Studies --
-*14. -- Studies 1 -- (here are other features not shared with jobs 2) --
+*14. -- Studies 1 -- 
 *15. -- Proyects -- 
 *16. -- Proyects 3 --
 *17. -- Blog --
@@ -287,7 +287,7 @@ header{
 }
 
 .container{
-    width: 95%;
+    width: 96%;
 }
 
 .nav{
@@ -324,7 +324,10 @@ header{
 
 .nav__icon{
     transition: transform 300ms ease-in-out;
-    width: 25px;
+}
+
+.bi-x-lg{
+    font-size: 25px;
 }
 
 .nav__icon:hover {
@@ -383,7 +386,7 @@ header{
 
 .bi-arrow-left{
     color: var(--white);
-    font-size: x-large;
+    font-size: 25px;
     align-items: center;
 }
 
@@ -566,12 +569,11 @@ input.src{
 
 /* --------------------*10. -- Profile -- -------------------- */
 
-.banner {
+.banner img{
     height: 20vh;
-    background-image: url(../assets/img/banner-998px.png);
-    background-repeat: no-repeat;
-    background-size: cover;
+    width: 100%;
     z-index: -1;
+    object-fit: cover;
 }
 
 .profile {
@@ -606,22 +608,14 @@ input.src{
 }
 
 @media screen and (min-width: 576px) {
-    .banner {
+    .banner img {
         height: 25vh;
-    }
-
-    .profile__description{
-        padding: 1.5rem;
     }
 }
 
 @media screen and (min-width: 768px){
-    .banner {
+    .banner img {
         height: 30vh;
-    }
-
-    .profile__description{
-        padding: 4rem;
     }
 }
 
@@ -630,7 +624,8 @@ input.src{
         display: none;
     }
     .profile{
-        margin: 20rem;
+        margin-top: 300px;
+        margin-bottom: 200px;
         display: grid;
         justify-content: center;
         place-items:start;
@@ -759,15 +754,9 @@ input.src{
     margin-right: 5px;
 }
 
-@media screen and (min-width: 576px){
-    .job__content--1, .job__content--2, .job__content--3, .job__content--4{
-        padding: 1.5rem;
-    }
-}
-
 @media screen and (min-width: 992px){
     .job{
-        padding: 0rem;
+        margin-top: 80px;
         display: grid;
         justify-content: center;
         grid-template-columns: repeat(2,400px);
@@ -802,18 +791,21 @@ input.src{
 
 @media screen and (min-width: 1200px){
     .job{
-        grid-template-columns: repeat(2,30%);
+        grid-template-columns: repeat(2,540px);
+    }
+
+    .job__content--1, .job__content--2, .job__content--3, .job__content--4{
+        margin-top: 10px;
+        margin-right: 20px;
     }
 }
 
 /* ----------------*12. -- Jobs 2 -- ---------------------- */
 
-.banner-jobs2 {
-    background-image: url(../assets/img/banner-jobs2.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+.banner-jobs2 img{
     height: 20vh;
+    width: 100%;
+    object-fit: cover;
 }
 
 .profile-jobs2_hig768px_{
@@ -851,7 +843,6 @@ input.src{
     font-weight: 700;
     line-height: 24px;
     text-align: left;
-
 }
 
 .profile-jobs2__description{
@@ -868,7 +859,7 @@ input.src{
     flex-direction: column;
     text-align: center;
     row-gap: 3rem;
-    margin-top: 50px;
+    margin-top: 80px;
 }
 
 .icons-jobs2 img{
@@ -882,7 +873,7 @@ input.src{
 }
 
 .proyects-jobs2{
-    margin-top: 4rem;
+    margin-top: 90px;
     place-items: center;
     justify-content: center;
     row-gap: 4px;
@@ -912,32 +903,9 @@ input.src{
 }
 
 
-@media screen and (min-width:576px) {
-    .banner-jobs2 {
-        height: 25vh;
-    }
-
-    .profile-jobs2_min768px_{
-        justify-content: center;
-        grid-template-columns: 180px 300px;
-    }
-
-    .profile-jobs2__img img{
-        width: 150px;
-    }
-
-    .profile-jobs2__img{
-        margin-top: -5rem;
-    }
-
-    .profile-jobs2__description{
-        padding: 2rem;
-        font-size: medium;
-    }
-}
 
 @media screen and (min-width:768px){
-    .banner-jobs2{
+    .banner-jobs2 img{
         height: 30vh;
     }
 
@@ -950,15 +918,14 @@ input.src{
         justify-content: center;
         place-items: center;
         grid-template-columns: 200px 500px;
-        grid-template-rows: 200px 80px;
+        grid-template-rows: 150px;
         grid-template-areas: 
         "profile-jobs2__img profile-jobs2__description "
-        ". profile-jobs2__description";
     }
 
     .profile-jobs2__img{
         grid-area: profile-jobs2__img;
-        margin-top: -120px;
+        margin-top: -40px;
     }
 
     .profile-jobs2__img img{
@@ -967,24 +934,23 @@ input.src{
     
     .profile-jobs2__description{
         grid-area: profile-jobs2__description;
-        margin-top: 10px;
         text-align: start;
         padding: 0;
     }
 
     .profile-jobs2__description h1{
-        font-size: xx-large;
+        font-size: 30px;
+        margin-bottom: 10px;
     }
 
     .profile-jobs2__description p{
-        margin-top: 30px;
-        margin-bottom: 100px;
+        margin-top: 20px;
     }
 }
 
 @media screen and (min-width:992px){
-    .banner-jobs2{
-        height: 40vh;
+    .banner-jobs2 img{
+        height: 35vh;
     }
 
     .profile-jobs2_hig768px_{
@@ -992,7 +958,8 @@ input.src{
     }
 
     .profile-jobs2__img img{
-        width: 240px;
+        margin-top: -10px;
+        width: 225px;
     }
 
     .profile-jobs2__description p{
@@ -1002,7 +969,8 @@ input.src{
     .proyects-jobs2{
         justify-content: center;
         grid-template-columns: repeat(2,300px);
-        grid-template-rows: 8rem 160px;
+        column-gap: 10px;
+        grid-template-rows: 80px 162px;
         grid-template-areas:
             "proyects__title proyects__title"
             "proyects__item-1 proyects__item-2"
@@ -1012,11 +980,23 @@ input.src{
 
 @media screen and (min-width: 1200px){
     .profile-jobs2__description h1{
-        font-size: 50px;
+        font-size: 40px;
     }
 
     .profile-jobs2_hig768px_{
-        grid-template-columns: 300px 940px;
+        grid-template-columns: 300px 780px;
+    }
+}
+
+@media screen and (min-width:1400px){
+    .proyects-jobs2{
+        grid-template-columns: repeat(2,400px);
+        column-gap: 10px;
+        grid-template-rows: 80px 216px;
+    }
+
+    .proyects-jobs2 img{
+        width: 400px;
     }
 }
 
@@ -1120,13 +1100,10 @@ input.src{
 
 /* ----------------------*14. -- Studies 1 -- ----------------------- */
 
-.banner-studies1{
-    background-image: url(../assets/img/banner-studies1.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    object-fit: contain;
+.banner-studies1 img{
     height: 20vh;
+    width: 100%;
+    object-fit: cover;
 }
 
 .profile-studies1_hig768px_{
@@ -1176,7 +1153,7 @@ input.src{
 }
 
 .tecnologies-studies1{
-    margin-top: 50px;
+    margin-top: 90px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1207,7 +1184,6 @@ input.src{
 .tecnologies__icons2{
     display: flex;
     flex-direction: row;
-    
 }
 
 .tecnologies__icon img{
@@ -1223,12 +1199,12 @@ input.src{
 }
 
 .proyects-studies1{
-    margin-top: 4rem;
+    margin-top: 80px;
     place-items: center;
     justify-content: center;
     display: grid;
     grid-template-columns: 300px;
-    grid-template-rows: 8rem 18rem;
+    grid-template-rows: 80px 162px;
     grid-template-areas:
         "proyects__title"
         "proyects__item-1";
@@ -1246,33 +1222,8 @@ input.src{
     grid-area: proyects__item-1;
 }
 
-
-@media screen and (min-width:576px){
-    .banner-studies1{
-        height: 25vh;
-    }
-
-    .profile-studies1_min768px_{
-        justify-content: center;
-        grid-template-columns: 180px 300px;
-    }
-
-    .profile-studies1__img img{
-        width: 150px;
-    }
-
-    .profile-studies1__img {
-        margin-top: -5rem;
-    }
-
-    .profile-studies1__description{
-        padding: 2rem;
-        font-size: medium;
-    }
-}
-
 @media screen and (min-width:768px){
-    .banner-studies1{
+    .banner-studies1 img{
         height: 30vh;
     }
 
@@ -1285,27 +1236,25 @@ input.src{
     }
 
     .profile-studies1_hig768px_{
-        margin-top: 30px;
         display: grid;
         justify-content: center;
         place-items: center;
+        column-gap: 15px;
         grid-template-columns: 200px 500px;
-        grid-template-rows: 200px 80px;
+        grid-template-rows: 160px;
         grid-template-areas: 
         "profile-studies1__img profile-studies1__description "
-        ". profile-studies1__description";
     }
 
     .profile-studies1__img{
         grid-area: profile-studies1__img;
-        margin-top: -150px;
+        margin-top: -40px;
     }
     
     .profile-studies1__description{
         grid-area: profile-studies1__description;
-        margin-top: 10px;
         text-align: start;
-        padding: 0;
+        
     }
 
     .profile-studies1__description h1{
@@ -1313,17 +1262,13 @@ input.src{
     }
 
     .profile-studies1__description p{
-        margin-top: 30px;
-        margin-bottom: 100px;
+        margin-top: 20px;
     }
 }
 
 @media screen and (min-width:992px){
-    .banner-studies1{
-        height: 40vh;
-        background-image: url(../assets/img/banner-studies998px.png);
-        background-position: center;
-        background-size: cover;
+    .banner-studies1 img{
+        height: 35vh;
     }
 
     .profile-studies1_hig768px_{
@@ -1331,7 +1276,7 @@ input.src{
     }
 
     .profile-studies1__img img{
-        width: 240px;
+        width: 225px;
     }
 
     .profile-studies1__description p{
@@ -1341,11 +1286,23 @@ input.src{
 
 @media screen and (min-width: 1200px){
     .profile-studies1__description h1{
-        font-size: 50px;
+        font-size: 40px;
     }
 
     .profile-studies1_hig768px_{
-        grid-template-columns: 300px 940px;
+        grid-template-columns: 300px 780px;
+    }
+}
+
+@media screen and (min-width:1400px){
+    .proyects-studies1{
+        grid-template-columns: 400px;
+        column-gap: 10px;
+        grid-template-rows: 80px 216px;
+    }
+
+    .proyects-studies1 img{
+        width: 400px;
     }
 }
 
@@ -1399,17 +1356,13 @@ input.src{
     content:'';
     position:absolute;
     left:0; top:0;
-    /*width:100%; height:100%;*/
+    width: 100%;
+    height: 98%;
     display:inline-block;
-    background: -moz-linear-gradient(to top, rgba(20, 20, 20, 0.692) 0%, rgba(10, 10, 10, 0) 100%);
-    
-  background: -webkit-linear-gradient(to top, rgba(20, 20, 20, 0.692) 0%, rgba(10, 10, 10, 0) 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(to top, rgba(20, 20, 20, 0.692) 0%, rgba(10, 10, 10, 0) 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(to top, rgba(20, 20, 20, 0.692) 0%, rgba(10, 10, 10, 0) 100%); /* IE10+ */
-  background: linear-gradient(to top, rgba(20, 20, 20, 0.692) 0%, rgba(10, 10, 10, 0) 100%); /* W3C */
+    background: linear-gradient(0deg, rgba(33, 24, 33, 0.65) 0%, rgba(33, 24, 33, 0) 100%);
 }
 
-.figure-caption, .figure-caption-blog, .figure-caption-blog-small{
+.figure-caption, .figure-caption-blog, .figure-caption-blog-small,.figure-caption-blog1-high, .figure-caption-blog1-small{
     z-index: 2;
 }
 
@@ -1482,12 +1435,13 @@ input.src{
 
 @media screen and (min-width:1400px){
     .proyects{
-        grid-template-columns: repeat(3,380px);
-        grid-template-rows: 15rem repeat(2,205px);
+        grid-template-columns: repeat(3,400px);
+        grid-template-rows: 80px repeat(2,218px);
+        gap: 20px;
     }
 
     .proyects img{
-        width: 380px;
+        width: 400px;
     }
 }
 
@@ -1495,13 +1449,10 @@ input.src{
 
 /* -----------------------*16. -- Proyects 3 -- -------------------- */
 
-.banner-proyect3{
-    background-image: url(../assets/img/banner-proyect3.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    object-fit: contain;
+.banner-proyect3 img{
+    object-fit: cover;
     height: 20vh;
+    width: 100%;
 }
 
 .inicio-proyect3{
@@ -1541,6 +1492,7 @@ input.src{
 
 .galery-proyect3 img{
     width: 100%;
+    margin-bottom: -4px;
 }
 
 .tecnologies{
@@ -1548,7 +1500,7 @@ input.src{
     flex-direction: column;
     text-align: center;
     row-gap: 30px;
-    margin-top: 50px;
+    margin-top: 80px;
 }
 
 .tecnologies__icons{
@@ -1572,32 +1524,24 @@ input.src{
 }
 
 @media screen and (min-width:576px){
-    .banner-proyect3{
+    .banner-proyect3 img{
         height: 25vh;
-    }
-
-    .galery-proyect3{
-
     }
 }
 
 @media screen and (min-width:768px){
-    .banner-proyect3{
+    .banner-proyect3 img{
         height: 30vh;
     }
 
     .inicio-proyect3{
         padding: 20px 50px;
     }
-
-    .galery-proyect3{
-
-    }
 }
 
 @media screen and (min-width:992px){
-    .banner-proyect3{
-        height: 40vh;
+    .banner-proyect3 img{
+        height: 35vh;
     }
 
     .inicio-proyect3{
@@ -1606,13 +1550,20 @@ input.src{
         justify-content: center;
     }
 
+    .inicio-proyect3 h1{
+        font-size: 35px;
+        font-weight: 700;
+        line-height: 57px;
+        text-align: left;
+    }
+
     .subtitle-proyect3{
         display: none;
     }
 
     .galery-proyect3{
         display: grid;
-        grid-auto-columns: 820px;
+        grid-auto-columns: 720px;
         justify-content: center;
     }
 }
@@ -1622,7 +1573,10 @@ input.src{
         display: grid;
         grid-auto-columns: 1080px;
         justify-content: center;
-        
+    }
+
+    .inicio-proyect3 h1{
+        font-size: 40px;
     }
 
     .galery-proyect3{
@@ -1710,8 +1664,9 @@ input.src{
         display: grid;
         place-items: center;
         justify-content: center;
+        gap: 5px;
         grid-template-columns: 610px 300px;
-        grid-template-rows: 15rem repeat(3,220px);
+        grid-template-rows: 80px repeat(3,200px);
         grid-template-areas:
         "blog__title blog__title"
         "blog__item-1 blog__item-2"
@@ -1721,7 +1676,6 @@ input.src{
 
     .blog__title_992px_ {
         grid-area: blog__title;
-        text-align: center;
     }
     
     .blog__item-1_992px_ {
@@ -1729,16 +1683,14 @@ input.src{
     }
 
     .blog__item-1_992px_ img {
-        width: 610px;
-        height: 540px;
+        width: 620px;
+        height: 510px;
         box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.2);
     }
     
     .blog__item-2_992px_ {
         grid-area: blog__item-2;
-        margin-left: 15px;
-        
-        padding: 5px;
+        margin-left: 10px;
     }
 
     .blog__item-2_992px_ img {
@@ -1749,8 +1701,8 @@ input.src{
     .blog__item-3_992px_ {
         grid-area: blog__item-3;
         border-top: 2px solid #DBDBDB;
-        margin-left: 15px;
-        padding: 5px;
+        padding-top: 5px;
+        margin-left: 10px;
     }
 
     .blog__item-3_992px_ img {
@@ -1761,8 +1713,8 @@ input.src{
     .blog__item-4_992px_ {
         grid-area: blog__item-4;
         border-top: 2px solid #DBDBDB;
-        margin-left: 15px;
-        padding: 5px;
+        padding-top: 5px;
+        margin-left: 10px;
     }
 
     .blog__item-4_992px_ img{
@@ -1774,13 +1726,14 @@ input.src{
 @media screen and (min-width:1400px){
 
     .blog_992px_{
-        grid-template-columns: 610px 570px;
-        grid-template-rows: 10rem repeat(3,200px);
+        grid-template-columns: 620px 570px;
+        grid-template-rows: 80px repeat(3,175px);
+        gap: 5px;
     }
 
     .blog__item-1_992px_ img {
         width: 610px;
-        height: 480px;
+        height: 450px;
     }
 
     .blog__item-2_992px_ {
@@ -1795,7 +1748,7 @@ input.src{
     }
 
     .blog__item-2_992px_ h3{
-        margin-left: 20px;
+        margin-left: 5px;
         margin-top: 5px;
     }
 
@@ -1810,7 +1763,7 @@ input.src{
     }
 
     .blog__item-3_992px_ h3{
-        margin-left: 20px;
+        margin-left: 5px;
         margin-top: 5px;
     }
 
@@ -1825,7 +1778,7 @@ input.src{
     }
 
     .blog__item-4_992px_ h3{
-        margin-left: 20px;
+        margin-left: 5px;
         margin-top: 5px;
     }
 
@@ -1833,11 +1786,10 @@ input.src{
 
 /* -----------------*18. -- Blog 1 -- --------------------- */
 
-.banner-blog1{
+.banner-blog1 img{
     height: 20vh;
-    background-image: url(../assets/img/banner-blog.png);
-    background-repeat: no-repeat;
-    background-size: cover;
+    object-fit: cover;
+    width: 100%;
 }
 
 .container-blog1{
@@ -1855,6 +1807,12 @@ input.src{
     font-weight: 700;
     line-height: 24px;
     text-align: left;
+}
+
+.h2-subtitle__blog1{
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 18px;
 }
 
 .blog1-titles_hig992px_{
@@ -1898,12 +1856,12 @@ blockquote{
     text-align: left;
 }
 
-.keep-reading_min768px_{
+.keep-reading_min992px_{
     margin-top: 50px;
     margin-bottom: -5px;
 }
 
-.keep-reading_min768px_ h3{
+.keep-reading_min992px_ h3{
     font-size: 17px;
     font-weight: 600;
     line-height: 21px;
@@ -1911,7 +1869,7 @@ blockquote{
     margin-bottom: 20px;
 }
 
-.keep-reading_min768px_ img{
+.keep-reading_min992px_ img{
     margin-top: 11px;
     width: 100%;
 }
@@ -1927,7 +1885,7 @@ blockquote{
     margin: 5px;
 }
 
-.keep-reading_hig768px_{
+.keep-reading_hig992px_{
     display: none;
 }
 
@@ -1943,76 +1901,15 @@ blockquote{
     font-size:x-small;
 }
 
-
-@media screen and (min-width:576px){
-    .banner-blog1{
-        height: 25vh;
-    }
-
-    .container-blog1{
-        display: grid;
-        justify-content: center;
-        grid-auto-columns: 400px;
-    }
-
-    blockquote{
-        margin: 40px 50px;
-    }
-
-    .container-blog1-small{
-        margin: 15px;
-    }
-
-}
-
 @media screen and (min-width:768px){
-    .banner-blog1{
+    .banner-blog1 img{
         height: 30vh;
-    }
-
-    .container-blog1{
-        grid-auto-columns: 600px;
-    }
-
-    blockquote{
-        margin: 80px 80px;
-    }
-
-    .keep-reading_min768px_{
-        display: none;
-    }
-
-    .keep-reading_hig768px_{
-        margin-top: 5rem;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .container-keep{
-        margin: 0px 20px;
-        margin-top: 20px;
-    }
-
-    .container-keep img{
-        width: 100%;
-    }
-    
-    .figure-container-blog1-high {
-        position: relative;
-    }
-    
-    .figure-container-blog1-high .figure-caption-blog1-high {
-        position: absolute;
-        top: 70%;
-        left: 70%;
-        color: var(--white);
-        font-size:x-small;
     }
 }
 
 @media screen and (min-width:992px){
-    .banner-blog1{
-        height: 40vh;
+    .banner-blog1 img{
+        height: 35vh;
     }
 
     .blog1-titles_min992px_{
@@ -2020,13 +1917,16 @@ blockquote{
     }
 
     .container-blog1{
-        grid-auto-columns: 800px;
+        grid-auto-columns: 720px;
         margin-top: 67px;
     }
 
     .blog1-titles_hig992px_{
         display: block;
-        font-size: 30px;
+    }
+
+    .blog1-titles_hig992px_ h1{
+        font-size: 35px;
         font-weight: 700;
         line-height: 57px;
         text-align: left;
@@ -2049,12 +1949,44 @@ blockquote{
         line-height: 36px;
     }
 
+    .keep-reading_min992px_{
+        display: none;
+    }
+
+    .keep-reading_hig992px_{
+        margin-top: 5rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .container-keep{
+        width: 300px;
+        margin: 20px;
+    }
+
+    .container-keep img{
+        width: 300px;
+        height: 162px;
+    }
+
+    .container-keep p{
+        margin-top: 10px;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 29px;
+        text-align: left;
+    }
+
+    .figure-container-blog1-high {
+        position: relative;
+    }
+    
     .figure-container-blog1-high .figure-caption-blog1-high {
         position: absolute;
         top: 80%;
         left: 80%;
         color: var(--white);
-        font-size:small;
+        font-size:x-small;
     }
 
     .container-keep p{
@@ -2100,6 +2032,13 @@ blockquote{
         font-size: 20px;
         line-height: 36px;
     }
+
+    .keep-reading_hig992px_{
+        width: 800px;
+        margin-top: 80px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 
@@ -2111,7 +2050,7 @@ blockquote{
     grid-auto-columns: 300px;
     place-items: center;
     justify-content: center;
-    margin-top: 20px;
+    padding-top: 20px;
 }
 
 .social__icons {
@@ -2137,12 +2076,10 @@ blockquote{
 
 /* ------------------------*20. -- Contact -- ----------------------- */
 
-.banner-contact{
+.banner-contact img{
     height: 20vh;
-    background-image: url(../assets/img/banner-998px.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    z-index: -1;
+    width: 100%;
+    object-fit: cover;
 }
 
 .contact{
@@ -2150,7 +2087,7 @@ blockquote{
     margin-bottom: 5rem;
     justify-content: center;
     grid-template-columns: 90px 210px;
-    grid-template-rows: 100%;
+    grid-template-rows: 60px;
     grid-template-areas: 
     "contact__img contact__title"
     ;
@@ -2161,7 +2098,6 @@ blockquote{
     margin-top: -3rem;
     display: flex;
     justify-content: center;
-    
 }
 
 .contact__img img{
@@ -2188,48 +2124,10 @@ blockquote{
 }
 
 .contact__container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    
 }
 
-.contact__input-line{
-    display:flex;
-    justify-content: center;
-    margin-top: 15px;
-}
 
-.contact__input1{
-    width: 300px;
-    font-size:small ;
-    padding: 10px;
-    border-color: inherit;
-    box-shadow: none;
-    border: var(--black) solid 2px;
-    outline: 0;
-
-}
-
-.contact__input2{
-    width: 300px;
-    font-size:small ;
-    padding: 10px;
-    border-color: inherit;
-    box-shadow: none;
-    border: var(--black) solid 2px;
-    outline: 0;
-}
-
-.contact__input--textarea{
-    width: 300px;
-    height: 10rem;
-    border: var(--black) solid 2px;
-    font-size:small ;
-    padding: 10px;
-    border-color: inherit;
-    box-shadow: none;
-    outline: 0;
-}
 
 .container__button{
     display: flex;
@@ -2256,29 +2154,19 @@ blockquote{
 
 
 @media screen and (min-width:576px){
-
     .contact{
         grid-template-columns:150px 200px;
         margin: auto;
     }
-    .contact__input1{
-        width: 70%;
-    }
-
-    .contact__input2{
-        width: 70%;
-    }
-
-    .contact__input--textarea{
-        width: 70%;
-    }
-
-
 }
 
 @media screen and (min-width:768px){
-    .banner-contact{
+    .banner-contact img{
         height: 30vh;
+    }
+
+    .contact{
+        grid-template-rows: 90px;
     }
 
     .contact__img{
@@ -2286,7 +2174,7 @@ blockquote{
     }
 
     .contact__img img{
-        width: 14rem;
+        width: 140px;
     }
 
     .contact__title{
@@ -2299,14 +2187,15 @@ blockquote{
 }
 
 @media screen and (min-width:992px){
-    .banner-contact{
-        height: 40vh;
+    .banner-contact img{
+        height: 35vh;
     }
 
     .contact__input1{
         width: 30rem;
         height: 50px;
         width: 400px;
+        max-width: 390px;
     }
 
     .contact__input2{
@@ -2314,29 +2203,28 @@ blockquote{
         margin-left: 20px;
         height: 50px;
         width: 400px;
+        max-width: 390px;
     }
 
     .contact__input--textarea{
         height: 190px;
-        width: 820px;
+        width: 800px;
+        max-width: 800px;
     }
 
     .contact{
-        grid-template-columns: 200px 500px;
+        grid-template-columns: 150px 500px;
+        margin-bottom: 100px;
     }
 
     .contact__title{
         margin-top: -5px;
     }
 
-    .contact img{
-        width: 200px;
-        height: 200px;
-        margin-top: -50px;
-    }
-
     .contact h1{
-        font-size: 50px;
+        margin-top: 10px;
+        font-size: 40px;
+        margin-bottom: 10px;
     }
 
     .contact__container{
@@ -2352,30 +2240,21 @@ blockquote{
 }
 
 @media screen and (min-width:1400px){
-    .contact__input1{
-        width: 30rem;
-        height: 50px;
-        width: 530px;
+    .contact{
+        grid-template-columns:225px 500px;
+        grid-template-rows: 140px;
+        column-gap: 20px;
     }
 
-    .contact__input2{
-        width: 30rem;
-        margin-left: 20px;
-        height: 50px;
-        width: 530px;
+    .contact h1{
+        margin-top: 40px;
     }
 
-    .contact__input--textarea{
-        height: 190px;
-        width: 1080px;
-    }
-
-    .button__contact1{
-        max-width: 1080px;
+    .contact__img img{
+        width: 225px;
+        margin-top: -20px;
     }
 }
-
-
 
 /*-----------------estilos SweetAlert--------------------*/
 
@@ -2442,7 +2321,7 @@ blockquote{
     height: 143px;
     background-color: var(--black);
     display: grid;
-    grid-template-columns: 60% 40%;
+    grid-template-columns: 50% 50%;
     grid-template-rows: 143px;
     grid-template-areas:
         "footer__text footer__up";

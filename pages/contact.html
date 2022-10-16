@@ -72,7 +72,7 @@
     </header>
     <main>
         <div class="banner-contact">
-
+            <img src="../assets/img/banner-998px.png" alt="">
         </div>
             <section class="contact">
                 <article class="contact__img">
@@ -86,26 +86,25 @@
 
             <section class="contact__container">
                 <form action="" class="contact__form">
-                    <div class="container__name-email">
-                        <div class="contact__input-line">
-                            <label for="name" class="contact__label"></label>
-                            <input type="text" name="name" id="name" class="contact__input1" placeholder="Your name" required>
-                        </div>
-                        <div class="contact__input-line">
-                            <label for="email" class="contact__label"></label>
-                            <input type="email" name="email" id="email" class="contact__input2" placeholder="Your e-mail" required>
-                        </div>
+                    <div class="input-group">
+                        <input type="text" id="name" class="input" required>
+                        <label for="name" class="input-label">Your name</label>
                     </div>
-                    <div class="contact__input-line">
-                        <label for="message" class="contact__label"></label>
-                        <textarea type="text" name="mensaje" id="mensaje" class="contact__input--textarea" placeholder="Your message" required></textarea>
+                    <div class="input-group">
+                        <input type="email" id="email" class="input" required>
+                        <label for="email" class="input-label">Your e-mail</label>
                     </div>
-
+                    <div class="input-group">
+                        <textarea id="message" class="input" required></textarea>
+                        <label for="message" class="input-label">Your message</label>
+                    </div>
+                </form>
                     <div class="container__button">
                         <input id="buttonContact" class="button__contact1"  type="submit"  value="Send">
                     </div>
             </section>
     </main>
+
     <footer class="footer">
         <div class="footer__text">
             <h2>Emma Johnson</h2>
