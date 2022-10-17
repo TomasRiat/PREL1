@@ -1,7 +1,7 @@
 const btnSwitch = document.getElementById('switch');
 const button = document.getElementById('buttonContact');
 
-
+// DARK-MODE
 
 btnSwitch.addEventListener("click", () => {
     document.body.classList.toggle('dark');
@@ -21,8 +21,7 @@ btnSwitch.addEventListener("click", () => {
     btnSwitch.classList.remove('active');
     }
 
-
-
+// ALERT-CONTACT
 
 button.addEventListener('click', () =>{
     Swal.fire({

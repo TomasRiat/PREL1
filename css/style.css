@@ -63,7 +63,7 @@
     cursor: pointer;
     display: flex;
     outline: none; 
-    transition: 500ms ease all;
+    transition: none;
 }
 
 .switch span{
@@ -86,7 +86,7 @@
     left: 0;
     right: unset;
     border-radius: 100px;
-    transition: 500ms ease all;
+    transition: none;
 }
 
 .switch.active{
@@ -110,6 +110,7 @@
 html {
     font-size: 62.5%;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -386,6 +387,14 @@ header{
     font-size: 1.2rem;
 }
 
+.min992px{
+    display: block;
+}
+
+.hig992px{
+    display: none;
+}
+
 .bi-arrow-left{
     color: var(--white);
     font-size: 25px;
@@ -421,6 +430,7 @@ input.src{
     background: #FFFFFF url(../assets/img/search.svg) 
     no-repeat 3px center ;
     transition: 500ms ease;
+    box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.2);
 }
 
 .search-hig992px{
@@ -471,6 +481,14 @@ input.src{
         grid-row: 1/2;
         max-height: unset;
         max-width: unset;
+    }
+
+    .min992px{
+        display: none;
+    }
+
+    .hig992px{
+        display: block;
     }
 
     .nav__links-contact{
@@ -558,7 +576,7 @@ input.src{
     }
 }
 
-@media screen and (min-width:1400px){
+@media screen and (min-width:1600px){
     .nav__links{
         gap: 55px;
     }
@@ -894,6 +912,7 @@ input.src{
 
 .proyects-jobs2 img{
     width: 300px;
+    box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.2);
 }
 
 .proyects-jobs2__title{
@@ -956,7 +975,7 @@ input.src{
 
 @media screen and (min-width:992px){
     .banner-jobs2 img{
-        height: 35vh;
+        height: 40vh;
     }
 
     .profile-jobs2_hig768px_{
@@ -1218,6 +1237,7 @@ input.src{
 
 .proyects-studies1 img{
     width: 300px;
+    box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.2);
 }
 
 .proyects-studies1__title{
@@ -1274,7 +1294,7 @@ input.src{
 
 @media screen and (min-width:992px){
     .banner-studies1 img{
-        height: 35vh;
+        height: 40vh;
     }
 
     .profile-studies1_hig768px_{
@@ -1330,6 +1350,7 @@ input.src{
 
 .proyects img{
     width: 300px;
+    box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.2);
 }
 
 .proyects__title {
@@ -1547,7 +1568,7 @@ input.src{
 
 @media screen and (min-width:992px){
     .banner-proyect3 img{
-        height: 35vh;
+        height: 40vh;
     }
 
     .inicio-proyect3{
@@ -1622,6 +1643,7 @@ input.src{
 .blog__item-1 img{
     width: 100%;
     max-width: 500px;
+    box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.2);
 }
 
 .blog__item-2 {
@@ -1633,12 +1655,20 @@ input.src{
     border-top: var(--blog-line-color) solid 1px;
 }
 
+.blog__item-1 img{
+    box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.2);
+}
+
 .blog__item-3 {
     display: flex;
     flex-direction: row;
     grid-area: blog__item-3;
     padding-top: 10px;
     border-top: var(--blog-line-color) solid 1px;
+}
+
+.blog__item-1 img{
+    box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.2);
 }
 
 .blog_992px_{
@@ -1702,6 +1732,7 @@ input.src{
     .blog__item-2_992px_ img {
         width:170px;
         border-radius: 4px;
+        box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.2);
     }
     
     .blog__item-3_992px_ {
@@ -1714,6 +1745,7 @@ input.src{
     .blog__item-3_992px_ img {
         width:170px;
         border-radius: 4px;
+        box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.2);
     }
 
     .blog__item-4_992px_ {
@@ -1726,6 +1758,7 @@ input.src{
     .blog__item-4_992px_ img{
         width:170px;
         border-radius: 4px;
+        box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.2);
     }
 }
 
@@ -1878,6 +1911,7 @@ blockquote{
 .keep-reading_min992px_ img{
     margin-top: 11px;
     width: 100%;
+    box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.2);
 }
 
 .container-keep-reading{
@@ -1915,7 +1949,7 @@ blockquote{
 
 @media screen and (min-width:992px){
     .banner-blog1 img{
-        height: 35vh;
+        height: 40vh;
     }
 
     .blog1-titles_min992px_{
@@ -1973,6 +2007,7 @@ blockquote{
     .container-keep img{
         width: 300px;
         height: 162px;
+        box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.2);
     }
 
     .container-keep p{
@@ -2114,7 +2149,6 @@ blockquote{
 .contact__title{
     grid-area: contact__title;
     justify-content: start;
-
 }
 
 .contact__title h1{
@@ -2238,10 +2272,11 @@ blockquote{
     .contact{
         grid-template-columns: 150px 500px;
         margin-bottom: 100px;
+        gap: 20px;
     }
 
     .contact__title{
-        margin-top: -5px;
+        margin-top: 5px;
     }
 
     .contact h1{
@@ -2297,7 +2332,7 @@ blockquote{
     }
 
     .contact h1{
-        margin-top: 40px;
+        margin-top: 20px;
     }
 
     .contact__img img{
@@ -2377,7 +2412,11 @@ blockquote{
         "footer__text footer__up";
 }
 
-.footer__nav-container{
+.footer__nav1{
+    display: none;
+}
+
+.footer__nav2{
     display: none;
 }
 
@@ -2405,8 +2444,15 @@ blockquote{
     display: none;
 }
 
-.footer__up {
+.footer__nav-container{
     grid-area: footer__up;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer__up {
     color: var(--white);
     font-size: 30px;
     margin: auto;
@@ -2432,30 +2478,22 @@ blockquote{
         display: grid;
         text-align: start;
         justify-content:center;
-        grid-template-columns: 60% 20% 20%;
+        grid-template-columns: 50% 50%;
         grid-template-rows: 143px;
         grid-template-areas:
-        "footer__text footer__nav-container footer__up";
+        "footer__text footer__up";
     }
 
     .footer__text {
         grid-area: footer__text;
         color: var(--white);
-        margin: auto 150px;
+        margin: auto 100px;
         text-align: left;
         font-size: 14px;
     }
 
     .footer__text h2{
         font-size: 20px;
-    }
-
-    .footer__up {
-        grid-area: footer__up;
-        color: var(--white);
-        font-size: 30px;
-        margin-right: auto;
-        
     }
 
     .div__footer{
@@ -2466,24 +2504,33 @@ blockquote{
 
     .footer__nav-container{
         display: grid;
-        justify-content: center;
-        font-size: 16px;
+        justify-content: end;
         align-items: center;
         margin-top: auto;
-        margin-left: auto;
-        grid-template-columns: repeat(2, 100px);
+        margin-right: 30px;
+        gap: 20px;
+        grid-template-columns: 90px 100px 160px;
         grid-template-rows: 143px;
         grid-template-areas:
-        "footer__nav1 footer__nav2";
+        "footer__nav1 footer__nav2 arrow";
     }
     
     .footer__nav1{
         grid-area: footer__nav1;
+        display: block;
+        font-size: 16px;
     }
     
     .footer__nav2{
         grid-area: footer__nav2;
+        display: block;
         margin-bottom: 16px;
+        font-size: 16px;
+    }
+
+    .footer__up {
+        grid-area: arrow;
+        
     }
     
     .footer__nav-container ul{
