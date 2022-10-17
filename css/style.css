@@ -312,6 +312,7 @@ header{
     cursor: pointer;
     grid-column: -2/-1;
     grid-row: 1/2;
+    z-index: 2;
 }
 
 .nav__hamburguer{
@@ -372,6 +373,7 @@ header{
     padding-right: 30px;
     padding-bottom: 30px;
     transform: var(--state-menu);
+    z-index: 2;
 }
 
 .nav__item{
@@ -616,6 +618,10 @@ input.src{
 @media screen and (min-width: 768px){
     .banner img {
         height: 30vh;
+    }
+
+    .profile img{
+        width: 200px;
     }
 }
 
@@ -925,11 +931,11 @@ input.src{
 
     .profile-jobs2__img{
         grid-area: profile-jobs2__img;
-        margin-top: -40px;
+        margin-top: -50px;
     }
 
     .profile-jobs2__img img{
-        width: 200px;
+        width: 180px;
     }
     
     .profile-jobs2__description{
@@ -1228,7 +1234,7 @@ input.src{
     }
 
     .profile-studies1__img img{
-        width: 200px;
+        width: 180px;
     }
 
     .profile-studies1_min768px_{
@@ -1248,7 +1254,7 @@ input.src{
 
     .profile-studies1__img{
         grid-area: profile-studies1__img;
-        margin-top: -40px;
+        margin-top: -50px;
     }
     
     .profile-studies1__description{
@@ -2085,6 +2091,7 @@ blockquote{
 .contact{
     display: grid;
     margin-bottom: 5rem;
+    gap: 10px;
     justify-content: center;
     grid-template-columns: 90px 210px;
     grid-template-rows: 60px;
@@ -2107,7 +2114,7 @@ blockquote{
 .contact__title{
     grid-area: contact__title;
     justify-content: start;
-    margin: 5px 10px;
+
 }
 
 .contact__title h1{
@@ -2123,9 +2130,59 @@ blockquote{
     color: #444444;
 }
 
+.contact__form{
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    margin: auto;
+    gap: 30px;
+}
 
+.group-name-email{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
 
+.input-group{
+    position: relative;
+}
 
+.input-group textarea{
+    height: 100px;
+}
+
+.input{
+    padding: 10px;
+    border: 2px solid black;
+    color: var(--secondary-color);
+    background-color: var(--primary-color);
+    outline: none;
+    width: 100%;
+}
+
+.input-label{
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(10px, 10px);
+    transition: transform .25s;
+    color: #A2A2A2;
+    font-family: Cabin;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.input:focus+.input-label, .input:valid+.input-label{
+    transform: translate(10px, -10px) scale(1.1);
+    color: #A2A2A2;
+    padding-inline: 5px;
+    background-color: var(--primary-color);
+}
+
+.input:is(:focus, :valid){
+    outline-color: var(--secondary-color);
+}
 
 .container__button{
     display: flex;
@@ -2141,7 +2198,6 @@ blockquote{
     border: none;
     transition: 300ms ease;
     margin: auto;
-    
 }
 
 .button__contact1:hover{
@@ -2150,21 +2206,15 @@ blockquote{
     border: var(--black) solid 2px;
 }
 
-
-@media screen and (min-width:576px){
-    .contact{
-        grid-template-columns:150px 200px;
-        margin: auto;
-    }
-}
-
 @media screen and (min-width:768px){
     .banner-contact img{
         height: 30vh;
     }
 
     .contact{
-        grid-template-rows: 90px;
+        grid-template-columns: 180px 160px;
+        grid-template-rows: 100px;
+        gap: 10px;
     }
 
     .contact__img{
@@ -2172,11 +2222,7 @@ blockquote{
     }
 
     .contact__img img{
-        width: 140px;
-    }
-
-    .contact__title{
-        margin-top: 2rem;
+        width: 180px;
     }
 
     .button__contact1{
@@ -2187,27 +2233,6 @@ blockquote{
 @media screen and (min-width:992px){
     .banner-contact img{
         height: 35vh;
-    }
-
-    .contact__input1{
-        width: 30rem;
-        height: 50px;
-        width: 400px;
-        max-width: 390px;
-    }
-
-    .contact__input2{
-        width: 30rem;
-        margin-left: 20px;
-        height: 50px;
-        width: 400px;
-        max-width: 390px;
-    }
-
-    .contact__input--textarea{
-        height: 190px;
-        width: 800px;
-        max-width: 800px;
     }
 
     .contact{
@@ -2229,11 +2254,38 @@ blockquote{
         height: 60vh;
     }
 
-    .container__name-email{
+    .contact__form{
+        grid-auto-columns: 800px;
+    }
+
+    .input{
+        width: 295px;
+        
+    }
+
+    .input-group textarea{
+        width: 610px;
+        height: 190px;
+    }
+
+    .contact__form{
+        display: flex;
+        flex-direction: column;
+        max-width: 600px;
+        margin: auto;
+        gap: 30px;
+    }
+    
+    .group-name-email{
         display: flex;
         flex-direction: row;
-        justify-content:center;
-        margin: 20px;
+        gap: 20px;
+        max-width: 600px;
+        justify-content: space-between;
+    }
+
+    .input-label{
+        font-size: 13px;
     }
 }
 
