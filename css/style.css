@@ -53,6 +53,7 @@
 .dark{
     --primary-color: #1b1d23;
     --secondary-color: #fff;
+
 }
 
 .switch{
@@ -1463,7 +1464,7 @@ input.src{
 @media screen and (min-width:1400px){
     .proyects{
         grid-template-columns: repeat(3,400px);
-        grid-template-rows: 80px repeat(2,218px);
+        grid-template-rows: 80px repeat(2,215px);
         gap: 20px;
     }
 
