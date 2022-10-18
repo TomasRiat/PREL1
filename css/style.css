@@ -124,7 +124,8 @@ body {
 
 h1, h2 {
     font-weight: var(--font-title);
-    color:var(--secondary-color) 
+    color:var(--secondary-color);
+    font-size: 30px;
 }
 
 img{
@@ -134,7 +135,7 @@ img{
 
 @media screen and (min-width:992px){
     h2{
-        font-size: 30px;
+        font-size: 35px;
     }
 }
 
@@ -507,6 +508,7 @@ input.src{
 
     .nav__link{
         color: var(--black);
+        font-weight: 500;
     }
 
     .button-contact__nav{
@@ -611,7 +613,7 @@ input.src{
 }
 
 .profile__title h1{
-    font-size: 3rem;
+    font-size: 30px;
 }
 
 .p-profile{
@@ -669,16 +671,16 @@ input.src{
         padding: 0;
     }
 
+    .profile__title h1{
+        font-size: 40px;
+        margin-bottom: 5px;
+    }
+
     .profile__title{
         text-align: start;
         grid-area: profile__title;
         margin-top: 4rem;
         margin-left: 20px;
-    }
-
-    .profile__title h1{
-        font-size: 3rem;
-        margin-bottom: 5px;
     }
 
     .profile__description{
@@ -887,7 +889,7 @@ input.src{
     margin-top: 80px;
 }
 
-.icons-jobs2 img{
+.tecnologies__icon img{
     margin: 50px;
 }
 
@@ -990,6 +992,10 @@ input.src{
 
     .profile-jobs2__description p{
         font-size: 17px;
+    }
+
+    .tecnologies__icon img{
+        width: 65px;
     }
 
     .proyects-jobs2{
@@ -1213,9 +1219,9 @@ input.src{
 }
 
 .tecnologies__icon img{
-    height: 35px;
-    width: 26.78571319580078px;
-    margin: 10px 25px;
+    height: 53.97321319580078px;
+    width: 65px;
+    margin: 20px 25px;
 }
 
 .tecnologies__icon{
@@ -1593,6 +1599,11 @@ input.src{
         display: grid;
         grid-auto-columns: 720px;
         justify-content: center;
+    }
+
+    .tecnologies__icons img{
+    height: 53.97321319580078px;
+    width: 65px;
     }
 }
 
@@ -2185,6 +2196,9 @@ blockquote{
 
 .input-group textarea{
     height: 100px;
+    font-family: Cabin;
+    font-size: 12px;
+    font-weight: 400;
 }
 
 .input{
@@ -2192,8 +2206,11 @@ blockquote{
     border: 2px solid black;
     color: var(--secondary-color);
     background-color: var(--primary-color);
+    font-family: Cabin;
     outline: none;
     width: 100%;
+    font-size: 12px;
+    font-weight: 400;
 }
 
 .input-label{
@@ -2229,6 +2246,7 @@ blockquote{
     width: 300px;
     height: 5rem;
     background-color: var(--black);
+    font-family: Cabin;
     color: var(--white);
     border: none;
     transition: 300ms ease;
@@ -2259,10 +2277,6 @@ blockquote{
     .contact__img img{
         width: 180px;
     }
-
-    .button__contact1{
-        max-width: 820px;
-    }
 }
 
 @media screen and (min-width:992px){
@@ -2286,28 +2300,29 @@ blockquote{
         margin-bottom: 10px;
     }
 
+    .contact__title h2{
+        font-size: 25px;
+        font-weight: 600;
+        line-height: 43px;
+    }
+
     .contact__container{
         height: 60vh;
     }
 
-    .contact__form{
-        grid-auto-columns: 800px;
-    }
-
     .input{
-        width: 295px;
-        
+        width: 395px;
     }
 
     .input-group textarea{
-        width: 610px;
+        width: 800px;
         height: 190px;
     }
 
     .contact__form{
         display: flex;
         flex-direction: column;
-        max-width: 600px;
+        max-width: 800px;
         margin: auto;
         gap: 30px;
     }
@@ -2315,8 +2330,8 @@ blockquote{
     .group-name-email{
         display: flex;
         flex-direction: row;
-        gap: 20px;
-        max-width: 600px;
+        gap: 10px;
+        max-width: 800px;
         justify-content: space-between;
     }
 
@@ -2328,7 +2343,7 @@ blockquote{
 @media screen and (min-width:1400px){
     .contact{
         grid-template-columns:225px 500px;
-        grid-template-rows: 140px;
+        grid-template-rows: 150px;
         column-gap: 20px;
     }
 
