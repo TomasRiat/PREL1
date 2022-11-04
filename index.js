@@ -1,6 +1,5 @@
 const btnSwitch = document.getElementById('switch');
 const button = document.getElementById('buttonContact');
-const button2 = document.getElementById('buttonComment');
 
 // DARK-MODE
 
@@ -32,16 +31,6 @@ button.addEventListener('click', () =>{
         html: '<h1 class="h1__sweetAlert">Message sent!</h1><p class="p__sweetAlert">Thanks for contacting me, I’ll be aswering soon.</p><br><br><a href="../index.html" class="button-sweetAlert"><i class=" arrow_sweet bi bi-arrow-left"></i>Back to Home</a><br> <br>'
     });
 });
-
-button2.addEventListener('click', () =>{
-    Swal.fire({
-        showConfirmButton: false,
-        timer: 2500,
-        width: '600px',
-        html: '<h1 class="h1__sweetAlert">Comment sent!</h1><p class="p__sweetAlert">Thanks for comment, I’ll be aswering soon.</p><br><br><a href="../index.html" class="button-sweetAlert"><i class=" arrow_sweet bi bi-arrow-left"></i>Back to Home</a><br> <br>'
-    });
-});
-
 
 
 
